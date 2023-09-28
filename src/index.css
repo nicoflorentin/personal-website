@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+@font-face {
+  font-family: "rubik-mono-one";
+  src: url("../public/fonts/RubikMonoOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "consolas";
+  src: url("../public/fonts/Consolas.ttf");
+}
+
