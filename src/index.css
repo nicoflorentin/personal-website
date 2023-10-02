@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: "rubik-mono-one";
-  src: url("../public/fonts/RubikMonoOne-Regular.ttf");
+  src: url("../fonts/RubikMonoOne-Regular.ttf");
 }
 
 @font-face {
   font-family: "consolas";
-  src: url("../public/fonts/Consolas.ttf");
+  src: url("../fonts/Consolas.ttf");
 }
 
