@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   background-repeat: repeat;
-  background-image: url("../public/assets/bg-texture.webp");
+  background-image: url("/src/assets/images/bg-texture.webp");
   mix-blend-mode: multiply;
   /* pointer-events: none; */
   

@@ -1,16 +1,15 @@
 import React from "react"
-import { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon } from "../icons/Icons"
+import { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon } from "/src/assets/icons/icons.jsx"
 import config from "../tailwind.config.js"
 import style from "./App.module.css"
-
-console.log(style)
+import About from "./components/about/About.jsx"
 
 const { bone } = config.theme.extend.colors
 
 function App() {
 	return (
 		<div className={style.paperOverlay}>
-			<div className="font-consolas z-1 opacity-[0.80]">
+			<div className="font-consolas z-1 opacity-[0.70]">
 				<section className="bg-[#1C1C1C]">
 					<header className=" pt-2 text-[8px] text-center mb-20 text-primary tracking-[2px]">
 						{/* Contenido del encabezado */}
@@ -40,10 +39,14 @@ function App() {
 						<div className="mt-24">
 							{/* Contenido de la sección de contacto */}
 							<button
-								className="flex items-center gap-3
+								className="flex items-center gap-4
                         shadow-[0px_0px_10px_1px_rgba(200,200,200,0.2)]
-                       text-bone text-lg m-auto
-                        border border-bone rounded-3xl py-1 px-6"
+                       	text-bone text-lg m-auto
+                        border border-bone rounded-3xl py-1 px-6
+												hover:shadow-[0px_0px_10px_7px_rgba(200,200,200,0.3)]
+												hover:scale-[102%]
+												transition-all
+												"
 							>
 								<p>CONTACT ME</p>
 								<MailIcon color={bone} size={25} />
