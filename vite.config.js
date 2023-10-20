@@ -6,10 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: {
-        main: './src/main.js',
-        icons: './src/assets/icons/icons.jsx',
-      },
+      external: './src/assets/icons/icons.jsx',
     },
   },
 })
