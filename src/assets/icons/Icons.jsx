@@ -81,4 +81,4 @@ const TwitterIcon = ({ color, size }) => {
 	)
 }
 
-export { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon }
+export default { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon }

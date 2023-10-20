@@ -1,10 +1,11 @@
 import React from "react"
-import { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon } from "./assets/icons/Icons.jsx"
+import icons from "./assets/icons/Icons.jsx"
 import config from "../tailwind.config.js"
 import style from "./App.module.css"
 import About from "./components/about/About.jsx"
 
 const { bone } = config.theme.extend.colors
+const { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon } = icons
 
 function App() {
 	return (
