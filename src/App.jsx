@@ -1,5 +1,5 @@
 import React from "react"
-import { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon } from "./assets/icons/icons.jsx"
+import { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon } from "./assets/icons/Icons.jsx"
 import config from "../tailwind.config.js"
 import style from "./App.module.css"
 import About from "./components/about/About.jsx"
