@@ -2,14 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
 
 @font-face {
-  font-family: "rubik-mono-one";
-  src: url("/src/assets/fonts/RubikMonoOne-Regular.ttf");
+	font-family: "rubik-mono-one";
+	src: url("/src/assets/fonts/RubikMonoOne-Regular.ttf");
 }
 
 @font-face {
-  font-family: "consolas";
-  src: url("/src/assets/fonts/Consolas.ttf");
+	font-family: "consolas";
+	src: url("/src/assets/fonts/Consolas.ttf");
+}
+
+@font-face {
+	font-family: "inter";
+	src: url("/src/assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+* {
+  /* border: 1px solid red; */
 }

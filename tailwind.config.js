@@ -4,13 +4,14 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#93C572;",
-        bone: '#DAD7CB'
+				primary: "#93C572",
+				secondary: '#AE8FDB',
+				bone: '#DAD7CB'
 			},
 			fontFamily: {
 				rubik: ["rubik-mono-one", "sans-serif"],
 				consolas: ["consolas", "sans-serif"],
-        inter: ['Inter', 'sans-serif']
+				inter: ['inter', 'sans-serif']
 			},
 		},
 	},
