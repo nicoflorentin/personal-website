@@ -21,7 +21,7 @@ const Main = () => {
 					<h1 className="text-[13px] tracking-wide pl-1">NICOLÁS FLORENTÍN</h1>
 					<h2 className="font-rubik text-[50px] leading-[0.95em] tracking-[10px]">
 						{/* Título de la sección Full Stack */}
-						FULL <br /> STACK
+						FULL <br /> STACK <br /> DEV
 					</h2>
 				</div>
 				<nav className="navbar">
