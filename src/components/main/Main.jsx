@@ -33,12 +33,13 @@ const Main = () => {
 						className="flex flex-col gap-2
                             w-52 m-10
                             font-inter text-bone text-[12px] tracking-[2px] font-[700]
+														
 														"
 					>
-						<li className="hover:text-primary">WORK</li>
-						<li className="hover:text-primary">TECHNOLOGY</li>
-						<li className="hover:text-primary">ABOUT</li>
-						<li className="text-secondary hover:text-primary">CONTACT ME</li>
+						<li className="hover:text-primary transition-all duration-fast">WORK</li>
+						<li className="hover:text-primary transition-all duration-fast">TECHNOLOGY</li>
+						<li className="hover:text-primary transition-all duration-fast">ABOUT</li>
+						<li className="text-secondary hover:text-primary transition-all duration-fast">CONTACT ME</li>
 					</ul>
 				</nav>
 			</div>

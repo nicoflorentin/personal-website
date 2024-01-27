@@ -14,6 +14,9 @@ export default {
 				consolas: ["consolas", "sans-serif"],
 				inter: ['inter', 'sans-serif']
 			},
+			transitionDuration: {
+        fast: '200ms',
+      }
 		},
 	},
 	plugins: [
