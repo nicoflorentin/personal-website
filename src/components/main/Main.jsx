@@ -24,11 +24,14 @@ const Main = () => {
 						FULL <br /> STACK <br /> DEV
 					</h2>
 				</div>
-				<nav className="navbar">
+				<nav
+					className="navbar
+										"
+				>
 					{/* Contenido de la barra de navegación */}
 					<ul
 						className="flex flex-col gap-2
-                            w-60 m-10
+                            w-52 m-10
                             font-inter text-bone text-[12px] tracking-[2px] font-[700]
 														"
 					>
