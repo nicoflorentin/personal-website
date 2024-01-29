@@ -3,8 +3,9 @@ import React from "react"
 const Main = () => {
 	return (
 		<section
-			className="bg-[#1C1C1C] h-[100vh]
-											flex flex-col justify-between"
+			className="h-[100vh]
+									flex flex-col justify-between
+									"
 		>
 			<header
 				className="pt-2 text-[8px] text-center text-primary tracking-[2px]
