@@ -1,36 +1,47 @@
 import React from "react"
 
-const Project = ({ title, description, githubURL, deployURL }) => {
+const Project = ({ title, description, image, githubURL, deployURL }) => {
+
+	console.log(image)
 	return (
 		<div
-			className="px-3 mx-5 my-2
+			className="flex flex-col gap-2
+								px-3 mx-10 my-2
 								border-r-2 border-bone
 								text-center
 								"
 		>
 			<h3
 				className="text-bone font-semibold uppercase
-									border border-bone
+									text-xl
 									"
 			>
 				{title}
 			</h3>
 			<p
-				className="text-bone
-									border border-bone
-									text-xs
+				className="text-bone text-s tracking-wider
+									
 									"
 			>
 				{description}
 			</p>
-			<a
-				href={deployURL}
-				className="text-bone
-									border border-bone
+			<img src={image} alt="" />
+			<div className="flex justify-center gap-5">
+				<a
+					href={deployURL}
+					className="text-bone
 									"
-			>
-				DEPLOY
-			</a>
+				>
+					REPO
+				</a>
+				<a
+					href={deployURL}
+					className="text-bone
+									"
+				>
+					BUTTON TO DEPLOY
+				</a>
+			</div>
 		</div>
 	)
 }

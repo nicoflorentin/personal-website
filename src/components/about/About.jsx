@@ -7,12 +7,12 @@ const About = () => {
 			className="flex flex-col justify-between items-center
 						font-consolas
 						h-[100vh]
+						py-28
 						"
 		>
 			<h2
 				className="text-primary text-3xl font-bold 
 							text-center
-							m-10
 							"
 			>
 				ABOUT ME
@@ -27,10 +27,10 @@ const About = () => {
 			/> */}
 			<div>
 				<p
-					className="text-bone text-[12px]
+					className="text-bone text-[16px]
 								font-inter font-light tracking-widest
-								leading-6
-								mb-10 mx-5 px-5
+								leading-8
+								mb-10 mx-11 px-5
 								border-l-2 border-bone
 								"
 				>
@@ -39,19 +39,18 @@ const About = () => {
 					when works with JS together.
 				</p>
 			</div>
-			<button
-				className="text-secondary font-inter text-xs font-bold
+				<button
+					className="text-secondary font-inter text-sm font-bold
 							text-left
 							leading-4 tracking-widest
-							w-32
-							mb-10 px-5
+							w-44 px-5
 							border-l-2 border-secondary
 							hover:text-primary hover:border-primary
 							transition-all duration-fast
 							"
-			>
-				CHECK MY EXPERIENCE
-			</button>
+				>
+					CHECK OUT MY EXPERIENCE
+				</button>
 		</section>
 	)
 }
