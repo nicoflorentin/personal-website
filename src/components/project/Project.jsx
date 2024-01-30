@@ -33,23 +33,29 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				className="h-20 object-cover
 							"
 			/>
-			<div className="flex justify-center items-center gap-10">
+			<div className="flex justify-center items-center gap-10
+							font-semibold">
 				<a
-					href={deployURL}
+					href=''
 					className="text-secondary
 								px-4
 								border-l-2 border-secondary
+								hover:text-primary
+								hover:border-primary
+								transition-all duration-fast
 									"
 				>
 					REPO
 				</a>
-				<div className="flex items-center gap-2 text-secondary
+				<a href="" className="text-secondary
 								px-4
 								border-l-2 border-secondary
+								hover:text-primary
+								hover:border-primary
+								transition-all duration-fast
 									">
-					<div>DEPLOY</div>
-					<LinkIcon color={secondary} size={25} />
-				</div>
+					DEPLOY
+				</a>
 			</div>
 		</div>
 	)

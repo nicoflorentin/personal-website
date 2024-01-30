@@ -3,7 +3,7 @@ import React from "react"
 const Main = () => {
 	return (
 		<section
-			className="h-[100vh]
+			className="h-[100vh] pb-10
 									flex flex-col justify-between
 									"
 		>

@@ -84,6 +84,7 @@ const TwitterIcon = ({ color, size }) => {
 const LinkIcon = ({ color, size }) => {
 	return (
 		<svg
+			className="hover:text-primary"
 			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
