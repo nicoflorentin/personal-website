@@ -1,11 +1,14 @@
 import React from "react"
+import icons from "../../assets/icons/Icons"
+import config from "../../../tailwind.config"
 
 const Project = ({ title, description, image, githubURL, deployURL }) => {
+	const { LinkIcon } = icons
+	const { bone, secondary } = config.theme.extend.colors
 
-	console.log(image)
 	return (
 		<div
-			className="flex flex-col gap-2
+			className="flex flex-col gap-5
 								px-3 mx-10 my-2
 								border-r-2 border-bone
 								text-center
@@ -20,27 +23,33 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 			</h3>
 			<p
 				className="text-bone text-s tracking-wider
-									
 									"
 			>
 				{description}
 			</p>
-			<img src={image} alt="" />
-			<div className="flex justify-center gap-5">
+			<img
+				src={image}
+				alt="projectImage"
+				className="h-20 object-cover
+							"
+			/>
+			<div className="flex justify-center items-center gap-10">
 				<a
 					href={deployURL}
-					className="text-bone
+					className="text-secondary
+								px-4
+								border-l-2 border-secondary
 									"
 				>
 					REPO
 				</a>
-				<a
-					href={deployURL}
-					className="text-bone
-									"
-				>
-					BUTTON TO DEPLOY
-				</a>
+				<div className="flex items-center gap-2 text-secondary
+								px-4
+								border-l-2 border-secondary
+									">
+					<div>DEPLOY</div>
+					<LinkIcon color={secondary} size={25} />
+				</div>
 			</div>
 		</div>
 	)
