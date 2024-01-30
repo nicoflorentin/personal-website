@@ -9,10 +9,10 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 	return (
 		<div
 			className="flex flex-col gap-5
-								px-3 mx-10 my-2
-								border-r-2 border-bone
-								text-center
-								"
+						px-5 mx-10 my-2
+						border-r-2 border-bone
+						text-center
+						"
 		>
 			<h3
 				className="text-bone font-semibold uppercase

@@ -4,7 +4,7 @@ import Project from "../project/Project"
 const projects = [
 	{
 		id: 1,
-		title: "Primer Proyecto",
+		title: "First Project",
 		description: "Brief description of the project, explaining processes and functionalities",
 		image: 'https://lsaglobal.com/wp-content/uploads/2020/05/Effective-Individual-Development-Plan.jpg',
 		githubURL: "http://example.com",
@@ -12,7 +12,7 @@ const projects = [
 	},
 	{
 		id: 2,
-		title: "Segundo Proyecto",
+		title: "Second Project",
 		description: "Brief description of the project, explaining processes and functionalities",
 		image: 'https://lsaglobal.com/wp-content/uploads/2020/05/Effective-Individual-Development-Plan.jpg',
 		githubURL: "http://example.com",
@@ -20,7 +20,7 @@ const projects = [
 	},
 	{
 		id: 3,
-		title: "Tercer Proyecto",
+		title: "Third Project",
 		description: "Brief description of the project, explaining processes and functionalities",
 		image: 'https://lsaglobal.com/wp-content/uploads/2020/05/Effective-Individual-Development-Plan.jpg',
 		githubURL: "http://example.com",
@@ -28,7 +28,7 @@ const projects = [
 	},
 	{
 		id: 4,
-		title: "Cuarto Proyecto",
+		title: "Fourth Project",
 		description: "Brief description of the project, explaining processes and functionalities",
 		image: 'https://lsaglobal.com/wp-content/uploads/2020/05/Effective-Individual-Development-Plan.jpg',
 		githubURL: "http://example.com",
@@ -36,7 +36,7 @@ const projects = [
 	},
 	{
 		id: 5,
-		title: "Quinto Proyecto",
+		title: "Fifth Project",
 		description: "Brief description of the project, explaining processes and functionalities",
 		image: 'https://lsaglobal.com/wp-content/uploads/2020/05/Effective-Individual-Development-Plan.jpg',
 		githubURL: "http://example.com",
@@ -44,7 +44,7 @@ const projects = [
 	},
 	{
 		id: 6,
-		title: "Sexto Proyecto",
+		title: "Sixth Project",
 		description: "Brief description of the project, explaining processes and functionalities",
 		image: 'https://lsaglobal.com/wp-content/uploads/2020/05/Effective-Individual-Development-Plan.jpg',
 		githubURL: "http://example.com",
@@ -67,8 +67,8 @@ const Projects = () => {
         WORK
       </h2>
       <div
-        className="flex flex-col gap-8
-                   font-consolas
+        className="flex flex-col gap-10
+                   font-inter
 									 h-[80vh] overflow-y-auto" // Añade esta línea para permitir el desplazamiento vertical
       >
         <ProjectsMap />
