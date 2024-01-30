@@ -62,6 +62,7 @@ const Projects = () => {
       <h2
         className="text-primary text-3xl font-bold
                    text-center
+									 tracking-wide
                    p-10"
       >
         WORK

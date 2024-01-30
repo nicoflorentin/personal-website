@@ -13,6 +13,7 @@ const About = () => {
 			<h2
 				className="text-primary text-3xl font-bold 
 							text-center
+							tracking-wide
 							"
 			>
 				ABOUT ME
