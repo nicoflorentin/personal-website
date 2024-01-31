@@ -58,7 +58,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 								hover:border-primary
 								transition-all duration-fast
 									">
-					DEPLOY
+					VISIT
 				</a>
 			</div>
 		</div>

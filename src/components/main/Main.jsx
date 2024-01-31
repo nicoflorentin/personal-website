@@ -1,6 +1,14 @@
 import React from "react"
 
-const Main = () => {
+const Main = ({ scroller }) => {
+
+	const scrollToSection = (sectionName) => {
+		scroller.scrollTo(sectionName, {
+			duration: 800,
+			smooth: true,
+		})
+	}
+
 	return (
 		<section
 			className="h-[100vh] 
@@ -39,9 +47,9 @@ const Main = () => {
 														
 														"
 					>
-						<li className="hover:text-primary transition-all duration-fast">WORK</li>
-						<li className="hover:text-primary transition-all duration-fast">TECHNOLOGY</li>
-						<li className="hover:text-primary transition-all duration-fast">ABOUT</li>
+						<li onClick={() => scrollToSection('projects')} className="hover:text-primary transition-all duration-fast">WORK</li>
+						{/* <li onClick={() => scrollToSection('about')} className="hover:text-primary transition-all duration-fast">TECHNOLOGY</li> */}
+						<li onClick={() => scrollToSection('about')} className="hover:text-primary transition-all duration-fast">ABOUT</li>
 						<li className="text-secondary hover:text-primary transition-all duration-fast">CONTACT ME</li>
 					</ul>
 				</nav>
