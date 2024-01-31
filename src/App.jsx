@@ -6,20 +6,34 @@ import { About, Main, Projects } from "./components/index.js"
 import { Element, scroller } from "react-scroll"
 
 function App() {
+	const scrollToSection = sectionName => {
+		scroller.scrollTo(sectionName, {
+			duration: 800,
+			smooth: true,
+		})
+	}
+
 	return (
 		<div className={style.paperOverlay}>
 			<div
 				className="font-consolas z-1 opacity-[0.80] select-none
 											bg-[#1C1C1C] 
+											
 											"
 			>
-				<Main scroller={scroller} />
-				<Element name="about">
-					<About />
-				</Element>
-				<Element name="projects">
-					<Projects />
-				</Element>
+				<div
+					className="m-auto
+											sm:max-w-7xl
+											"
+				>
+					<Main scroller={scroller} scrollToSection={scrollToSection} />
+					<Element name="about">
+						<About scroller={scroller} scrollToSection={scrollToSection} />
+					</Element>
+					<Element name="projects">
+						<Projects />
+					</Element>
+				</div>
 			</div>
 		</div>
 	)

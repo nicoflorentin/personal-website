@@ -1,21 +1,13 @@
 import React from "react"
 
-const Main = ({ scroller }) => {
-
-	const scrollToSection = (sectionName) => {
-		scroller.scrollTo(sectionName, {
-			duration: 800,
-			smooth: true,
-		})
-	}
-
+const Main = ({ scroller, scrollToSection }) => {
 	return (
 		<section
-			className="h-[100vh] 
-									pb-10 m-auto
-									flex flex-col justify-between
-									max-w-2xl
-									"
+			className="h-[100vh] pb-10 m-auto
+								flex flex-col justify-between
+								max-w-2xl
+								sm:max-w-full
+								"
 		>
 			<header
 				className="pt-2 text-[8px] text-center text-primary tracking-[2px]
@@ -26,38 +18,53 @@ const Main = ({ scroller }) => {
 			</header>
 			<div
 				className="flex flex-col items-center
+										sm:flex-row
+										sm:justify-center
+										sm:gap-52
+										xl:gap-[500px]
 											"
 			>
 				<div className="text-primary">
 					<h1 className="text-[13px] tracking-wide pl-1">NICOLÁS FLORENTÍN</h1>
-					<h2 className="font-rubik text-[50px] leading-[0.95em] tracking-[10px]">
+					<h2
+						className="font-rubik text-[50px] leading-[0.95em] tracking-[10px]
+												sm:text-[80px]"
+					>
 						{/* Título de la sección Full Stack */}
 						FULL <br /> STACK <br /> DEV
 					</h2>
 				</div>
-				<nav
-					className="navbar
-										"
-				>
-					{/* Contenido de la barra de navegación */}
+				<nav className="navbar">
 					<ul
 						className="flex flex-col gap-2
-                            w-52 m-10
-                            font-inter text-bone text-sm tracking-[2px] font-[700]
-														
-														"
+												w-52
+												font-inter text-bone text-sm tracking-[2px] font-[700]
+												sm:text-end
+												"
 					>
-						<li onClick={() => scrollToSection('projects')} className="hover:text-primary transition-all duration-fast">WORK</li>
+						<li
+							onClick={() => scrollToSection("projects")}
+							className="hover:text-primary transition-all duration-fast"
+						>
+							WORK
+						</li>
 						{/* <li onClick={() => scrollToSection('about')} className="hover:text-primary transition-all duration-fast">TECHNOLOGY</li> */}
-						<li onClick={() => scrollToSection('about')} className="hover:text-primary transition-all duration-fast">ABOUT</li>
-						<li className="text-secondary hover:text-primary transition-all duration-fast">CONTACT ME</li>
+						<li onClick={() => scrollToSection("about")} className="hover:text-primary transition-all duration-fast">
+							ABOUT
+						</li>
+						<li
+							className="text-secondary hover:text-primary
+													transition-all duration-fast"
+						>
+							CONTACT ME
+						</li>
 					</ul>
 				</nav>
 			</div>
 			<div
 				className="text-[0.5em] text-primary text-center
-												pb-10
-												"
+									pb-10
+									"
 			>
 				{/* Contenido del carrusel */}SOLVE - DESIGN - <span className="text-base">DEVELOP</span> - REST - WORK
 			</div>

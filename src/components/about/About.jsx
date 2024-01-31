@@ -1,7 +1,7 @@
 import React from "react"
 import profileImage from "../../assets/images/profile.jpg"
 
-const About = () => {
+const About = ({scroller, scrollToSection}) => {
 	return (
 		<section
 			className="flex flex-col justify-between items-center
@@ -41,6 +41,7 @@ const About = () => {
 				</p>
 			</div>
 				<button
+					onClick={() => {scrollToSection('projects')}}
 					className="text-secondary font-inter text-sm font-bold
 							text-left
 							leading-5 tracking-widest
