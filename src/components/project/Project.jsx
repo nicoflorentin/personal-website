@@ -8,7 +8,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 
 	return (
 		<div
-			className="flex flex-col gap-2
+			className="flex flex-col gap-3
 						px-5 mx-10 my-3
 						border-r-2 border-bone
 						text-center
@@ -32,14 +32,14 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 			<img
 				src={image}
 				alt="projectImage"
-				className="h-24 object-cover
+				className="h-32 object-cover
 							"
 			/>
 			<div className="flex justify-center items-center gap-6 mt-1
 							font-semibold">
 				<a
 					href=''
-					className="text-secondary
+					className="text-secondary text-sm
 								px-3
 								border-l-2 border-secondary
 								hover:text-primary
@@ -49,7 +49,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				>
 					REPO
 				</a>
-				<a href="" className="text-secondary
+				<a href="" className="text-secondary text-sm
 								px-3
 								border-l-2 border-secondary
 								hover:text-primary

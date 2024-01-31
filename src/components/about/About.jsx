@@ -6,7 +6,7 @@ const About = () => {
 		<section
 			className="flex flex-col justify-between items-center
 						font-consolas
-						h-[100vh]
+						h-[100vh] max-w-2xl m-auto
 						py-28
 						"
 		>
@@ -37,13 +37,13 @@ const About = () => {
 				>
 					I'm Nicolás, Full Stack Web Developer, Figma digitalizes my projects and then, writing the required code, it
 					is perfectly interpreted by the browser. I'm also very passionate about CSS and all the potential it offers
-					when works with JS together.
+					when working together with JS.
 				</p>
 			</div>
 				<button
 					className="text-secondary font-inter text-sm font-bold
 							text-left
-							leading-4 tracking-widest
+							leading-5 tracking-widest
 							w-44 px-5
 							border-l-2 border-secondary
 							hover:text-primary hover:border-primary

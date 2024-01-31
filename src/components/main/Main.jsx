@@ -3,8 +3,10 @@ import React from "react"
 const Main = () => {
 	return (
 		<section
-			className="h-[100vh] pb-10
+			className="h-[100vh] 
+									pb-10 m-auto
 									flex flex-col justify-between
+									max-w-2xl
 									"
 		>
 			<header
@@ -33,7 +35,7 @@ const Main = () => {
 					<ul
 						className="flex flex-col gap-2
                             w-52 m-10
-                            font-inter text-bone text-[12px] tracking-[2px] font-[700]
+                            font-inter text-bone text-sm tracking-[2px] font-[700]
 														
 														"
 					>
