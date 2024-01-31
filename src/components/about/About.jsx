@@ -30,7 +30,7 @@ const About = () => {
 				<p
 					className="text-bone text-[16px]
 								font-inter font-light tracking-widest
-								leading-8
+								leading-6
 								mb-10 mx-11 px-5
 								border-l-2 border-bone
 								"

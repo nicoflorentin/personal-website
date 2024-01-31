@@ -20,6 +20,7 @@ const Projects = () => {
 			<div
 				className="flex flex-col gap-10
                    font-inter
+									 px-3 m-auto
 									 h-[80vh] overflow-y-auto" // Añade esta línea para permitir el desplazamiento vertical
 			>
 				<ProjectsMap />
