@@ -34,6 +34,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				src={image}
 				alt="projectImage"
 				className="h-32 object-cover
+							rounded-md
 							"
 			/>
 			<div className="flex justify-center items-center gap-6 mt-1
