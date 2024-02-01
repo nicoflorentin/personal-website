@@ -1,9 +1,10 @@
 import React from "react"
 
 const Main = ({ scroller, scrollToSection }) => {
+
 	return (
 		<section
-			className="h-[100vh] pb-10 m-auto
+			className="h-[100vh] m-auto
 								flex flex-col justify-between
 								max-w-2xl
 								sm:max-w-full
@@ -28,6 +29,7 @@ const Main = ({ scroller, scrollToSection }) => {
 					<h1 className="text-[13px] tracking-wide pl-1">NICOLÁS FLORENTÍN</h1>
 					<h2
 						className="font-rubik text-[50px] leading-[0.95em] tracking-[10px]
+												mb-20
 												sm:text-[80px]"
 					>
 						{/* Título de la sección Full Stack */}
@@ -42,6 +44,7 @@ const Main = ({ scroller, scrollToSection }) => {
 												sm:text-end
 												"
 					>
+					
 						<li
 							onClick={() => scrollToSection("projects")}
 							className="hover:text-primary transition-all duration-fast"
@@ -63,7 +66,7 @@ const Main = ({ scroller, scrollToSection }) => {
 			</div>
 			<div
 				className="text-[0.5em] text-primary text-center
-									pb-10
+									mb-10
 									"
 			>
 				{/* Contenido del carrusel */}SOLVE - DESIGN - <span className="text-base">DEVELOP</span> - REST - WORK

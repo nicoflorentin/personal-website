@@ -4,10 +4,10 @@ import profileImage from "../../assets/images/profile.jpg"
 const About = ({scroller, scrollToSection}) => {
 	return (
 		<section
-			className="flex flex-col justify-between items-center
+			className="flex flex-col justify-around items-center
 						font-consolas
 						h-[100vh] max-w-2xl m-auto
-						py-28
+						py-10
 						"
 		>
 			<h2
@@ -31,7 +31,7 @@ const About = ({scroller, scrollToSection}) => {
 					className="text-bone text-[16px]
 								font-inter font-light tracking-widest
 								leading-6
-								mb-10 mx-11 px-5
+								mx-11 px-5
 								border-l-2 border-bone
 								"
 				>

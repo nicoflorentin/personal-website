@@ -9,15 +9,17 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 	return (
 		<div
 			className="flex flex-col gap-3
+						text-center
 						px-5 my-3 m-auto
 						max-w-xs
 						border-r-2 border-bone
-						text-center
+						md:max-w-full
 						"
 		>
 			<h3
 				className="text-bone font-medium uppercase tracking-widest
 									text-lg
+									md:order-2
 									"
 			>
 				{title}
@@ -26,6 +28,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				className="text-bone font-light leading-5
 									text-sm
 									tracking-wide
+									md:order-2
 									"
 			>
 				{description}
@@ -34,11 +37,15 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				src={image}
 				alt="projectImage"
 				className="h-32 object-cover
-							rounded-md
-							"
+										rounded-sm
+										md:order-1
+										"
 			/>
-			<div className="flex justify-center items-center gap-6 mt-1
-							font-semibold">
+			<div
+				className="flex justify-center items-center gap-6 mt-1
+									font-semibold
+									md:order-2"
+			>
 				<a
 					href={githubURL}
 					className="text-secondary text-sm
@@ -51,13 +58,16 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				>
 					REPO
 				</a>
-				<a href={deployURL} className="text-secondary text-sm
+				<a
+					href={deployURL}
+					className="text-secondary text-sm
 								px-3
 								border-l-2 border-secondary
 								hover:text-primary
 								hover:border-primary
 								transition-all duration-fast
-									">
+									"
+				>
 					VISIT
 				</a>
 			</div>

@@ -8,12 +8,16 @@ const Projects = () => {
 	}
 
 	return (
-		<section className="h-[100vh] max-w-2xl m-auto">
+		<section
+			className="h-[100vh] max-w-2xl m-auto 
+								"
+		>
 			<h2
 				className="text-primary text-3xl font-bold
                    text-center
 									 tracking-wide
-                   p-10"
+                   p-10
+									 "
 			>
 				WORK
 			</h2>
