@@ -21,7 +21,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 3px;
 }
 
 /* Track */
@@ -42,5 +42,5 @@
 }
 
 * {
-	/* border: 1px solid red; */
+	/* border: 2px solid red; */
 }

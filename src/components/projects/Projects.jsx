@@ -9,7 +9,8 @@ const Projects = () => {
 
 	return (
 		<section
-			className="h-[100vh] max-w-2xl m-auto 
+			className="h-[100vh] max-w-2xl m-auto
+								lg:max-w-[54rem]
 								"
 		>
 			<h2

@@ -26,9 +26,9 @@ const Main = ({ scroller, scrollToSection }) => {
 											"
 			>
 				<div className="text-primary">
-					<h1 className="text-[13px] tracking-wide pl-1">NICOLÁS FLORENTÍN</h1>
+					<h1 className="text-[16px] tracking-wide pl-2">NICOLÁS FLORENTÍN</h1>
 					<h2
-						className="font-rubik text-[50px] leading-[0.95em] tracking-[10px]
+						className="font-rubik text-[70px] leading-[0.95em] tracking-[10px]
 												mb-20
 												sm:text-[80px]"
 					>
