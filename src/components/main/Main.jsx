@@ -12,10 +12,11 @@ const Main = ({ scroller, scrollToSection }) => {
 								"
 		>
 			<header
-				className="pt-2 text-[8px] text-center text-primary tracking-[2px]
+				className="pt-2
+									text-[8px] text-center font-inter font-light text-primary tracking-[2px]
+									sm:text-xs
 											"
 			>
-				{/* Contenido del encabezado */}
 				2023 - Buenos Aires - Argentina
 			</header>
 			<div
@@ -27,7 +28,7 @@ const Main = ({ scroller, scrollToSection }) => {
 											"
 			>
 				<div className="text-primary">
-					<h1 className="text-[16px] tracking-wide pl-2">NICOLÁS FLORENTÍN</h1>
+					<h1 className="text-[16px] tracking-wide pl-2 font-inter">NICOLÁS FLORENTÍN</h1>
 					<h2
 						className="font-rubik text-[53px] leading-[0.95em] tracking-[10px]
 												mb-20
@@ -49,19 +50,19 @@ const Main = ({ scroller, scrollToSection }) => {
 					
 						<li
 							onClick={() => scrollToSection("projects")}
-							className="hover:text-primary transition-all duration-fast"
+							className="hover:text-primary transition-all duration-fast cursor-pointer"
 						>
 							WORK
 						</li>
 						{/* <li onClick={() => scrollToSection('about')} className="hover:text-primary transition-all duration-fast">TECHNOLOGY</li> */}
-						<li onClick={() => scrollToSection("about")} className="hover:text-primary transition-all duration-fast">
+						<li onClick={() => scrollToSection("about")} className="hover:text-primary transition-all duration-fast cursor-pointer">
 							ABOUT
 						</li>
 						<li
 							className="text-secondary hover:text-primary
 													transition-all duration-fast"
 						>
-							CONTACT ME
+							<a href="mailto:nicoflorentn@gmail.com">CONTACT ME</a>
 						</li>
 					</ul>
 				</nav>
