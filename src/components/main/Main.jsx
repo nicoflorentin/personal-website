@@ -67,7 +67,7 @@ const Main = ({ scroller, scrollToSection }) => {
 				</nav>
 			</div>
 			<div
-				className="text-primary text-center font-inter tracking-[0.9em] font-extralight
+				className="text-primary text-center font-inter tracking-[0.9em] font-light
 									"
 			>
 				<Slider />

@@ -2,8 +2,7 @@ import React from "react"
 import style from "./Slider.module.css"
 
 export const Slider = () => {
-	const WORDS = ["Solve", "Design", "Develop", "Code", "Debug", "Create", "Rest", "Work", "Think", "Share", "Improve", "Optimize", "Enhance", "Collaborate"]
-	// const WORDS = ["Solve", "Design", "Develop", "Rest", "Work"]
+	const WORDS = ["Solve", "Design", "Develop", "Code", "Create", "Work", "Think", "Share", "Optimize"]
 
 	const MapWordsComponent = () => {
 		return WORDS.map(word => <div className={style.slide}><p className="uppercase">{word}</p></div>)
@@ -12,6 +11,7 @@ export const Slider = () => {
 		<>
 			<div className={style.slider}>
 				<div className={style.slideTrack}>
+					<MapWordsComponent />
 					<MapWordsComponent />
 				</div>
 			</div>
