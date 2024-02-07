@@ -29,8 +29,9 @@ const Main = ({ scroller, scrollToSection }) => {
 				<div className="text-primary">
 					<h1 className="text-[16px] tracking-wide pl-2">NICOLÁS FLORENTÍN</h1>
 					<h2
-						className="font-rubik text-[70px] leading-[0.95em] tracking-[10px]
+						className="font-rubik text-[53px] leading-[0.95em] tracking-[10px]
 												mb-20
+												min-[320px]:text-[60px]
 												sm:text-[80px]"
 					>
 						{/* Título de la sección Full Stack */}

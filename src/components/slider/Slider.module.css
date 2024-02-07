@@ -24,7 +24,7 @@
   width: 960px;
 }
 .slider::before, .slider::after {
-  background: linear-gradient(to right, #1C1C1C 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, #1C1C1C 0%, rgba(0, 0, 0, 0) 100%);
   content: "";
   height: 100px;
   position: absolute;
@@ -49,4 +49,26 @@
 .slider .slide {
   height: 100px;
   width: 250px;
+}
+
+@media screen and (max-width: 425px) {
+	.slider {
+		width: 320px;
+		bottom: 20px;
+	}
+}
+
+.slider::before, .slider::after {
+  width: 100px;
+}
+
+.slider .slideTrack {
+  -webkit-animation: scroll 30s linear infinite;
+          animation: scroll 30s linear infinite;
+}
+
+@media screen and (max-width: 280px) {
+	.slider {
+		width: 280px;
+	}
 }
