@@ -21,9 +21,9 @@ const Main = ({ scroller, scrollToSection }) => {
 			</header>
 			<div
 				className="flex flex-col items-center
-										sm:flex-row
-										sm:justify-center
-										sm:gap-52
+										lg:flex-row
+										lg:justify-center
+										lg:gap-52
 										xl:gap-[500px]
 											"
 			>
@@ -33,7 +33,7 @@ const Main = ({ scroller, scrollToSection }) => {
 						className="font-rubik text-[53px] leading-[0.95em] tracking-[10px]
 												mb-20
 												min-[320px]:text-[60px]
-												sm:text-[80px]"
+												lg:text-[80px]"
 					>
 						{/* Título de la sección Full Stack */}
 						FULL <br /> STACK <br /> DEV
@@ -44,7 +44,7 @@ const Main = ({ scroller, scrollToSection }) => {
 						className="flex flex-col gap-2
 												w-52
 												font-inter text-bone text-sm tracking-[2px] font-[700]
-												sm:text-end
+												lg:text-end
 												"
 					>
 					

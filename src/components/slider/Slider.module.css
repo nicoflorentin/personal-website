@@ -51,10 +51,16 @@
   width: 250px;
 }
 
+@media screen and (max-width: 1024px) {
+	.slider {
+		width: 80vw;
+    bottom: 80px;
+	}
+}
+
 @media screen and (max-width: 425px) {
 	.slider {
 		width: 320px;
-		bottom: 80px;
 	}
 }
 

@@ -5,7 +5,7 @@ export const Slider = () => {
 	const WORDS = ["Solve", "Design", "Develop", "Code", "Create", "Work", "Think", "Share", "Optimize"]
 
 	const MapWordsComponent = () => {
-		return WORDS.map(word => <div className={style.slide}><p className="uppercase">{word}</p></div>)
+		return WORDS.map(word => <div key={word} className={style.slide}><p className="uppercase">{word}</p></div>)
 	}
 	return (
 		<>
