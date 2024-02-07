@@ -41,8 +41,8 @@
   top: 0;
 }
 .slider .slideTrack {
-  -webkit-animation: scroll 10s linear infinite;
-          animation: scroll 10s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
   display: flex;
   width: calc(250px * 18);
 }
