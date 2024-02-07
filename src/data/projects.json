@@ -21,7 +21,7 @@
 		"description": "This project queries the Rick and Morty API to display the characters information. It allows users to implement filters and search by text with an unique and charming design",
 		"image": "https://github.com/nicoflorentin/rick_and_morty/assets/81888574/507eedd3-e0dc-46c8-9329-7b4dcc0465c8",
 		"githubURL": "https://github.com/nicoflorentin/rick_and_morty",
-		"deployURL": "rymviewer.netlify.app"
+		"deployURL": "https://rymviewer.netlify.app"
 	},
 	{
 		"id": "pokemon",

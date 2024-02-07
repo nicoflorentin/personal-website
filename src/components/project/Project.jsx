@@ -9,6 +9,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 						text-center
 						px-5 my-3 m-auto
 						max-w-xs
+						border-r-2 border-bone
 						md:max-w-full
 						md:flex-row
 						md:items-center
@@ -44,6 +45,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				alt="projectImage"
 				className="h-32 object-cover
 										rounded-sm
+										md:rounded-none
 										md:order-1
 										"
 			/>

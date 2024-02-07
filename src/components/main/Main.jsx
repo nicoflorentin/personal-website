@@ -1,4 +1,5 @@
 import React from "react"
+import Slider from "../slider/Slider"
 
 const Main = ({ scroller, scrollToSection }) => {
 
@@ -65,11 +66,10 @@ const Main = ({ scroller, scrollToSection }) => {
 				</nav>
 			</div>
 			<div
-				className="text-[0.5em] text-primary text-center
-									mb-10
+				className="text-primary text-center font-inter tracking-[0.9em] font-extralight
 									"
 			>
-				{/* Contenido del carrusel */}SOLVE - DESIGN - <span className="text-base">DEVELOP</span> - REST - WORK
+				<Slider />
 			</div>
 			{/* <div className="scroll-icon">Icono de desplazamiento</div> */}
 		</section>

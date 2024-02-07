@@ -15,9 +15,20 @@ export default {
 				inter: ['inter', 'sans-serif']
 			},
 			transitionDuration: {
-        fast: '200ms',
-      }
-		},
+				fast: '200ms',
+			},
+			animation: {
+				["infinite-slider"]: "infiniteSlider 10s linear infinite",
+			},
+			keyframes: {
+				infiniteSlider: {
+					"0%": { transform: "translateX(0)" },
+					"100%": {
+						transform: "translateX(calc(-250px * 5))",
+					},
+				},
+			},
+		}
 	},
 	plugins: [
 		function ({ addVariant }) {
