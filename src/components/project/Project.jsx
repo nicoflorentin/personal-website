@@ -43,7 +43,7 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 			<img
 				src={image}
 				alt="projectImage"
-				className="h-32 object-cover
+				className="h-32 w-44 object-cover
 										rounded-sm
 										md:rounded-none
 										md:order-1

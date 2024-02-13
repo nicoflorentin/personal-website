@@ -1,6 +1,6 @@
 import React from "react"
 import Project from "../project/Project"
-import projects from "../../data/projects.json"
+import { projects } from "../../data/projects"
 
 const Projects = () => {
 	const ProjectsMap = () => {
