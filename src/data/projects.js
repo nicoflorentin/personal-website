@@ -1,19 +1,11 @@
 export const projects = [
   {
-    id: "nature",
-    title: "NatureXtreme",
-    description: "Ecommerce with full CRUD functionality, login and a complete dashboard view",
-    image: "https://github.com/nicoflorentin/portfolio/assets/81888574/eb497ade-2788-4c2a-b738-1f26ae5d16fc",
-    githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
-    deployURL: "https://naturaleza-xtreme.vercel.app/"
-  },
-  {
-    id: "matrix",
-    title: "Matrix Navigator",
-    description: "From a list of information without coordinates, this application assigns a location to each element and allows coherent navigation to the chosen direction.",
-    image: "https://github.com/nicoflorentin/matrix-navigator/assets/81888574/4d34d1be-d91b-4ca7-93f7-f92410c23cb1",
-    githubURL: "https://github.com/nicoflorentin/matrix-navigator",
-    deployURL: "https://matrix-navigator.vercel.app/"
+    id: "automenu",
+    title: "AutoMenu",
+    description: "Instantly generate menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level",
+    image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
+    githubURL: "https://github.com/nicoflorentin/auto-menu",
+    deployURL: ""
   },
   {
     id: "tokio",
@@ -31,6 +23,22 @@ export const projects = [
     githubURL: "https://github.com/nicoflorentin/rick_and_morty",
     deployURL: "https://rymviewer.netlify.app"
   },
+  {
+    id: "nature",
+    title: "NatureXtreme",
+    description: "Ecommerce with full CRUD functionality, login and a complete dashboard view",
+    image: "https://github.com/nicoflorentin/portfolio/assets/81888574/eb497ade-2788-4c2a-b738-1f26ae5d16fc",
+    githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
+    deployURL: "https://naturaleza-xtreme.vercel.app/"
+  },
+  // {
+  //   id: "matrix",
+  //   title: "Matrix Navigator",
+  //   description: "From a list of information without coordinates, this application assigns a location to each element and allows coherent navigation to the chosen direction.",
+  //   image: "https://github.com/nicoflorentin/matrix-navigator/assets/81888574/4d34d1be-d91b-4ca7-93f7-f92410c23cb1",
+  //   githubURL: "https://github.com/nicoflorentin/matrix-navigator",
+  //   deployURL: "https://matrix-navigator.vercel.app/"
+  // },
   // {
   //   id: "pokemon",
   //   title: "Pokémon Viewer",
