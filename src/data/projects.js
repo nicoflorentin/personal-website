@@ -2,10 +2,10 @@ export const projects = [
   {
     id: "automenu",
     title: "AutoMenu",
-    description: "Instantly generate menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level",
+    description: "Instantly generate modern design menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level",
     image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
     githubURL: "https://github.com/nicoflorentin/auto-menu",
-    deployURL: "https://auto-menu-alpha.vercel.app/admin/login"
+    deployURL: "https://auto-menu-app.vercel.app/"
   },
   {
     id: "tokio",
