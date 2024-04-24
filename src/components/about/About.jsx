@@ -1,7 +1,7 @@
 import React from "react"
 import profileImage from "../../assets/images/profile.jpg"
 
-const About = ({scroller, scrollToSection}) => {
+const About = ({ scroller, scrollToSection }) => {
 	return (
 		<section
 			className="flex flex-col justify-around items-center
@@ -35,14 +35,16 @@ const About = ({scroller, scrollToSection}) => {
 								border-l-2 border-bone
 								"
 				>
-					I'm Nicolás, Full Stack Web Developer, Figma digitalizes my projects and then, writing the required code, it
-					is perfectly interpreted by the browser. I'm also very passionate about CSS and all the potential it offers
-					when working together with JS.
-				</p>
+					As a JavaScript specialized programmer , I have experience in architecting robust web solutions, with both server-side and client-side dynamics.
+					<br /><br />
+					My enthusiasm lies in meticulously capturing the essence of web designs and user experience, a hallmark of my prowess as a full-stack web developer.
+					<br /><br />
+					Dedicated to crafting digital experiences that make an impact on businesses and connect with people.
+				</p><span></span>
 			</div>
-				<button
-					onClick={() => {scrollToSection('projects')}}
-					className="text-secondary font-inter text-sm font-bold
+			<button
+				onClick={() => { scrollToSection('projects') }}
+				className="text-secondary font-inter text-sm font-bold
 							text-left
 							leading-5 tracking-widest
 							w-44 px-5
@@ -50,9 +52,9 @@ const About = ({scroller, scrollToSection}) => {
 							hover:text-primary hover:border-primary
 							transition-all duration-fast
 							"
-				>
-					CHECK OUT MY EXPERIENCE
-				</button>
+			>
+				CHECK OUT MY EXPERIENCE
+			</button>
 		</section>
 	)
 }

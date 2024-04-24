@@ -17,7 +17,7 @@ const Main = ({ scroller, scrollToSection }) => {
 									sm:text-xs
 											"
 			>
-				2023 - Buenos Aires - Argentina
+				2024 - Buenos Aires - Argentina
 			</header>
 			<div
 				className="flex flex-col items-center
