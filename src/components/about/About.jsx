@@ -35,7 +35,7 @@ const About = ({ scroller, scrollToSection }) => {
 								border-l-2 border-bone
 								"
 				>
-					As a JavaScript specialized programmer , I have experience in architecting robust web solutions, with both server-side and client-side dynamics.
+					As a JavaScript mobile/web specialized programmer , I have experience in architecting robust web solutions, with both server-side and client-side dynamics.
 					<br /><br />
 					My enthusiasm lies in meticulously capturing the essence of web designs and user experience, a hallmark of my prowess as a full-stack web developer.
 					<br /><br />
