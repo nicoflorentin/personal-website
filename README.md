@@ -14,7 +14,7 @@ Este proyecto utiliza tecnologías web modernas para crear un portfolio personal
 - **Contacto**: Formulario de contacto integrado para que visitantes puedan enviar mensajes de manera directa.
 - **Diseño responsivo**: Adaptable a dispositivos móviles y de escritorio, asegurando una experiencia de usuario óptima en cualquier plataforma.
 
-## Estamos en contacto! nicoflorentn@gmail.com
+#### Estamos en contacto! nicoflorentn@gmail.com
 
 
 [Ir a la página](https://porfolio-nicolas-florentin.vercel.app/)
