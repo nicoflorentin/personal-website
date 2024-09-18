@@ -1,5 +1,10 @@
 import React from "react"
 import Slider from "../slider/Slider"
+import icons from "../../assets/icons/Icons"
+import resume from '../../assets/documents/cv.pdf'
+
+console.log(resume)
+
 
 const Main = ({ scroller, scrollToSection }) => {
 
@@ -47,7 +52,7 @@ const Main = ({ scroller, scrollToSection }) => {
 												lg:text-end
 												"
 					>
-					
+
 						<li
 							onClick={() => scrollToSection("projects")}
 							className="hover:text-primary transition-all duration-fast cursor-pointer"
@@ -63,6 +68,14 @@ const Main = ({ scroller, scrollToSection }) => {
 													transition-all duration-fast"
 						>
 							<a href="mailto:nicoflorentn@gmail.com">CONTACT ME</a>
+						</li>
+						<li
+							className="flex justify-end gap-2 items-center
+												text-secondary hover:text-primary
+													transition-all duration-fast"
+						>
+							<icons.DownloadIcon color={'#AE8FDB'} size={20}/>
+							<a href={resume} download={'NicolasFlorentin.pdf'}>CV</a>
 						</li>
 					</ul>
 				</nav>
