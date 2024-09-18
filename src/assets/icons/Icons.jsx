@@ -114,11 +114,29 @@ const DownloadIcon = ({ className, color, size }) => {
 			viewBox="0 0 24 24"
 			strokeWidth={2}
 			stroke={color}
-			>
+		>
 			<path strokeLinecap="round" strokeLinejoin="round" d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
 		</svg>
 
 	)
 }
 
-export default { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon, LinkIcon, DownloadIcon }
+const WorkIcon = ({ color, size }) => {
+	return (<svg
+		fill={color}
+		viewBox="0 0 512 512"
+		id="_x30_1"
+		version="1.1"
+		height={size}
+		width={size}
+		xmlSpace="preserve"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlnsXlink="http://www.w3.org/1999/xlink"
+		transform="rotate(0)"><g id="SVGRepo_bgCarrier"
+			strokeWidth="0"></g><g id="SVGRepo_tracerCarrier"
+				strokeLinecap="round"
+				strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
+			<path d="M452,120h-76C376,53.726,322.274,0,256,0h0c-66.274,0-120,53.726-120,120H60c-33.137,0-60,26.863-60,60v272 c0,33.137,26.863,60,60,60h392c33.137,0,60-26.863,60-60V180C512,146.863,485.137,120,452,120z M256,60c33.137,0,60,26.863,60,60 H196C196,86.863,222.863,60,256,60z M402,260v20c0,16.569-13.431,30-30,30h0c-16.569,0-30-13.431-30-30v-20H170v20 c0,16.569-13.431,30-30,30h0c-16.569,0-30-13.431-30-30v-20c-16.569,0-30-13.431-30-30s13.431-30,30-30h292 c16.569,0,30,13.431,30,30S418.569,260,402,260z"></path></g></svg>)
+}
+
+export default { MailIcon, LinkedinIcon, GitHubIcon, TwitterIcon, LinkIcon, DownloadIcon, WorkIcon }
