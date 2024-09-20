@@ -97,7 +97,7 @@ const Main = ({ scroller, scrollToSection }) => {
 				</div>
 				<div className={`flex justify-center transition-all duration-200 ${hoveredItem ? 'opacity-100' : 'opacity-0'}`}>
 					{/* Muestra el ícono correspondiente según el ítem hovered */}
-					{hoveredItem ? <div className="absolute">{iconMap[hoveredItem].icon}</div> : <div></div>}
+					{/* {hoveredItem ? <div className="absolute">{iconMap[hoveredItem].icon}</div> : <div></div>} */}
 				</div>
 			</div>
 			<div className="text-primary text-center font-inter tracking-[0.9em] font-light">
