@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "../slider/Slider";
 import icons from "../../assets/icons/Icons";
 import resume from '../../assets/documents/cv.pdf';
@@ -6,26 +6,41 @@ import resume from '../../assets/documents/cv.pdf';
 const Main = ({ scroller, scrollToSection }) => {
 	// Estado para guardar el ítem que está siendo hovered
 	const [hoveredItem, setHoveredItem] = useState(null);
+	const [barIsVisible, setBarIsVisible] = useState(false);
+	const intervalRef = useRef(null);
+
+	useEffect(() => {
+		intervalRef.current = setInterval(() => setBarIsVisible(prev => !prev), 2000);
+		return () => clearInterval(intervalRef.current);
+	}, [])
 
 	const IconSize = 180
 
 	// Mapea los íconos según el ítem que se esté hovered
 	const iconMap = {
 		work: {
+			label: 'WORK',
+			colored: false,
 			icon: <icons.WorkIcon size={IconSize} color={'rgb(174 143 219 )'} />,
-			direction: 'down'
+			animationDirection: 'down'
 		},
 		about: {
+			colored: false,
+			label: 'ABOUT',
 			icon: <icons.WorkIcon size={IconSize} color={'rgb(174 143 219 )'} />,
-			direction: 'down'
+			animationDirection: 'down'
 		},
 		contact: {
+			colored: true,
+			label: 'CONTACT',
 			icon: <icons.WorkIcon size={IconSize} color={'rgb(174 143 219 )'} />,
-			direction: 'down'
+			animationDirection: 'down'
 		},
 		cv: {
+			colored: true,
+			label: 'CV',
 			icon: <icons.WorkIcon size={IconSize} color={'rgb(174 143 219 )'} />,
-			direction: 'up'
+			animationDirection: 'up'
 		}
 	};
 
@@ -39,7 +54,7 @@ const Main = ({ scroller, scrollToSection }) => {
 					<div className="text-primary">
 						<h1 className="text-[16px] tracking-wide pl-2 font-inter">NICOLÁS FLORENTÍN</h1>
 						<h2 className="font-rubik text-[53px] leading-[0.95em] tracking-[10px] mb-20 min-[320px]:text-[60px] lg:text-[80px]">
-							FULL <br /> STACK <br /> DEV
+							FULL <br /> STACK <br /> DEV{barIsVisible ? '' : '/'}
 						</h2>
 					</div>
 					<nav className="navbar">
