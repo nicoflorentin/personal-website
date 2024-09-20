@@ -5,7 +5,6 @@ import resume from '../../assets/documents/cv.pdf';
 import CvDownloadItem from "./CvDownloadItem";
 
 const Main = ({ scroller, scrollToSection }) => {
-	// Estado para guardar el ítem que está siendo hovered
 	const [hoveredItem, setHoveredItem] = useState(null);
 	const [barIsVisible, setBarIsVisible] = useState(false);
 	const intervalRef = useRef(null);
@@ -21,7 +20,6 @@ const Main = ({ scroller, scrollToSection }) => {
 
 	const IconSize = 180
 
-	// Mapea los íconos según el ítem que se esté hovered
 	const iconMap = {
 		work: {
 			label: 'WORK',
