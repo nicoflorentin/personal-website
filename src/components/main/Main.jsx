@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Slider from "../slider/Slider";
 import icons from "../../assets/icons/Icons";
 import resume from '../../assets/documents/cv.pdf';
+import CvDownloadItem from "./CvDownloadItem";
 
 const Main = ({ scroller, scrollToSection }) => {
 	// Estado para guardar el ítem que está siendo hovered
@@ -11,7 +12,11 @@ const Main = ({ scroller, scrollToSection }) => {
 
 	useEffect(() => {
 		intervalRef.current = setInterval(() => setBarIsVisible(prev => !prev), 2000);
-		return () => clearInterval(intervalRef.current);
+		return () => {
+			clearInterval(intervalRef.current)
+			intervalRef.current = null
+		}
+
 	}, [])
 
 	const IconSize = 180
@@ -85,9 +90,9 @@ const Main = ({ scroller, scrollToSection }) => {
 							<li
 								onMouseEnter={() => setHoveredItem("cv")}
 								onMouseLeave={() => setHoveredItem(null)}
-								className="text-secondary hover:text-primary transition-all duration-fast"
+								className="text-secondary transition-all duration-fast"
 							>
-								<a href={resume} download={'NicolasFlorentin.pdf'}>CV</a>
+								<CvDownloadItem />
 							</li>
 						</ul>
 					</nav>
