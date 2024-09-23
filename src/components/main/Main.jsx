@@ -78,13 +78,13 @@ const Main = ({ scroller, scrollToSection }) => {
 							>
 								ABOUT
 							</li>
-							<li
+							{/* <li
 								onMouseEnter={() => setHoveredItem("contact")}
 								onMouseLeave={() => setHoveredItem(null)}
 								className="text-secondary hover:text-primary transition-all duration-fast"
 							>
 								<a href="mailto:nicoflorentn@gmail.com">CONTACT ME</a>
-							</li>
+							</li> */}
 							<li
 								onMouseEnter={() => setHoveredItem("cv")}
 								onMouseLeave={() => setHoveredItem(null)}
