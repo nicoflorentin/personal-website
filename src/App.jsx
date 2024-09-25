@@ -1,5 +1,3 @@
-import React from "react"
-import icons from "./assets/icons/Icons.jsx"
 import style from "./App.module.css"
 import { About, Main, Projects } from "./components/index.js"
 

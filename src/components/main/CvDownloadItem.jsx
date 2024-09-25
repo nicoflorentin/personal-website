@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import resume from '../../assets/documents/cv.pdf';
+import resume from '../../assets/documents/Nicolas-Florentin-CV.pdf';
 
 const CvDownloadItem = () => {
 	const [showConfirm, setShowConfirm] = useState(false)
@@ -10,7 +10,7 @@ const CvDownloadItem = () => {
 		setShowConfirm(true)
 		timeOutRef.current = setTimeout(() => {
 			setShowConfirm(false)
-		}, 10000);
+		}, 6000);
 	}
 
 	const closeDownloadConfirmHandler = () => {
@@ -19,7 +19,7 @@ const CvDownloadItem = () => {
 	}
 
 	return (
-		<div>
+		<div className='text-secondary transition-all duration-fast'>
 			{!showConfirm ? <li className='hover:text-primary cursor-pointer' onClick={toggleDownloadVisibility}>RESUME</li> : <li>
 				<span className='hover:text-primary'><a href={resume} download={'NicolasFlorentin.pdf'}>DOWNLOAD RESUME</a><span className='absolute ml-1'>?</span></span>
 				<span className='absolute pl-2 ml-4 hover:text-red-400 hover:scale-[1.1] text-secondary' onClick={closeDownloadConfirmHandler}>✖</span>
