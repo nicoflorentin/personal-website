@@ -1,46 +1,53 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Slider from "../slider/Slider";
 import icons from "../../assets/icons/Icons";
 import CvDownloadItem from "./CvDownloadItem";
 import { MAIN_ICONS_ABOUT, MAIN_ICONS_PROJECTS, MAIN_ICONS_RESUME } from "../../constants/constants";
 import NameLabel from "./NameLabel";
 import Header from "./Header";
+import { useRef } from "react";
 
-const Main = ({ scroller, scrollToSection }) => {
+const Main = ({ scrollToSection }) => {
 	const [hoveredItem, setHoveredItem] = useState(null);
+	const hovereableItem = useRef(true)
+	const [clickedItem, setClickedItem] = useState(null);
 
-	const BIG_ICON_SIZE = 180
-	const LIST_ITEM_ICON_SIZE = 15
+	const LIST_ITEM_ICON_SIZE = 20;
 
 	const navConfig = [
 		{
 			name: MAIN_ICONS_PROJECTS,
-			colored: false,
 			icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
-			animationDirection: 'down',
 			onClick: () => scrollToSection(MAIN_ICONS_PROJECTS),
 			content: 'WORK'
 		},
 		{
 			name: MAIN_ICONS_ABOUT,
-			colored: false,
 			icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
-			animationDirection: 'down',
 			onClick: () => scrollToSection(MAIN_ICONS_ABOUT),
 			content: 'ABOUT'
 		},
 		{
 			name: MAIN_ICONS_RESUME,
-			colored: true,
 			icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
-			animationDirection: 'up',
-			content: <CvDownloadItem />,
 			onClick: () => { },
+			content: <CvDownloadItem />,
 		}
-	]
+	];
 
-	console.log('hovered-item', hoveredItem)
-
+	const handleClick = (item) => {
+		setClickedItem(item.name);
+		hovereableItem.current = false
+		setTimeout(() => {
+			setClickedItem(null)
+			item.onClick()
+		}, 500);
+		setTimeout(() => {
+			setHoveredItem(null)
+			hovereableItem.current = true
+		},1000)
+	};
 
 	return (
 		<section className="h-[100vh] m-auto flex flex-col justify-between max-w-2xl sm:max-w-full">
@@ -50,25 +57,29 @@ const Main = ({ scroller, scrollToSection }) => {
 					<NameLabel />
 					<nav className="navbar">
 						<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] lg:text-end lg:items-end">
-							{navConfig.map((config, index) => (
-
+							{navConfig.map((itemConfig, index) => (
 								<li
-									className="flex transition-all duration-fast cursor-pointer w-fit hover:text-primary"
+									className="flex items-center transition-all duration-fast cursor-pointer w-fit justify-end hover:text-primary"
 									key={index}
-									onMouseEnter={() => setHoveredItem(config.name)}
+									onMouseEnter={() => setHoveredItem(itemConfig.name)}
 									onMouseLeave={() => setHoveredItem(null)}
-									onClick={() => config.onClick()}
+									onClick={() => handleClick(itemConfig)}
 								>
-									{config.content}
-									{/* <config.icon /> */}
+									<span>{itemConfig.content} </span>
+									{hoveredItem === itemConfig.name && (
+										<motion.span
+											className="absolute"
+											initial={{ x: 35, opacity: 0 }}
+											animate={clickedItem === itemConfig.name ? { x: 500, opacity: 0 } : { x: 25, opacity: 1 }}
+											transition={{ duration: 0.3, ease: "easeOut" }}
+										>
+											{itemConfig.icon}
+										</motion.span>
+									)}
 								</li>
-
 							))}
-
-
 						</ul>
 					</nav>
-
 				</div>
 			</div>
 			<div className="text-primary text-center font-inter tracking-[0.9em] font-light">
@@ -76,6 +87,6 @@ const Main = ({ scroller, scrollToSection }) => {
 			</div>
 		</section>
 	);
-}
+};
 
 export default Main;
