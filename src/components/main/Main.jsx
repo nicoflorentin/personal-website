@@ -19,25 +19,25 @@ const Main = ({ scrollToSection }) => {
 	const LIST_ITEM_ICON_SIZE = 20;
 	const SCROLL_DELAY_TIME = 500;
 	const RESET_SCROLL_DELAY_TIME = 1000;
-	const RESET_RESUME_LINK_STATE = 6000
+	const RESET_RESUME_LINK_STATE = 3000
 
 	const navConfig = [
 		{
 			name: MAIN_ICONS_PROJECTS,
 			// icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
-			icon: <BsBriefcaseFill color='rgb(174 143 219 )' size={LIST_ITEM_ICON_SIZE} />,
+			icon: <BsBriefcaseFill color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
 			onClick: () => scrollToSection(MAIN_ICONS_PROJECTS),
 			content: 'WORK'
 		},
 		{
 			name: MAIN_ICONS_ABOUT,
-			icon: <BsFillPersonLinesFill color='rgb(174 143 219 )' size={LIST_ITEM_ICON_SIZE} />,
+			icon: <BsFillPersonLinesFill color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
 			onClick: () => scrollToSection(MAIN_ICONS_ABOUT),
 			content: 'ABOUT'
 		},
 		{
 			name: MAIN_ICONS_RESUME,
-			icon: <ImFolderDownload color='rgb(174 143 219 )' size={LIST_ITEM_ICON_SIZE} />,
+			icon: <ImFolderDownload color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
 			onClick: () => { },
 			content: <CvDownloadItem resetTime={RESET_RESUME_LINK_STATE} />,
 		}
@@ -91,7 +91,8 @@ const Main = ({ scrollToSection }) => {
 											transition={{ duration: 0.3, ease: "easeOut" }}
 										>
 											{/* non animated icons doesnt render during animation period */}
-											{clickedItem ? clickedItem === itemConfig.name ? itemConfig.icon : null : itemConfig.icon}
+											{/* {clickedItem ? clickedItem === itemConfig.name ? itemConfig.icon : null : itemConfig.icon} */}
+											{clickedItem === itemConfig.name ? itemConfig.icon : itemConfig.icon}
 										</motion.span>
 									)}
 								</li>
