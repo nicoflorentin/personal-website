@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "../slider/Slider";
-import icons from "../../assets/icons/Icons";
 import CvDownloadItem from "./CvDownloadItem";
 import { MAIN_ICONS_ABOUT, MAIN_ICONS_PROJECTS, MAIN_ICONS_RESUME } from "../../constants/constants";
 import NameLabel from "./NameLabel";
 import Header from "./Header";
 import { BsBriefcaseFill, BsFillPersonLinesFill } from "react-icons/bs";
 import { ImFolderDownload } from "react-icons/im";
+import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE } from "../../constants/constants";
 
 
 
@@ -16,10 +16,7 @@ const Main = ({ scrollToSection }) => {
 	const [hoveredItem, setHoveredItem] = useState(null);
 	const [clickedItem, setClickedItem] = useState(null);
 
-	const LIST_ITEM_ICON_SIZE = 20;
-	const SCROLL_DELAY_TIME = 500;
-	const RESET_SCROLL_DELAY_TIME = 1000;
-	const RESET_RESUME_LINK_STATE = 3000
+
 
 	const navConfig = [
 		{
@@ -92,7 +89,7 @@ const Main = ({ scrollToSection }) => {
 										>
 											{/* non animated icons doesnt render during animation period */}
 											{/* {clickedItem ? clickedItem === itemConfig.name ? itemConfig.icon : null : itemConfig.icon} */}
-											{clickedItem === itemConfig.name ? itemConfig.icon : itemConfig.icon}
+											{itemConfig.icon}
 										</motion.span>
 									)}
 								</li>

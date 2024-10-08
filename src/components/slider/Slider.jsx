@@ -2,7 +2,19 @@ import React from "react"
 import style from "./Slider.module.css"
 
 export const Slider = () => {
-	const WORDS = ["Solve", "Design", "Develop", "Code", "Create", "Work", "Think", "Share", "Optimize"]
+	// const WORDS = ["Solve", "Design", "Develop", "Code", "Create", "Work", "Think", "Share", "Optimize"]
+	const WORDS = [
+		"Solve",
+		"Design",
+		"Code",
+		"Create",
+		"Transform",
+		"Work",
+		"Share",
+		"Innovate",
+		"Explore",
+		"Enhance"
+	];
 
 	const MapWordsComponent = () => {
 		return WORDS.map(word => <div key={word} className={style.slide}><p className="uppercase">{word}</p></div>)
