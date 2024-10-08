@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import resume from '../../assets/documents/Nicolas-Florentin-CV.pdf';
 
-const CvDownloadItem = () => {
+const CvDownloadItem = ({ resetTime }) => {
 	const [showConfirm, setShowConfirm] = useState(false)
 
 	const timeOutRef = useRef(null)
@@ -10,7 +10,7 @@ const CvDownloadItem = () => {
 		setShowConfirm(true)
 		timeOutRef.current = setTimeout(() => {
 			setShowConfirm(false)
-		}, 6000);
+		}, resetTime);
 	}
 
 	const closeDownloadConfirmHandler = () => {
@@ -24,7 +24,6 @@ const CvDownloadItem = () => {
 				<span className='hover:text-primary'><a href={resume} download={'NicolasFlorentin.pdf'}>DOWNLOAD RESUME</a><span className='absolute ml-1'>?</span></span>
 				<span className='absolute pl-2 ml-4 hover:text-red-400 hover:scale-[1.1] text-secondary' onClick={closeDownloadConfirmHandler}>✖</span>
 			</li>}
-
 		</div>
 	)
 }

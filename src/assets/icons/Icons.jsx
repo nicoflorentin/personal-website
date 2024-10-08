@@ -103,7 +103,7 @@ const LinkIcon = ({ color, size }) => {
 	)
 }
 
-const DownloadIcon = ({ className, color, size }) => {
+const DownloadIcon = ({ color, size }) => {
 	return (
 
 		<svg

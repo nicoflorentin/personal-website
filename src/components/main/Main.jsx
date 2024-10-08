@@ -6,43 +6,60 @@ import CvDownloadItem from "./CvDownloadItem";
 import { MAIN_ICONS_ABOUT, MAIN_ICONS_PROJECTS, MAIN_ICONS_RESUME } from "../../constants/constants";
 import NameLabel from "./NameLabel";
 import Header from "./Header";
+import { BsBriefcaseFill, BsFillPersonLinesFill } from "react-icons/bs";
+import { ImFolderDownload } from "react-icons/im";
+
+
+
 
 const Main = ({ scrollToSection }) => {
 	const [hoveredItem, setHoveredItem] = useState(null);
 	const [clickedItem, setClickedItem] = useState(null);
 
 	const LIST_ITEM_ICON_SIZE = 20;
+	const SCROLL_DELAY_TIME = 500;
+	const RESET_SCROLL_DELAY_TIME = 1000;
+	const RESET_RESUME_LINK_STATE = 6000
 
 	const navConfig = [
 		{
 			name: MAIN_ICONS_PROJECTS,
-			icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
+			// icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
+			icon: <BsBriefcaseFill color='rgb(174 143 219 )' size={LIST_ITEM_ICON_SIZE} />,
 			onClick: () => scrollToSection(MAIN_ICONS_PROJECTS),
 			content: 'WORK'
 		},
 		{
 			name: MAIN_ICONS_ABOUT,
-			icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
+			icon: <BsFillPersonLinesFill color='rgb(174 143 219 )' size={LIST_ITEM_ICON_SIZE} />,
 			onClick: () => scrollToSection(MAIN_ICONS_ABOUT),
 			content: 'ABOUT'
 		},
 		{
 			name: MAIN_ICONS_RESUME,
-			icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
+			icon: <ImFolderDownload color='rgb(174 143 219 )' size={LIST_ITEM_ICON_SIZE} />,
 			onClick: () => { },
-			content: <CvDownloadItem />,
+			content: <CvDownloadItem resetTime={RESET_RESUME_LINK_STATE} />,
 		}
 	];
 
 	const handleClick = (item) => {
-		setClickedItem(item.name);
-		setTimeout(() => {
-			item.onClick()
-		}, 500);
-		setTimeout(() => {
-			setClickedItem(null)
-			setHoveredItem(null)
-		}, 1000)
+
+		if (item.name === MAIN_ICONS_RESUME) {
+			setClickedItem(item.name);
+			setTimeout(() => {
+				setClickedItem(null);
+			}, RESET_RESUME_LINK_STATE);
+		} else {
+			setClickedItem(item.name);
+			setTimeout(() => {
+				item.onClick()
+			}, SCROLL_DELAY_TIME);
+			setTimeout(() => {
+				setClickedItem(null)
+			}, RESET_SCROLL_DELAY_TIME);
+
+		}
 	};
 
 	const handleHover = (itemName) => {
@@ -73,6 +90,7 @@ const Main = ({ scrollToSection }) => {
 											animate={clickedItem === itemConfig.name ? { x: 100, opacity: 0 } : { x: 30, opacity: 1 }}
 											transition={{ duration: 0.3, ease: "easeOut" }}
 										>
+											{/* non animated icons doesnt render during animation period */}
 											{clickedItem ? clickedItem === itemConfig.name ? itemConfig.icon : null : itemConfig.icon}
 										</motion.span>
 									)}
