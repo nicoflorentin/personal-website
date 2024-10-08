@@ -8,6 +8,7 @@ import Header from "./Header";
 import { BsBriefcaseFill, BsFillPersonLinesFill } from "react-icons/bs";
 import { ImFolderDownload } from "react-icons/im";
 import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE } from "../../constants/constants";
+import { useMedia } from "use-media";
 
 
 
@@ -15,8 +16,7 @@ import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_
 const Main = ({ scrollToSection }) => {
 	const [hoveredItem, setHoveredItem] = useState(null);
 	const [clickedItem, setClickedItem] = useState(null);
-
-
+	const isDesktop = useMedia({ minWidth: '1024px' });
 
 	const navConfig = [
 		{
@@ -51,7 +51,7 @@ const Main = ({ scrollToSection }) => {
 			setClickedItem(item.name);
 			setTimeout(() => {
 				item.onClick()
-			}, SCROLL_DELAY_TIME);
+			}, SCROLL_DELAY_TIME + !isDesktop && 500);
 			setTimeout(() => {
 				setClickedItem(null)
 			}, RESET_SCROLL_DELAY_TIME);
@@ -80,15 +80,24 @@ const Main = ({ scrollToSection }) => {
 									onClick={() => handleClick(itemConfig)}
 								>
 									<span>{itemConfig.content}</span>
-									{hoveredItem === itemConfig.name && (
+									{isDesktop && hoveredItem === itemConfig.name && (
 										<motion.span
-											className="absolute"
+											className="absolute opacity-0 lg:opacity-100"
 											initial={{ x: 35, opacity: 0 }}
 											animate={clickedItem === itemConfig.name ? { x: 100, opacity: 0 } : { x: 30, opacity: 1 }}
-											transition={{ duration: 0.3, ease: "easeOut" }}
+											transition={{ duration: 0.3, ease: 'easeOut' }}
 										>
-											{/* non animated icons doesnt render during animation period */}
-											{/* {clickedItem ? clickedItem === itemConfig.name ? itemConfig.icon : null : itemConfig.icon} */}
+											{itemConfig.icon}
+										</motion.span>
+									)}
+
+									{!isDesktop && clickedItem === itemConfig.name && (
+										<motion.span
+											className="absolute opacity-100 lg:opacity-100"
+											initial={{ x: 35, opacity: 0 }}
+											animate={clickedItem === itemConfig.name ? { x: 100, opacity: 1 } : { x: 30, opacity: 0 }}
+											transition={{ duration: 0.5, ease: 'easeOut' }}
+										>
 											{itemConfig.icon}
 										</motion.span>
 									)}
