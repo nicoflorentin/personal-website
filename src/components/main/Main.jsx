@@ -7,7 +7,7 @@ import NameLabel from "./NameLabel";
 import Header from "./Header";
 import { BsBriefcaseFill, BsFillPersonLinesFill } from "react-icons/bs";
 import { ImFolderDownload } from "react-icons/im";
-import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE } from "../../constants/constants";
+import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE } from "../../constants/constants";
 import { useMedia } from "use-media";
 
 
@@ -21,27 +21,28 @@ const Main = ({ scrollToSection }) => {
 	const navConfig = [
 		{
 			name: MAIN_ICONS_PROJECTS,
-			// icon: <icons.WorkIcon size={LIST_ITEM_ICON_SIZE} color={'rgb(174 143 219 )'} />,
 			icon: <BsBriefcaseFill color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
+			bigIcon: <BsBriefcaseFill color="#93C572" size={LIST_ITEM_BIG_ICON_SIZE} />,
 			onClick: () => scrollToSection(MAIN_ICONS_PROJECTS),
 			content: 'WORK'
 		},
 		{
 			name: MAIN_ICONS_ABOUT,
 			icon: <BsFillPersonLinesFill color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
+			bigIcon: <BsFillPersonLinesFill color="#93C572" size={LIST_ITEM_BIG_ICON_SIZE} />,
 			onClick: () => scrollToSection(MAIN_ICONS_ABOUT),
 			content: 'ABOUT'
 		},
 		{
 			name: MAIN_ICONS_RESUME,
 			icon: <ImFolderDownload color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
+			bigIcon: <ImFolderDownload color="#93C572" size={LIST_ITEM_BIG_ICON_SIZE} />,
 			onClick: () => { },
 			content: <CvDownloadItem resetTime={RESET_RESUME_LINK_STATE} />,
 		}
 	];
 
 	const handleClick = (item) => {
-
 		if (item.name === MAIN_ICONS_RESUME) {
 			setClickedItem(item.name);
 			setTimeout(() => {
@@ -62,6 +63,7 @@ const Main = ({ scrollToSection }) => {
 	const handleHover = (itemName) => {
 		setHoveredItem(itemName)
 	}
+
 
 	return (
 		<section className="h-[100vh] m-auto flex flex-col justify-between max-w-2xl sm:max-w-full">
@@ -107,6 +109,17 @@ const Main = ({ scrollToSection }) => {
 					</nav>
 				</div>
 			</div>
+			{ isDesktop && <div className="flex justify-center">
+
+				<motion.div
+					className="text-bone absolute w-auto m-auto"
+					initial={{ y: 0, opacity: 1 }}
+					animate={clickedItem && { y: 30, opacity: [0 , 1] }}
+					transition={{ duration: 0.5, ease: 'easeOut' }}
+				>
+					{navConfig.find(item => item.name === clickedItem)?.bigIcon}
+				</motion.div>
+			</div>}
 			<div className="text-primary text-center font-inter tracking-[0.9em] font-light">
 				<Slider />
 			</div>
