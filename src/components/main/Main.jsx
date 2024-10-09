@@ -49,13 +49,13 @@ const Main = ({ scrollToSection }) => {
 				setClickedItem(null);
 			}, isDesktop ? RESET_RESUME_LINK_STATE : RESET_SCROLL_DELAY_TIME);
 		} else {
-			setClickedItem(item.name);
-			setTimeout(() => {
-				item.onClick()
-			}, SCROLL_DELAY_TIME + !isDesktop && 500);
-			setTimeout(() => {
-				setClickedItem(null)
-			}, RESET_SCROLL_DELAY_TIME);
+		setClickedItem(item.name);
+		setTimeout(() => {
+			item.onClick()
+		}, SCROLL_DELAY_TIME + !isDesktop && 500);
+		setTimeout(() => {
+			setClickedItem(null)
+		}, RESET_SCROLL_DELAY_TIME);
 
 		}
 	};
@@ -112,9 +112,9 @@ const Main = ({ scrollToSection }) => {
 					<div className="">
 						<motion.div
 							className="absolute w-full bottom-[10%] flex justify-center"
-							initial={{ y: 0, opacity: 1}}
-							animate={clickedItem && { y: -30, opacity: [0, 1] }}
-							transition={{ duration: .8, ease: 'easeOut' }}
+							initial={{ y: 0, opacity: 0 }}
+							animate={clickedItem && { y: -30, opacity: [0, 1, 1, 0] }}
+							transition={{ duration: 1, ease: 'easeOut' }}
 						>
 							{navConfig.find(item => item.name === clickedItem)?.bigIcon}
 						</motion.div>
