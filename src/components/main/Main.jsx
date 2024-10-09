@@ -66,10 +66,10 @@ const Main = ({ scrollToSection }) => {
 
 
 	return (
-		<section className="h-[100vh] m-auto flex flex-col justify-between max-w-2xl sm:max-w-full">
+		<section className="relative h-[100vh] m-auto flex flex-col justify-between max-w-2xl sm:max-w-full">
 			<Header />
-			<div className="">
-				<div className="flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px]">
+			<div className="h-full flex flex-col justify-center ">
+				<div id='nav' className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px] ">
 					<NameLabel />
 					<nav className="navbar">
 						<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden lg:text-end lg:items-end">
@@ -108,19 +108,19 @@ const Main = ({ scrollToSection }) => {
 						</ul>
 					</nav>
 				</div>
+				{isDesktop &&
+					<div className="">
+						<motion.div
+							className="absolute w-full bottom-[10%] flex justify-center"
+							initial={{ y: 0, opacity: 1}}
+							animate={clickedItem && { y: -30, opacity: [0, 1] }}
+							transition={{ duration: .8, ease: 'easeOut' }}
+						>
+							{navConfig.find(item => item.name === clickedItem)?.bigIcon}
+						</motion.div>
+					</div>}
 			</div>
-			{ isDesktop && <div className="flex justify-center">
-
-				<motion.div
-					className="text-bone absolute w-auto m-auto"
-					initial={{ y: 0, opacity: 1 }}
-					animate={clickedItem && { y: 30, opacity: [0 , 1] }}
-					transition={{ duration: 0.5, ease: 'easeOut' }}
-				>
-					{navConfig.find(item => item.name === clickedItem)?.bigIcon}
-				</motion.div>
-			</div>}
-			<div className="text-primary text-center font-inter tracking-[0.9em] font-light">
+			<div className="text-primary text-center font-inter tracking-[0.9em] font-light ">
 				<Slider />
 			</div>
 		</section>
