@@ -46,7 +46,7 @@ const Main = ({ scrollToSection }) => {
 			setClickedItem(item.name);
 			setTimeout(() => {
 				setClickedItem(null);
-			}, RESET_RESUME_LINK_STATE);
+			}, isDesktop ? RESET_RESUME_LINK_STATE : RESET_SCROLL_DELAY_TIME);
 		} else {
 			setClickedItem(item.name);
 			setTimeout(() => {
