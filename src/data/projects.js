@@ -1,5 +1,14 @@
 export const projects = [
 	{
+		id: "rn-pomodoro-day-planner",
+		title: "React Native Pomodoro Day Planner",
+		description:
+			"Organize your day with a focus on productivity using the Pomodoro technique. Plan tasks, track progress, and boost your efficiency with this intuitive mobile app.",
+		image: "https://github.com/user-attachments/assets/c1611870-7fe7-4996-9bd3-20d090751c43",
+		githubURL: "https://github.com/nicoflorentin/RN-pomodoro-day-planner",
+		deployURL: "",
+	},
+	{
 		id: "automenu",
 		title: "AutoMenu",
 		description:
@@ -9,13 +18,12 @@ export const projects = [
 		deployURL: "https://auto-menu-app.vercel.app/",
 	},
 	{
-		id: "rn-pomodoro-day-planner",
-		title: "React Native Pomodoro Day Planner",
-		description:
-			"Organize your day with a focus on productivity using the Pomodoro technique. Plan tasks, track progress, and boost your efficiency with this intuitive mobile app.",
-		image: "https://github.com/user-attachments/assets/c1611870-7fe7-4996-9bd3-20d090751c43",
-		githubURL: "https://github.com/nicoflorentin/RN-pomodoro-day-planner",
-		deployURL: "",
+		id: "nature",
+		title: "NatureXtreme",
+		description: "Ecommerce with full CRUD functionality, login and a complete dashboard view",
+		image: "https://github.com/nicoflorentin/portfolio/assets/81888574/eb497ade-2788-4c2a-b738-1f26ae5d16fc",
+		githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
+		deployURL: "https://naturaleza-xtreme.vercel.app/",
 	},
 	{
 		id: "tokio",
@@ -34,14 +42,6 @@ export const projects = [
 	//   githubURL: "https://github.com/nicoflorentin/rick_and_morty",
 	//   deployURL: "https://rymviewer.netlify.app"
 	// },
-	{
-		id: "nature",
-		title: "NatureXtreme",
-		description: "Ecommerce with full CRUD functionality, login and a complete dashboard view",
-		image: "https://github.com/nicoflorentin/portfolio/assets/81888574/eb497ade-2788-4c2a-b738-1f26ae5d16fc",
-		githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
-		deployURL: "https://naturaleza-xtreme.vercel.app/",
-	},
 	// {
 	//   id: "matrix",
 	//   title: "Matrix Navigator",
