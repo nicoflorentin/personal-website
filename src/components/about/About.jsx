@@ -1,6 +1,3 @@
-import React from "react"
-import profileImage from "../../assets/images/profile.jpg"
-
 const About = ({ scroller, scrollToSection }) => {
 	return (
 		<section
@@ -35,11 +32,10 @@ const About = ({ scroller, scrollToSection }) => {
 								border-l-2 border-bone
 								"
 				>
-					As a JavaScript mobile/web specialized programmer , I have experience in architecting robust web solutions, with both server-side and client-side dynamics.
-					<br /><br />
-					My enthusiasm lies in meticulously capturing the essence of web designs and user experience, a hallmark of my prowess as a full-stack web developer.
-					<br /><br />
-					Dedicated to crafting digital experiences that make an impact on businesses and connect with people.
+					I'm a full-stack developer with a strong focus on JavaScript, specializing in building dynamic mobile and web applications. With expertise in <span className="hover:scale-125 text-lg font-medium">React, React Native, Node.js, PostgreSQL, TailwindCSS</span>.<br /><br />
+					I'm also passionate about design. I use tools like <span className="text-lg font-medium">Photoshop, Figma,</span> and <span className="text-lg font-medium">GIMP</span> to transform user-centric concepts into seamless, intuitive digital experiences.
+
+					<br /><br />Whether developing responsive user interfaces, optimizing server-side functionality, or working within a Linux environment, I'm dedicated to crafting high-quality solutions that not only meet business needs but also engage and delight users.
 				</p><span></span>
 			</div>
 			<button
