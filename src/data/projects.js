@@ -1,4 +1,15 @@
+import gpsApp from "../assets/images/gps.webp"
+
 export const projects = [
+	{
+		id: "gps-tracker",
+		title: "GPS Tracker",
+		description:
+			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service",
+		image: gpsApp,
+		githubURL: "",
+		deployURL: "",
+	},
 	{
 		id: "rn-pomodoro-day-planner",
 		title: "Android/IOS Pomodoro App",
@@ -17,14 +28,14 @@ export const projects = [
 		githubURL: "https://github.com/nicoflorentin/auto-menu",
 		deployURL: "https://auto-menu-app.vercel.app/",
 	},
-	{
-		id: "nature",
-		title: "NatureXtreme",
-		description: "Ecommerce with full CRUD functionality, login and a complete dashboard view",
-		image: "https://github.com/nicoflorentin/portfolio/assets/81888574/eb497ade-2788-4c2a-b738-1f26ae5d16fc",
-		githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
-		deployURL: "https://naturaleza-xtreme.vercel.app/",
-	},
+	// {
+	// 	id: "nature",
+	// 	title: "NatureXtreme",
+	// 	description: "Ecommerce with full CRUD functionality, login and a complete dashboard view",
+	// 	image: "https://github.com/nicoflorentin/portfolio/assets/81888574/eb497ade-2788-4c2a-b738-1f26ae5d16fc",
+	// 	githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
+	// 	deployURL: "https://naturaleza-xtreme.vercel.app/",
+	// },
 	{
 		id: "tokio",
 		title: "Tokio Blues Dialog Simulator",

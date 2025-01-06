@@ -11,9 +11,9 @@ const Project = ({ title, description, image, githubURL, deployURL }) => {
 				<img src={image} alt="projectImage" className="object-cover w-full h-full border-l-2 pl-1 border-secondary rounded-sm md:rounded-none md:order-1" />
 			</div>
 			<div className="flex md:flex-col justify-center items-center gap-6 mt-1 font-semibold md:order-2">
-				<a href={githubURL} className="text-secondary text-sm px-3 border-l-2 border-secondary hover:text-primary hover:border-primary transition-all duration-fast">
+				{githubURL && <a href={githubURL} className="text-secondary text-sm px-3 border-l-2 border-secondary hover:text-primary hover:border-primary transition-all duration-fast">
 					REPO
-				</a>
+				</a>}
 				{deployURL && <a href={deployURL} className="text-secondary text-sm px-3 border-l-2 border-secondary hover:text-primary hover:border-primary transition-all duration-fast">
 					VISIT
 				</a>}
