@@ -1,11 +1,31 @@
 import gpsApp from "../assets/images/gps.webp"
+import auadImage from "../assets/images/auad.png"
 
 export const projects = [
+	{
+		id: "astro-landing",
+		title: "Astro Landing",
+		description:
+			"Modern and professional landing page for a law firm built with Astro. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
+
+		image: auadImage,
+		githubURL: "",
+		deployURL: "https://auad-landing-page.vercel.app/",
+	},
+	{
+		id: "automenu",
+		title: "AutoMenu",
+		description:
+			"Instantly generate modern design menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level.",
+		image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
+		githubURL: "https://github.com/nicoflorentin/auto-menu",
+		deployURL: "https://auto-menu-app.vercel.app/",
+	},
 	{
 		id: "gps-tracker",
 		title: "GPS Tracker",
 		description:
-			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service",
+			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
 		image: gpsApp,
 		githubURL: "",
 		deployURL: "",
@@ -19,15 +39,7 @@ export const projects = [
 		githubURL: "https://github.com/nicoflorentin/RN-pomodoro-day-planner",
 		deployURL: "",
 	},
-	{
-		id: "automenu",
-		title: "AutoMenu",
-		description:
-			"Instantly generate modern design menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level",
-		image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
-		githubURL: "https://github.com/nicoflorentin/auto-menu",
-		deployURL: "https://auto-menu-app.vercel.app/",
-	},
+
 	// {
 	// 	id: "nature",
 	// 	title: "NatureXtreme",
