@@ -22,8 +22,23 @@
   overflow: hidden;
   position: relative;
   width: 960px;
+
+    -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
-.slider::before, .slider::after {
+/* .slider::before, .slider::after {
   background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0) 100%);
   content: "";
   height: 100px;
@@ -39,7 +54,7 @@
 .slider::before {
   left: 0;
   top: 0;
-}
+} */
 .slider .slideTrack {
   -webkit-animation: scroll 40s linear infinite;
           animation: scroll 40s linear infinite;
