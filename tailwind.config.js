@@ -12,7 +12,8 @@ export default {
 			fontFamily: {
 				rubik: ["rubik-mono-one", "sans-serif"],
 				consolas: ["consolas", "sans-serif"],
-				inter: ['inter', 'sans-serif']
+				inter: ['inter', 'sans-serif'],
+				impact: ['impact', 'sans-serif']
 			},
 			transitionDuration: {
 				fast: '200ms',

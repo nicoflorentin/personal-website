@@ -19,6 +19,11 @@
 	src: url("/src/assets/fonts/Inter-VariableFont_slnt,wght.ttf");
 }
 
+@font-face {
+	font-family: "impact";
+	src: url("/src/assets/fonts/impact.woff");
+}
+
 /* width */
 ::-webkit-scrollbar {
 	width: 3px;
