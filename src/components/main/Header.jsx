@@ -1,7 +1,10 @@
 const Header = () => {
+
+	const year = new Date().getFullYear()
+
 	return (
 		<header className="pt-2 text-[8px] text-center font-inter font-light text-primary tracking-[2px] sm:text-xs">
-			2024 - Buenos Aires - Argentina
+			{year} - Buenos Aires - Argentina
 		</header>
 	)
 }

@@ -14,9 +14,8 @@ function App() {
 	return (
 		<div className={style.paperOverlay}>
 			<div
-				className="font-consolas z-10 opacity-[0.70] select-none
+				className="font-consolas z-10¿ opacity-[0.80] select-none
 											bg-[#000000]
-											
 											"
 			>
 				<div
