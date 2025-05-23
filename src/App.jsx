@@ -24,12 +24,12 @@ function App() {
 											"
 				>
 					<Main scroller={scroller} scrollToSection={scrollToSection} />
-					<Element name="about">
+					{/* <Element name="about">
 						<About scroller={scroller} scrollToSection={scrollToSection} />
 					</Element>
 					<Element name="projects">
 						<Projects />
-					</Element>
+					</Element> */}
 				</div>
 			</div>
 		</div>
