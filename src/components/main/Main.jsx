@@ -10,12 +10,10 @@ import { ImFolderDownload } from "react-icons/im";
 import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE } from "../../constants/constants";
 import { useMedia } from "use-media";
 
-
-
-
 const Main = ({ scrollToSection }) => {
 	const [hoveredItem, setHoveredItem] = useState(null);
 	const [clickedItem, setClickedItem] = useState(null);
+	const [isTransitioning, setIsTransitioning] = useState(false);
 	const isDesktop = useMedia({ minWidth: '1024px' });
 
 	const navConfig = [
@@ -49,14 +47,15 @@ const Main = ({ scrollToSection }) => {
 				setClickedItem(null);
 			}, isDesktop ? RESET_RESUME_LINK_STATE : RESET_SCROLL_DELAY_TIME);
 		} else {
-		setClickedItem(item.name);
-		setTimeout(() => {
-			item.onClick()
-		}, SCROLL_DELAY_TIME + !isDesktop && 500);
-		setTimeout(() => {
-			setClickedItem(null)
-		}, RESET_SCROLL_DELAY_TIME);
-
+			setClickedItem(item.name);
+			setIsTransitioning(true);
+			setTimeout(() => {
+				item.onClick();
+			}, SCROLL_DELAY_TIME + !isDesktop && 500);
+			setTimeout(() => {
+				setClickedItem(null);
+				setIsTransitioning(false);
+			}, RESET_SCROLL_DELAY_TIME);
 		}
 	};
 
@@ -64,14 +63,22 @@ const Main = ({ scrollToSection }) => {
 		setHoveredItem(itemName)
 	}
 
-
 	return (
 		<section className="relative h-[100vh] m-auto flex flex-col justify-between max-w-2xl sm:max-w-full">
 			<Header />
-			<div className="h-full flex flex-col justify-center ">
-				<div id='nav' className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px] ">
-					<NameLabel />
-					<nav className="navbar">
+			<div className="h-full flex flex-col justify-center">
+				<div id='nav' className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px]">
+					<motion.div
+						animate={isTransitioning ? { x: "-100%", opacity: 0 } : { x: 0, opacity: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+					>
+						<NameLabel />
+					</motion.div>
+					<motion.nav
+						className="navbar"
+						animate={isTransitioning ? { x: "100%", opacity: 0 } : { x: 0, opacity: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+					>
 						<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden lg:text-end lg:items-end">
 							{navConfig.map((itemConfig, index) => (
 								<li
@@ -106,7 +113,7 @@ const Main = ({ scrollToSection }) => {
 								</li>
 							))}
 						</ul>
-					</nav>
+					</motion.nav>
 				</div>
 				{isDesktop &&
 					<div className="">
@@ -120,7 +127,7 @@ const Main = ({ scrollToSection }) => {
 						</motion.div>
 					</div>}
 			</div>
-			<div className="text-primary text-center font-inter tracking-[0.9em] font-light ">
+			<div className="text-primary text-center font-inter tracking-[0.9em] font-light">
 				<Slider />
 			</div>
 		</section>
