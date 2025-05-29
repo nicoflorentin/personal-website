@@ -1,22 +1,23 @@
+import { SectionTitle, Nav } from "../index";
+
 const Window = ({ children }) => {
 	return (
-		<div className="flex h-screen max-w-7xl debug w-full mx-auto">
-			{/* Sidebar derecha */}
-			<div className="flex flex-col w-56 bg-gray-900 text-white justify-between">
-				<div>
-					<div className="p-4 text-xl font-bold border-b border-gray-700">
-						Título
-					</div>
+		<div className="flex gap-10 h-screen w-full debug mx-auto">
+			{/* Sidebar */}
+			<div className="flex flex-col flex-grow bg-gray-950 bg-opacity-30 text-white justify-between">
+				<div className="w-[225px] ml-auto debug">
+					<SectionTitle label='About' />
+					<Nav />
 					{/* Puedes agregar más contenido aquí si lo deseas */}
 				</div>
-				<footer className="p-4 border-t border-gray-700 text-sm text-gray-400">
+				<footer className="p-4 border-t border-gray-800 text-sm text-gray-400">
 					Footer simple
 				</footer>
 			</div>
 			{/* Contenido principal (más grande) */}
-			<div className="flex-1 flex flex-col bg-gray-800 min-w-0">
+			<div className="flex flex-col w-[930px]">
 				{/* Barra superior */}
-				<div className="h-12 bg-gray-700 flex items-center px-4 text-white font-semibold border-b border-gray-600">
+				<div className="bg-gray-700\ flex items-center justify-end border-t-2 text-white font-semibold">
 					Barra superior
 				</div>
 				{/* Children debajo de la barra superior */}
