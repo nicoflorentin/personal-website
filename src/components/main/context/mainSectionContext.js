@@ -1,15 +1,34 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState } from "react";
 
-export const MainSectionContext = createContext()
+const MainSectionContext = createContext();
 
-export const MainSectionProvider = ({ children }) => {
-	const [clickedMainSectionIcon, setClickedMainSectionIcon] = useState(null)
+export const useMainSection = () => useContext(MainSectionContext);
 
-	return (
-		<MainSectionContext.Provider value={{ clickedMainSectionIcon, setClickedMainSectionIcon }}>
-			{children}
-		</MainSectionContext.Provider>
-	)
-}
+export const MainSectionProvider = ({ children, scrollToSection, navConfig, isDesktop }) => {
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [clickedItem, setClickedItem] = useState(null);
 
-export const useMainSectionContext = () => useContext(MainSectionContext)
+  const handleHover = (itemName) => setHoveredItem(itemName);
+
+  const handleClick = (item) => {
+    // ...tu lógica de click aquí, puedes recibir scrollToSection, isDesktop, etc.
+  };
+
+  return (
+    <MainSectionContext.Provider
+      value={{
+        hoveredItem,
+        setHoveredItem,
+        clickedItem,
+        setClickedItem,
+        handleHover,
+        handleClick,
+        navConfig,
+        isDesktop,
+        scrollToSection,
+      }}
+    >
+      {children}
+    </MainSectionContext.Provider>
+  );
+};

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "../slider/Slider";
+import { NavItem } from '../ui'
 import CvDownloadItem from "./CvDownloadItem";
 import { MAIN_ICONS_ABOUT, MAIN_ICONS_PROJECTS, MAIN_ICONS_RESUME } from "../../constants/constants";
 import NameLabel from "./NameLabel";
@@ -49,13 +50,13 @@ const Main = ({ scrollToSection }) => {
 				setClickedItem(null);
 			}, isDesktop ? RESET_RESUME_LINK_STATE : RESET_SCROLL_DELAY_TIME);
 		} else {
-		setClickedItem(item.name);
-		setTimeout(() => {
-			item.onClick()
-		}, SCROLL_DELAY_TIME + !isDesktop && 500);
-		setTimeout(() => {
-			setClickedItem(null)
-		}, RESET_SCROLL_DELAY_TIME);
+			setClickedItem(item.name);
+			setTimeout(() => {
+				item.onClick()
+			}, SCROLL_DELAY_TIME + !isDesktop && 500);
+			setTimeout(() => {
+				setClickedItem(null)
+			}, RESET_SCROLL_DELAY_TIME);
 
 		}
 	};
@@ -74,14 +75,13 @@ const Main = ({ scrollToSection }) => {
 					<nav className="navbar">
 						<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden lg:text-end lg:items-end">
 							{navConfig.map((itemConfig, index) => (
-								<li
-									className="flex items-center transition-all duration-fast cursor-pointer w-fit justify-end hover:text-primary"
+								<NavItem
+									label={itemConfig.content}
 									key={index}
 									onMouseEnter={() => handleHover(itemConfig.name)}
 									onMouseLeave={() => setHoveredItem(null)}
-									onClick={() => handleClick(itemConfig)}
-								>
-									<span>{itemConfig.content}</span>
+									onClick={() => handleClick(itemConfig)}>
+
 									{isDesktop && hoveredItem === itemConfig.name && (
 										<motion.span
 											className="absolute opacity-0 lg:opacity-100"
@@ -103,7 +103,7 @@ const Main = ({ scrollToSection }) => {
 											{itemConfig.icon}
 										</motion.span>
 									)}
-								</li>
+								</NavItem>
 							))}
 						</ul>
 					</nav>

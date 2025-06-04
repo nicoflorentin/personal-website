@@ -1,6 +1,6 @@
 import { SectionTitle, Nav, PageControl, SocialMediaVertical } from "../ui/index";
 
-const Window = ({ children }) => {
+const Window = ({ children, subtitle = 'Subtitle' }) => {
     return (
         <div className="flex gap-10 h-screen w-full mx-auto">
             {/* Sidebar */}
@@ -23,8 +23,10 @@ const Window = ({ children }) => {
                     <PageControl />
                 </div>
                 {/* Barra superior */}
-                <div className="flex items-center justify-end border-t-2 border-gray-900 text-white font-semibold">
-                    Barra superior
+                <div className="flex items-center justify-end border-t-2 border-gray-900 ">
+                    <p className="mt-2 tracking-wider text-2xl text-gray-500 font-semibold uppercase">
+                        {subtitle}
+                    </p>
                 </div>
                 {/* Children debajo de la barra superior */}
                 <div className="flex-1 p-4 overflow-auto">
