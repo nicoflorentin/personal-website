@@ -7,7 +7,6 @@ const About = ({ scroller, scrollToSection }) => {
 						h-[100vh] m-auto
 						py-10
 						w-full
-						debug
 						"
 		>
 			<Window />
