@@ -1,3 +1,4 @@
+// import { AboutSection } from './index'
 import { Window } from '../index'
 
 const About = () => {
@@ -10,7 +11,7 @@ const About = () => {
 						"
 		>
 			<Window>
-				{/* Aquí puedes renderizar el contenido de AboutSection si es necesario */}
+				{/* <AboutSection></AboutSection> */}
 			</Window>
 		</section>
 	)
