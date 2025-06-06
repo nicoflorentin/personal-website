@@ -2,7 +2,7 @@ import { SectionTitle, Nav, PageControl, SocialMediaVertical } from "../ui/index
 
 const Window = ({ children, subtitle = 'Subtitle' }) => {
     return (
-        <div className="flex gap-10 h-screen w-full mx-auto">
+        <div className="flex gap-10 h-full w-full mx-auto">
             {/* Sidebar */}
             <div className="flex flex-col flex-grow bg-gray-950 bg-opacity-30 text-white justify-between">
                 <div className="w-[225px] ml-auto">
