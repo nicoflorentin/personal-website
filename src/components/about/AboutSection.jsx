@@ -1,6 +1,7 @@
+// import { AboutSection } from './index'
 import { Window } from '../index'
 
-const About = ({ scroller, scrollToSection }) => {
+const About = () => {
 	return (
 		<section
 			className="flex flex-col justify-around items-center

@@ -1,5 +1,5 @@
 import style from "./App.module.css"
-import { About, Main, Projects } from "./components/index.js"
+import { AboutSection, Main, Projects } from "./components/index"
 
 import { Element, scroller } from "react-scroll"
 
@@ -25,7 +25,7 @@ function App() {
 				>
 					<Main scroller={scroller} scrollToSection={scrollToSection} />
 					<Element name="about">
-						<About scroller={scroller} scrollToSection={scrollToSection} />
+						<AboutSection scroller={scroller} scrollToSection={scrollToSection} />
 					</Element>
 					<Element name="projects">
 						<Projects />
