@@ -1,13 +1,15 @@
 import { SectionTitle, Nav, PageControl, SocialMediaVertical } from "../ui/index";
 
-const Window = ({ children, subtitle = 'Subtitle' }) => {
+const Window = ({ children, title, subtitle = 'Subtitle' }) => {
     return (
-        <div className="flex gap-10 h-screen w-full mx-auto">
-            {/* Sidebar */}
-            <div className="flex flex-col flex-grow bg-gray-950 bg-opacity-30 text-white justify-between">
-                <div className="w-[225px] ml-auto">
-                    <SectionTitle label='About' />
-                    <Nav />
+        <div className="flex gap-20 h-screen w-full mx-auto font-inter">
+            {/* Asidebar */}
+            <div className="flex flex-col flex-grow text-white justify-between">
+                <div className="font-inter ml-auto">
+                    <SectionTitle label={title} />
+                    <div className="mt-10">
+                        <Nav />
+                    </div>
                 </div>
                 <div className="mt-auto self-end mr-2">
                     <SocialMediaVertical />
@@ -29,9 +31,8 @@ const Window = ({ children, subtitle = 'Subtitle' }) => {
                     </p>
                 </div>
                 {/* Children debajo de la barra superior */}
-                <div className="flex-1 p-4 overflow-auto">
+                <div className="flex-1 text-bone overflow-auto">
                     {children}
-                    <p className="text-white">content</p>
                 </div>
             </div>
         </div>

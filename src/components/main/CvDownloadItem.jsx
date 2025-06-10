@@ -20,8 +20,8 @@ const CvDownloadItem = ({ resetTime }) => {
 
 	return (
 		<div className='text-secondary transition-all duration-fast'>
-			{!showConfirm ? <li className='hover:text-primary cursor-pointer' onClick={toggleDownloadVisibility}>RESUME</li> : <li>
-				<span className='hover:text-primary'><a href={resume} download={'NicolasFlorentin.pdf'}>DOWNLOAD RESUME</a><span className='absolute ml-1'>?</span></span>
+			{!showConfirm ? <li className='hover:text-primary cursor-pointer list-none' onClick={toggleDownloadVisibility}>RESUME</li> : <li className='list-none'>
+				<span className='hover:text-primary'><a className='no-underline' href={resume} download={'NicolasFlorentin.pdf'}>DOWNLOAD RESUME</a><span className='absolute ml-1'>?</span></span>
 			</li>}
 		</div>
 	)

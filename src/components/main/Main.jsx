@@ -73,7 +73,7 @@ const Main = ({ scrollToSection }) => {
 				<div id='nav' className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px] ">
 					<NameLabel />
 					<nav className="navbar">
-						<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden lg:text-end lg:items-end">
+						<ul className="flex flex-col gap-2 w-52 overflow-hidden lg:text-end lg:items-end">
 							{navConfig.map((itemConfig, index) => (
 								<NavItem
 									label={itemConfig.content}
