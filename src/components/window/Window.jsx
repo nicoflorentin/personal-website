@@ -4,7 +4,7 @@ const Window = ({ children, title, subtitle = 'Subtitle' }) => {
     return (
         <div className="flex gap-20 h-screen w-full mx-auto font-inter">
             {/* Asidebar */}
-            <div className="flex flex-col debug flex-grow text-white justify-between">
+            <div className="flex flex-col flex-grow text-white justify-between">
                 <div className="font-inter ml-auto">
                     <SectionTitle label={title} />
                     <div className="mt-10">
@@ -19,7 +19,7 @@ const Window = ({ children, title, subtitle = 'Subtitle' }) => {
                 </footer>
             </div>
             {/* Contenido principal (más grande) */}
-            <div className="flex flex-col debug w-[850px] relative">
+            <div className="flex flex-col w-[850px] relative">
                 {/* Paginado arriba de la barra superior, absoluto y a la derecha */}
                 <div className="absolute top-0 right-0 -translate-y-full z-10">
                     <PageControl />
