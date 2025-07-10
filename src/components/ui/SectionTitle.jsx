@@ -1,6 +1,6 @@
 const SectionTitle = ({label}) => {
 	return (
-		<div className=' text-primary text-5xl uppercase font-bold text-right'>{label}</div>
+		<div className=' text-primary text-6xl uppercase font-bold text-right'>{label}</div>
 	)
 }
 
