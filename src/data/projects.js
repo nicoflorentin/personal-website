@@ -6,7 +6,7 @@ export const projects = [
 		id: "astro-landing",
 		title: "Astro Landing",
 		description:
-			"Modern and professional landing page for a law firm built with Astro. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
+			"Modern and professional landing page for a law firm built with Astro. The project includes production hosting and a custom domain, plus an integrated email service for client contact. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
 
 		image: auadImage,
 		githubURL: "",
