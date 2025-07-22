@@ -19,7 +19,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 
 				)}
 			</div>
-			<div className="h-40 min-w-[150px] max-w-[300px]">
+			<div className="h-40 min-w-[300px] max-w-[500px]">
 				<img src={image} alt="projectImage" className="object-cover w-full h-full border-l-2 pl-1 border-secondary rounded-sm md:rounded-none md:order-1" />
 			</div>
 			<div className="flex md:flex-col justify-center items-center gap-6 mt-1 font-semibold md:order-2">
