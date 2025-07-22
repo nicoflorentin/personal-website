@@ -1,6 +1,6 @@
-const ProjectTag = () => {
+const ProjectTag = ({label}) => {
 	return (
-		<div>ProjectTag</div>
+		<div className="text-secondary">ꞏ {label}</div>
 	)
 }
 
