@@ -51,15 +51,15 @@ export const projects = [
 	// 	githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
 	// 	deployURL: "https://naturaleza-xtreme.vercel.app/",
 	// },
-	{
-		id: "tokio",
-		title: "Tokio Blues Dialog Simulator",
-		description:
-			"A hobby project I enjoyed creating, based on the novel 'Norwegian Wood' (Tokyo Blues) by Haruki Murakami. Interactive dialogues app that allow you to choose different responses and see how they influence the narrative.",
-		image: "https://github.com/nicoflorentin/dialog-simulator/raw/master/dialog-simulator-gif-demo.gif",
-		githubURL: "https://github.com/nicoflorentin/dialog-simulator",
-		deployURL: "https://tokiobluesdialogs.netlify.app/",
-	},
+	// {
+	// 	id: "tokio",
+	// 	title: "Tokio Blues Dialog Simulator",
+	// 	description:
+	// 		"A hobby project I enjoyed creating, based on the novel 'Norwegian Wood' (Tokyo Blues) by Haruki Murakami. Interactive dialogues app that allow you to choose different responses and see how they influence the narrative.",
+	// 	image: "https://github.com/nicoflorentin/dialog-simulator/raw/master/dialog-simulator-gif-demo.gif",
+	// 	githubURL: "https://github.com/nicoflorentin/dialog-simulator",
+	// 	deployURL: "https://tokiobluesdialogs.netlify.app/",
+	// },
 	// {
 	//   id: "rickandmorty",
 	//   title: "RyM Viewer",
