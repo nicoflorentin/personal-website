@@ -1,20 +1,32 @@
 import style from "./App.module.css"
-import { About, Main, Projects } from "./components/index.js"
+import { Main, Portfolio } from "./components/index.js"
 
 import { Element, scroller } from "react-scroll"
 
+import { useState } from "react"
+
 function App() {
+	const [activeTab, setActiveTab] = useState("about")
+
 	const scrollToSection = sectionName => {
-		scroller.scrollTo(sectionName, {
-			duration: 800,
-			smooth: true,
-		})
+		if (sectionName === "about" || sectionName === "projects") {
+			setActiveTab(sectionName)
+			scroller.scrollTo("portfolio", {
+				duration: 800,
+				smooth: true,
+			})
+		} else {
+			scroller.scrollTo(sectionName, {
+				duration: 800,
+				smooth: true,
+			})
+		}
 	}
 
 	return (
 		<div className={style.paperOverlay}>
 			<div
-				className="font-consolas z-10¿ opacity-[0.80] select-none
+				className="font-consolas z-10 opacity-[0.80] select-none
 											bg-[#000000]
 											"
 			>
@@ -24,11 +36,8 @@ function App() {
 											"
 				>
 					<Main scroller={scroller} scrollToSection={scrollToSection} />
-					<Element name="about">
-						<About scroller={scroller} scrollToSection={scrollToSection} />
-					</Element>
-					<Element name="projects">
-						<Projects />
+					<Element name="portfolio">
+						<Portfolio activeTab={activeTab} setActiveTab={setActiveTab} />
 					</Element>
 				</div>
 			</div>

@@ -1,25 +1,12 @@
-import { motion } from "framer-motion";
-
-const About = ({ scroller, scrollToSection }) => {
+const About = () => {
 	return (
-		<motion.section
-			initial={{ opacity: 0, y: 20 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.5, delay: 0.5 }}
-			className="flex flex-col justify-around items-center
+		<div
+			className="flex flex-col justify-center items-center
 						font-consolas
-						h-[100vh] max-w-2xl m-auto
+						h-full max-w-2xl m-auto
 						py-10
 						"
 		>
-			<h2
-				className="text-primary text-3xl font-bold 
-							text-center
-							tracking-wide
-							"
-			>
-				ABOUT ME
-			</h2>
 			<div>
 				<p
 					className="text-bone text-[16px]
@@ -35,20 +22,7 @@ const About = ({ scroller, scrollToSection }) => {
 					<br /><br />Whether developing responsive user interfaces, optimizing server-side functionality, or working within a Linux environment, I'm dedicated to crafting high-quality solutions that not only meet business needs but also engage and delight users.
 				</p>
 			</div>
-			<button
-				onClick={() => { scrollToSection('projects') }}
-				className="text-secondary font-inter text-sm font-bold
-							text-left
-							leading-5 tracking-widest
-							w-44 px-5
-							border-l-2 border-secondary
-							hover:text-primary hover:border-primary
-							transition-all duration-fast
-							"
-			>
-				CHECK OUT MY EXPERIENCE
-			</button>
-		</motion.section>
+		</div>
 	)
 }
 
