@@ -6,11 +6,12 @@ export const projects = [
 		id: "astro-landing",
 		title: "Astro Landing",
 		description:
-			"Modern and professional landing page for a law firm built with Astro. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
+			"Modern and professional landing page for a law firm built with Astro. The project includes production hosting and a custom domain, plus an integrated email service for client contact. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
 
 		image: auadImage,
 		githubURL: "",
 		deployURL: "https://auad-landing-page.vercel.app/",
+		tags: ["Freelance", "Web design", "Figma", "Astro"],
 	},
 	{
 		id: "automenu",
@@ -20,15 +21,17 @@ export const projects = [
 		image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
 		githubURL: "https://github.com/nicoflorentin/auto-menu",
 		deployURL: "https://auto-menu-app.vercel.app/",
+		tags: ["Web design", "Figma", "React", "MongoDB", "NodeJS"],
 	},
 	{
 		id: "gps-tracker",
 		title: "GPS Tracker",
 		description:
-			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
+		"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
 		image: gpsApp,
 		githubURL: "",
 		deployURL: "",
+		tags: ["React Native", "Figma", "MongoDB", "Map box API"],
 	},
 	{
 		id: "rn-pomodoro-day-planner",
@@ -48,15 +51,15 @@ export const projects = [
 	// 	githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
 	// 	deployURL: "https://naturaleza-xtreme.vercel.app/",
 	// },
-	{
-		id: "tokio",
-		title: "Tokio Blues Dialog Simulator",
-		description:
-			"Interactive dialogues app that allow you to choose different responses and see how they influence the narrative. A hobby project I thoroughly enjoyed creating, based on the novel 'Norwegian Wood' (Tokyo Blues) by Haruki Murakami",
-		image: "https://github.com/nicoflorentin/dialog-simulator/raw/master/dialog-simulator-gif-demo.gif",
-		githubURL: "https://github.com/nicoflorentin/dialog-simulator",
-		deployURL: "https://tokiobluesdialogs.netlify.app/",
-	},
+	// {
+	// 	id: "tokio",
+	// 	title: "Tokio Blues Dialog Simulator",
+	// 	description:
+	// 		"A hobby project I enjoyed creating, based on the novel 'Norwegian Wood' (Tokyo Blues) by Haruki Murakami. Interactive dialogues app that allow you to choose different responses and see how they influence the narrative.",
+	// 	image: "https://github.com/nicoflorentin/dialog-simulator/raw/master/dialog-simulator-gif-demo.gif",
+	// 	githubURL: "https://github.com/nicoflorentin/dialog-simulator",
+	// 	deployURL: "https://tokiobluesdialogs.netlify.app/",
+	// },
 	// {
 	//   id: "rickandmorty",
 	//   title: "RyM Viewer",

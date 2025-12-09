@@ -11,9 +11,6 @@ import { ImFolderDownload } from "react-icons/im";
 import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE } from "../../constants/constants";
 import { useMedia } from "use-media";
 
-
-
-
 const Main = ({ scrollToSection }) => {
 	const [hoveredItem, setHoveredItem] = useState(null);
 	const [clickedItem, setClickedItem] = useState(null);
@@ -29,14 +26,14 @@ const Main = ({ scrollToSection }) => {
 		},
 		{
 			name: MAIN_ICONS_ABOUT,
-			icon: <BsFillPersonLinesFill color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
+			icon: <BsFillPersonLinesFill color="#93C572\" size={LIST_ITEM_ICON_SIZE} />,
 			bigIcon: <BsFillPersonLinesFill color="#93C572" size={LIST_ITEM_BIG_ICON_SIZE} />,
 			onClick: () => scrollToSection(MAIN_ICONS_ABOUT),
 			content: 'ABOUT'
 		},
 		{
 			name: MAIN_ICONS_RESUME,
-			icon: <ImFolderDownload color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
+			icon: <ImFolderDownload color="#93C572\" size={LIST_ITEM_ICON_SIZE} />,
 			bigIcon: <ImFolderDownload color="#93C572" size={LIST_ITEM_BIG_ICON_SIZE} />,
 			onClick: () => { },
 			content: <CvDownloadItem resetTime={RESET_RESUME_LINK_STATE} />,

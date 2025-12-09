@@ -46,8 +46,8 @@
 	background: #675581;
 }
 
-* {
-	/* border: 2px solid red; */
+.debug {
+	border: 1px solid red;
 }
 
 .debug {
