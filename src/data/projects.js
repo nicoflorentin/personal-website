@@ -1,5 +1,6 @@
 import gpsApp from "../assets/images/gps.webp"
 import auadImage from "../assets/images/auad.png"
+import noCountryImage from "../assets/images/telemed.jpeg"
 
 export const projects = [
 	{
@@ -12,6 +13,16 @@ export const projects = [
 		githubURL: "",
 		deployURL: "https://auad-landing-page.vercel.app/",
 		tags: ["Freelance", "Web design", "Figma", "Astro"],
+	},
+	{
+		id: "no-country-project",
+		title: "TeleMedicine Scheduler",
+		description:
+			"TeleMedicine Scheduler is a web application that enables patients to book, manage, and attend virtual medical appointments. It features secure video consultations, real-time scheduling, and automated reminders, making healthcare more accessible and efficient for both patients and providers.",
+		image: noCountryImage,
+		githubURL: "https://github.com/nicoflorentin/api-nocountry",
+		deployURL: "",
+		tags: ["Backend", "API", "Database", "SQL"],
 	},
 	{
 		id: "automenu",
@@ -27,7 +38,7 @@ export const projects = [
 		id: "gps-tracker",
 		title: "GPS Tracker",
 		description:
-		"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
+			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
 		image: gpsApp,
 		githubURL: "",
 		deployURL: "",
