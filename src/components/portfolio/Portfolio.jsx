@@ -45,7 +45,7 @@ const Portfolio = ({ activeTab, setActiveTab }) => {
 	const totalPages = activeTab === "about" ? 3 : 2
 
 	return (
-		<section className="min-h-[100vh] h-screen bg-[#111111] m-auto flex flex-col">
+		<section className="min-h-[100vh] h-screen m-auto flex flex-col">
 			<PortfolioLayout
 				activeSection={activeTab}
 				setActiveSection={setActiveTab}

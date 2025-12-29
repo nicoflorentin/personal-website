@@ -25,19 +25,17 @@ const PortfolioLayout = ({
 	return (
 		<div className="flex h-full w-full max-w-[1200px] mx-auto text-bone font-consolas">
 			{/* Sidebar */}
-			<aside className="w-16 md:w-64 flex-shrink-0 flex flex-col justify-between py-10 pl-6 h-full">
+			<aside className="w-16 md:w-64 flex-shrink-0 flex flex-col pt-10 pl-6 h-full overflow-hidden relative">
 
-				{/* Top Sidebar - Title */}
-				<div>
-					<h1 className="text-3xl md:text-5xl font-bold tracking-wider text-green-500/80 mb-12 hidden md:block">
+				{/* Title */}
+				<div className="mb-12">
+					<h1 className="text-3xl md:text-5xl font-bold tracking-wider text-green-500/80 hidden md:block">
 						ABOUT <span className="text-bone">ME</span>
 					</h1>
-
-					{/* Mobile/Tablet minimal title if needed or just hidden */}
 				</div>
 
-				{/* Middle Sidebar - Navigation */}
-				<nav className="flex flex-col items-end pr-8 gap-4 text-xs md:text-sm tracking-widest font-bold">
+				{/* Navigation */}
+				<nav className="flex flex-col items-end pr-8 gap-4 text-xs md:text-sm tracking-widest font-bold mb-12">
 					<button
 						onClick={() => setActiveSection("projects")}
 						className={`hover:text-white transition-colors uppercase ${activeSection === 'projects' ? 'text-white' : 'text-gray-500'}`}
@@ -55,8 +53,8 @@ const PortfolioLayout = ({
 					</a>
 				</nav>
 
-				{/* Bottom Sidebar - Socials */}
-				<div className="flex flex-col gap-4 text-xl md:text-2xl items-end pr-8">
+				{/* Socials */}
+				<div className="flex flex-col gap-4 text-xl md:text-2xl items-end pr-8 mb-12">
 					<a href="https://github.com/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
 						<FaGithub />
 					</a>
@@ -64,8 +62,16 @@ const PortfolioLayout = ({
 						<FaLinkedin />
 					</a>
 					<a href="#" className="hover:text-white transition-colors">
-						<FaTwitter /> {/* Using twitter icon for X as generic placeholder or verify generic 'X' icon availability */}
+						<FaTwitter />
 					</a>
+				</div>
+
+				{/* Footer Text moved to Sidebar */}
+				<div className="pr-8 text-[10px] text-zinc-600 font-inter text-right">
+					<p className="max-w-[150px] ml-auto">
+						This site was made mainly in AstroJS and TailwindCSS by Nicolás Florentin - a developer based in Buenos Aires, Argentina
+					</p>
+					<span className="block mt-2">2025</span>
 				</div>
 			</aside>
 
@@ -73,7 +79,7 @@ const PortfolioLayout = ({
 			<div className="flex-1 flex flex-col h-full border-l border-zinc-800/50">
 
 				{/* Top Bar */}
-				<header className="h-20 flex items-center justify-between px-8 w-full border-b border-zinc-800/50">
+				<header className="h-28 flex flex-col items-end justify-center px-8 w-full border-b border-zinc-800/50 gap-2">
 					{/* Pagination Controls */}
 					<div className="flex items-center gap-4 text-zinc-500">
 						<button
@@ -102,6 +108,9 @@ const PortfolioLayout = ({
 						</button>
 					</div>
 
+					{/* Divider Line */}
+					<div className="w-full max-w-[300px] h-[1px] bg-zinc-800/50"></div>
+
 					{/* Section Subtitle */}
 					<h2 className="text-zinc-500 font-bold tracking-widest uppercase text-sm md:text-base">
 						{activeSection === 'about' ? 'THIS IS SOMETHING ABOUT ME' : 'SELECTED WORKS'}
@@ -112,16 +121,6 @@ const PortfolioLayout = ({
 				<main className="flex-1 p-8 overflow-hidden relative">
 					{children}
 				</main>
-
-				{/* Footer/Copyright area if needed */}
-				<footer className="px-8 py-4 text-[10px] text-zinc-600 font-inter">
-					<div className="flex justify-between items-end">
-						<span>2025</span>
-						<p className="max-w-xs text-right">
-							This site was made mainly in AstroJS and TailwindCSS by Nicolás Florentin - a developer based in Buenos Aires, Argentina
-						</p>
-					</div>
-				</footer>
 			</div>
 		</div>
 	)
