@@ -1,71 +1,62 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import About from "../about/About"
 import Projects from "../projects/Projects"
+import PortfolioLayout from "./PortfolioLayout"
 
 const Portfolio = ({ activeTab, setActiveTab }) => {
+	const [activePage, setActivePage] = useState(1)
+
+	// Reset page when switching sections
+	useEffect(() => {
+		setActivePage(1)
+	}, [activeTab])
+
+	const renderContent = () => {
+		if (activeTab === "about") {
+			return (
+				<motion.div
+					key={`about-${activePage}`}
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: -10 }}
+					transition={{ duration: 0.3 }}
+					className="w-full h-full"
+				>
+					<About page={activePage} />
+				</motion.div>
+			)
+		} else {
+			return (
+				<motion.div
+					key={`projects-${activePage}`}
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: -10 }}
+					transition={{ duration: 0.3 }}
+					className="w-full h-full"
+				>
+					<Projects page={activePage} />
+				</motion.div>
+			)
+		}
+	}
+
+	const totalPages = activeTab === "about" ? 3 : 2
 
 	return (
-		<section
-			className="min-h-[100vh] max-w-2xl m-auto h-screen
-								lg:max-w-[1200px]
-								py-10 flex flex-col
-								"
-		>
-			{/* Top Navigation Bar */}
-			<div className="flex justify-center gap-8 mb-8">
-				<button
-					onClick={() => setActiveTab("about")}
-					className={`text-xl font-bold tracking-widest pb-2 border-b-2 transition-all duration-300
-						${activeTab === "about"
-							? "text-primary border-primary"
-							: "text-bone border-transparent hover:text-white"
-						}
-					`}
-				>
-					ABOUT
-				</button>
-				<button
-					onClick={() => setActiveTab("projects")}
-					className={`text-xl font-bold tracking-widest pb-2 border-b-2 transition-all duration-300
-						${activeTab === "projects"
-							? "text-primary border-primary"
-							: "text-bone border-transparent hover:text-white"
-						}
-					`}
-				>
-					PROJECTS
-				</button>
-			</div>
-
-			{/* Content Area */}
-			<div className="flex-grow relative overflow-hidden">
+		<section className="min-h-[100vh] h-screen bg-[#111111] m-auto flex flex-col">
+			<PortfolioLayout
+				activeSection={activeTab}
+				setActiveSection={setActiveTab}
+				activePage={activePage}
+				onPageChange={setActivePage}
+				totalPages={totalPages}
+			>
 				<AnimatePresence mode="wait">
-					{activeTab === "about" ? (
-						<motion.div
-							key="about"
-							initial={{ opacity: 0, x: -20 }}
-							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: 20 }}
-							transition={{ duration: 0.3 }}
-							className="w-full h-full"
-						>
-							<About />
-						</motion.div>
-					) : (
-						<motion.div
-							key="projects"
-							initial={{ opacity: 0, x: 20 }}
-							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: -20 }}
-							transition={{ duration: 0.3 }}
-							className="w-full h-full"
-						>
-							<Projects />
-						</motion.div>
-					)}
+					{renderContent()}
 				</AnimatePresence>
-			</div>
+			</PortfolioLayout>
 		</section>
 	)
 }
