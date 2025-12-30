@@ -24,7 +24,7 @@ const About = ({ page = 1 }) => {
 					<br /><br />Whether developing responsive user interfaces, optimizing server-side functionality, or working within a Linux environment, I'm dedicated to crafting high-quality solutions that not only meet business needs but also engage and delight users.
 				</p>
 			</div>
-			<ScrollPressureGauge />
+			<ScrollPressureGauge action={() => { alert('Action!') }} />
 		</div>
 	)
 }
