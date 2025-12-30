@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import NavItem from "../ui/NavItem"
 
 const AsideBar = ({ activeSection, setActiveSection }) => {
 	return (
@@ -12,22 +13,22 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 			</div>
 
 			{/* Navigation */}
-			<nav className="flex flex-col items-end gap-4 text-xs md:text-sm tracking-widest font-bold mb-12">
-				<button
+			<nav className="flex flex-col items-end gap-2 font-inter text-sm tracking-[2px] font-[700] mb-12">
+				<NavItem
 					onClick={() => setActiveSection("projects")}
-					className={`hover:text-white transition-colors uppercase ${activeSection === 'projects' ? 'text-white' : 'text-gray-500'}`}
+					className={`${activeSection === 'projects' ? 'text-white' : 'text-gray-500'}`}
 				>
 					Work
-				</button>
-				<button
+				</NavItem>
+				<NavItem
 					onClick={() => setActiveSection("about")}
-					className={`hover:text-white transition-colors uppercase ${activeSection === 'about' ? 'text-white' : 'text-gray-500'}`}
+					className={`${activeSection === 'about' ? 'text-white' : 'text-gray-500'}`}
 				>
 					About
-				</button>
-				<a href="/resume.pdf" target="_blank" className="text-purple-400 hover:text-purple-300 uppercase">
+				</NavItem>
+				<NavItem as="a" href="/resume.pdf" target="_blank" className="text-purple-400">
 					Resume
-				</a>
+				</NavItem>
 			</nav>
 
 			{/* Socials */}

@@ -9,6 +9,7 @@ import { BsBriefcaseFill, BsFillPersonLinesFill } from "react-icons/bs";
 import { ImFolderDownload } from "react-icons/im";
 import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE } from "../../constants/constants";
 import { useMedia } from "use-media";
+import NavItem from "../ui/NavItem";
 
 const Main = ({ scrollToSection }) => {
 	const [hoveredItem, setHoveredItem] = useState(null);
@@ -46,13 +47,13 @@ const Main = ({ scrollToSection }) => {
 				setClickedItem(null);
 			}, isDesktop ? RESET_RESUME_LINK_STATE : RESET_SCROLL_DELAY_TIME);
 		} else {
-		setClickedItem(item.name);
-		setTimeout(() => {
-			item.onClick()
-		}, SCROLL_DELAY_TIME + !isDesktop && 500);
-		setTimeout(() => {
-			setClickedItem(null)
-		}, RESET_SCROLL_DELAY_TIME);
+			setClickedItem(item.name);
+			setTimeout(() => {
+				item.onClick()
+			}, SCROLL_DELAY_TIME + !isDesktop && 500);
+			setTimeout(() => {
+				setClickedItem(null)
+			}, RESET_SCROLL_DELAY_TIME);
 
 		}
 	};
@@ -71,8 +72,7 @@ const Main = ({ scrollToSection }) => {
 					<nav className="navbar">
 						<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden lg:text-end lg:items-end">
 							{navConfig.map((itemConfig, index) => (
-								<li
-									className="flex items-center transition-all duration-fast cursor-pointer w-fit justify-end hover:text-primary"
+								<NavItem
 									key={index}
 									onMouseEnter={() => handleHover(itemConfig.name)}
 									onMouseLeave={() => setHoveredItem(null)}
@@ -100,7 +100,7 @@ const Main = ({ scrollToSection }) => {
 											{itemConfig.icon}
 										</motion.span>
 									)}
-								</li>
+								</NavItem>
 							))}
 						</ul>
 					</nav>
