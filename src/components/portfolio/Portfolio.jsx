@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import PortfolioLayout from "./PortfolioLayout"
-import { SECTION_CONFIG } from "../../config/sectionConfig"
+import { SECTIONS_CONFIG } from "../../config/sectionConfig"
 
 const Portfolio = ({ activeTab, setActiveTab }) => {
 	const [activePage, setActivePage] = useState(1)
@@ -11,7 +11,7 @@ const Portfolio = ({ activeTab, setActiveTab }) => {
 		setActivePage(1)
 	}, [activeTab])
 
-	const currentSection = SECTION_CONFIG.find(section => section.id === activeTab) || SECTION_CONFIG[0]
+	const currentSection = SECTIONS_CONFIG.find(section => section.id === activeTab) || SECTIONS_CONFIG[0]
 	const currentPageConfig = currentSection.pages[activePage - 1]
 	const ActiveComponent = currentPageConfig?.component
 

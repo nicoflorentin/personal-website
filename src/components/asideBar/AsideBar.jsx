@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import NavItem from "../ui/NavItem"
-import { SECTION_CONFIG } from "../../config/sectionConfig"
+import { SECTIONS_CONFIG } from "../../config/sectionConfig"
 
 const AsideBar = ({ activeSection, setActiveSection }) => {
 	return (
@@ -15,7 +15,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 
 			{/* Navigation */}
 			<nav className="flex flex-col items-end gap-2 font-inter text-sm tracking-[2px] font-[700] mb-12">
-				{SECTION_CONFIG.map((section) => (
+				{SECTIONS_CONFIG.map((section) => (
 					<NavItem
 						key={section.id}
 						onClick={() => setActiveSection(section.id)}

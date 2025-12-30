@@ -1,7 +1,7 @@
 import Projects from "../components/projects/Projects";
 import About from "../components/about/About";
 
-export const SECTION_CONFIG = [
+export const SECTIONS_CONFIG = [
 	{
 		id: "projects",
 		label: "Work",
@@ -48,4 +48,4 @@ export const SECTION_CONFIG = [
 	}
 ];
 
-export default SECTION_CONFIG;
+export default SECTIONS_CONFIG;
