@@ -1,6 +1,7 @@
 import { BsSquareFill } from "react-icons/bs"
 import AsideBar from "../asideBar/AsideBar"
 import ScrollPressureGauge from "../ui/ScrollPressureGauge"
+import { motion } from "framer-motion"
 
 const PortfolioLayout = ({
 	children,
@@ -26,13 +27,25 @@ const PortfolioLayout = ({
 	}
 
 	return (
-		<section className="w-full h-full border"	>
+		<section className="w-full h-full">
 			<div className="flex relative h-full w-full max-w-[1200px] mx-auto text-bone font-consolas">
-				{/* Sidebar */}
-				<AsideBar activeSection={activeSection} setActiveSection={setActiveSection} />
+				{/* Sidebar - Entry Animation Left */}
+				<motion.div
+					className="flex-shrink-0 h-full"
+					initial={{ x: -200, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					transition={{ duration: 0.8, delay: 0.2 }}
+				>
+					<AsideBar activeSection={activeSection} setActiveSection={setActiveSection} />
+				</motion.div>
 
-				{/* Main Content Area */}
-				<div className="flex-1 flex flex-col h-full pl-16">
+				{/* Main Content Area - Entry Animation Right */}
+				<motion.div
+					className="flex-1 flex flex-col h-full pl-16 opacity-0"
+					initial={{ x: 200, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					transition={{ duration: 0.8, delay: 0.2 }}
+				>
 
 					{/* Top Bar */}
 					<header className="h-28 flex flex-col items-end justify-center w-full gap-2">
@@ -79,7 +92,7 @@ const PortfolioLayout = ({
 					<main className="flex-1 p-8 overflow-hidden relative">
 						{children}
 					</main>
-				</div>
+				</motion.div>
 			</div>
 			<div className="absolute bottom-10 right-10">
 				<ScrollPressureGauge action={() => { alert('Action!') }} />
