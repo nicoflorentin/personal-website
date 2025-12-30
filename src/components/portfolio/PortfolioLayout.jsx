@@ -32,9 +32,9 @@ const PortfolioLayout = ({
 				{/* Sidebar - Entry Animation Left */}
 				<motion.div
 					className="flex-shrink-0 h-full"
-					initial={{ x: -200, opacity: 0 }}
+					initial={{ x: -100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
-					transition={{ duration: 0.8, delay: 0.2 }}
+					transition={{ duration: 0.5, delay: 0 }}
 				>
 					<AsideBar activeSection={activeSection} setActiveSection={setActiveSection} />
 				</motion.div>
@@ -42,9 +42,9 @@ const PortfolioLayout = ({
 				{/* Main Content Area - Entry Animation Right */}
 				<motion.div
 					className="flex-1 flex flex-col h-full pl-16 opacity-0"
-					initial={{ x: 200, opacity: 0 }}
+					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
-					transition={{ duration: 0.8, delay: 0.2 }}
+					transition={{ duration: 0.5, delay: 0 }}
 				>
 
 					{/* Top Bar */}

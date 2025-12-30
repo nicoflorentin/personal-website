@@ -78,7 +78,7 @@ const Main = ({ onNavigate }) => {
 					id="nav"
 					className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px] "
 				>
-					<div className="overflow-hidden">
+					<div className="overflow-hidden¿">
 						<motion.div
 							exit={{ x: -1000, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
 						>
@@ -86,12 +86,12 @@ const Main = ({ onNavigate }) => {
 						</motion.div>
 					</div>
 
-					<div className="overflow-hidden">
+					<div className="overflow-hidden¿">
 						<motion.nav
 							className="navbar"
 							exit={{ x: 1000, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
 						>
-							<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden lg:text-end lg:items-end">
+							<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden¿ lg:text-end lg:items-end">
 								{navConfig.map((itemConfig, index) => (
 									<NavItem
 										key={index}
