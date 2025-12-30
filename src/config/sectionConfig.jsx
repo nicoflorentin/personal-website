@@ -13,7 +13,7 @@ export const SECTION_CONFIG = [
 				title: "Proyectos"
 			},
 			{
-				component: () => (<div>Experiencia profesional</div>),
+				component: () => <div>Experiencia profesional</div>,
 				props: {},
 				title: "Experiencia profesional"
 			},
@@ -29,9 +29,21 @@ export const SECTION_CONFIG = [
 		label: "About",
 		title: "THIS IS SOMETHING ABOUT ME",
 		pages: [
-			{ component: About, props: { page: 1 }, title: "Resumen" },
-			{ component: About, props: { page: 2 }, title: "Tecnologias" },
-			{ component: About, props: { page: 3 }, title: "Mas sobre mi ..." }
+			{
+				component: About,
+				props: { page: 1 },
+				title: "Resumen"
+			},
+			{
+				component: () => <div>Tecnologias</div>,
+				props: { page: 2 },
+				title: "Tecnologias"
+			},
+			{
+				component: () => <div>Más sobre mí ...</div>,
+				props: { page: 3 },
+				title: "Mas sobre mi ..."
+			}
 		]
 	}
 ];

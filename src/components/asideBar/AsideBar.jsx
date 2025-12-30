@@ -4,7 +4,7 @@ import { SECTION_CONFIG } from "../../config/sectionConfig"
 
 const AsideBar = ({ activeSection, setActiveSection }) => {
 	return (
-		<aside className="w-16 md:w-64 flex-shrink-0 flex flex-col pt-10 pl-6 h-full overflow-hidden relative border">
+		<aside className="w-16 md:w-64 flex-shrink-0 flex flex-col pt-10 pl-6 h-full overflow-hidden relative">
 
 			{/* Title */}
 			<div className="mb-12">
