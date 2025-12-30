@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import NavItem from "../ui/NavItem"
+import { SECTION_CONFIG } from "../../config/sectionConfig"
 
 const AsideBar = ({ activeSection, setActiveSection }) => {
 	return (
@@ -14,22 +15,20 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 
 			{/* Navigation */}
 			<nav className="flex flex-col items-end gap-2 font-inter text-sm tracking-[2px] font-[700] mb-12">
-				<NavItem
-					onClick={() => setActiveSection("projects")}
-					className={`${activeSection === 'projects' ? 'text-white' : 'text-gray-500'}`}
-				>
-					Work
-				</NavItem>
-				<NavItem
-					onClick={() => setActiveSection("about")}
-					className={`${activeSection === 'about' ? 'text-white' : 'text-gray-500'}`}
-				>
-					About
-				</NavItem>
+				{SECTION_CONFIG.map((section) => (
+					<NavItem
+						key={section.id}
+						onClick={() => setActiveSection(section.id)}
+						className={`${activeSection === section.id ? 'text-white' : 'text-gray-500'}`}
+					>
+						{section.label}
+					</NavItem>
+				))}
 				<NavItem as="a" href="/resume.pdf" target="_blank" className="text-purple-400">
 					Resume
 				</NavItem>
 			</nav>
+
 
 			{/* Socials */}
 			<div className="flex flex-col gap-4 text-xl md:text-2xl items-end mb-12 mt-auto">
@@ -51,7 +50,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 				</p>
 				<span className="block font-semibold">2025</span>
 			</div>
-		</aside>
+		</aside >
 	)
 }
 

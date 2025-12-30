@@ -1,13 +1,9 @@
 import Project from "../project/Project"
 import { projects } from "../../data/projects"
 
-const Projects = ({ page = 1 }) => {
-	const ITEMS_PER_PAGE = 3
-	const startIndex = (page - 1) * ITEMS_PER_PAGE
-	const selectedProjects = projects.slice(startIndex, startIndex + ITEMS_PER_PAGE)
-
+const Projects = () => {
 	const ProjectsMap = () => {
-		return selectedProjects.map(project => <Project key={project.id} {...project} />)
+		return projects.map(project => <Project key={project.id} {...project} />)
 	}
 
 	return (

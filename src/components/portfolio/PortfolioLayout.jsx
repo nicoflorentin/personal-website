@@ -7,7 +7,9 @@ const PortfolioLayout = ({
 	setActiveSection,
 	activePage,
 	onPageChange,
-	totalPages
+	totalPages,
+	sectionTitle,
+	pageTitle
 }) => {
 
 	const handleNext = () => {
@@ -65,8 +67,9 @@ const PortfolioLayout = ({
 					<div className="w-full h-[1px] bg-zinc-800/50"></div>
 
 					{/* Section Subtitle */}
-					<h2 className="text-zinc-500 font-bold tracking-widest uppercase text-sm md:text-base">
-						{activeSection === 'about' ? 'THIS IS SOMETHING ABOUT ME' : 'SELECTED WORKS'}
+					<h2 className="text-zinc-500 font-bold tracking-widest uppercase text-sm md:text-base flex gap-2">
+						<span>{sectionTitle}</span>
+						{pageTitle && <span className="text-zinc-700">| {pageTitle}</span>}
 					</h2>
 				</header>
 
