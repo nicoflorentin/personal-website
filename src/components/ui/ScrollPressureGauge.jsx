@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useTransform, useMotionValue, useSpring, animate } from 'framer-motion';
 
-const ScrollPressureGauge = ({ action, label = "PRESSURIZING..." }) => {
+const ScrollPressureGauge = ({ action, label = "Almost there ..." }) => {
 	const [isCompleted, setIsCompleted] = useState(false);
 	const pressure = useMotionValue(0);
 
 	// Physics constants
 	const PRESSURE_GAIN = 0.2; // How much pressure adds per scroll event
-	const DECAY_RATE = 0.96;    // How fast pressure drops (0-1)
-	const THRESHOLD = 0.95;     // Completion threshold
+	const DECAY_RATE = 0.98;    // How fast pressure drops (0-1)
+	const THRESHOLD = 1;     // Completion threshold
 
 	// Smooth partial display for the rows
 	const smoothPressure = useSpring(pressure, {
@@ -61,17 +61,17 @@ const ScrollPressureGauge = ({ action, label = "PRESSURIZING..." }) => {
 	}, [smoothPressure, isCompleted, action]);
 
 	return (
-		<div className="fixed right-12 top-1/2 -translate-y-1/2">
+		<div className="flex flex-col">
 			{/* Text Overlay */}
 			<motion.div
 				style={{ opacity: textOpacity }}
-				className="absolute right-full mr-4 top-1/2 -translate-y-1/2 text-white font-consolas text-sm tracking-widest whitespace-nowrap bg-black/50 px-3 py-1 rounded backdrop-blur-sm"
+				className="text-white font-consolas text-sm tracking-widest whitespace-nowrap bg-black/50 px-3 py-1 rounded backdrop-blur-sm"
 			>
 				{label}
 			</motion.div>
 
 			{/* Matrix */}
-			<div className="flex gap-1 bg-black/20 p-4 rounded-xl backdrop-blur-sm relative">
+			<div className="flex gap-1 p-4 rounded-xl backdrop-blur-sm relative">
 				{Array.from({ length: 10 }).map((_, colIndex) => (
 					<div key={colIndex} className="flex flex-col-reverse gap-1">
 						{Array.from({ length: 40 }).map((_, rowIndex) => (

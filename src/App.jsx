@@ -32,7 +32,7 @@ function App() {
 			>
 				<div
 					className="m-auto
-											sm:max-w-7xl
+											sm:max-w-7xl¿
 											"
 				>
 					<Main scroller={scroller} scrollToSection={scrollToSection} />
