@@ -2,17 +2,17 @@ import { BsSquareFill } from "react-icons/bs"
 import AsideBar from "../asideBar/AsideBar"
 import ScrollPressureGauge from "../ui/ScrollPressureGauge"
 import { motion } from "framer-motion"
+import { useView } from "../../context/ViewContext"
 
 const PortfolioLayout = ({
 	children,
-	activeSection,
-	setActiveSection,
 	activePage,
 	onPageChange,
 	totalPages,
 	sectionTitle,
 	pageTitle
 }) => {
+	const { activeTab, setActiveTab, goBack } = useView()
 
 	const handleNext = () => {
 		if (activePage < totalPages) {
@@ -34,9 +34,10 @@ const PortfolioLayout = ({
 					className="flex-shrink-0 h-full"
 					initial={{ x: -100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
+					exit={{ x: -100, opacity: 0 }}
 					transition={{ duration: 0.5, delay: 0 }}
 				>
-					<AsideBar activeSection={activeSection} setActiveSection={setActiveSection} />
+					<AsideBar activeSection={activeTab} setActiveSection={setActiveTab} />
 				</motion.div>
 
 				{/* Main Content Area - Entry Animation Right */}
@@ -44,6 +45,7 @@ const PortfolioLayout = ({
 					className="flex-1 flex flex-col h-full pl-16 opacity-0"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
+					exit={{ x: 100, opacity: 0 }}
 					transition={{ duration: 0.5, delay: 0 }}
 				>
 
@@ -95,7 +97,7 @@ const PortfolioLayout = ({
 				</motion.div>
 			</div>
 			<div className="absolute bottom-10 right-10">
-				<ScrollPressureGauge action={() => { alert('Action!') }} />
+				<ScrollPressureGauge action={goBack} />
 			</div>
 		</section>
 	)

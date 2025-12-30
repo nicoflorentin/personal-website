@@ -2,8 +2,10 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import PortfolioLayout from "./PortfolioLayout"
 import { SECTIONS_CONFIG } from "../../config/sectionConfig"
+import { useView } from "../../context/ViewContext"
 
-const Portfolio = ({ activeTab, setActiveTab }) => {
+const Portfolio = () => {
+	const { activeTab, setActiveTab } = useView()
 	const [activePage, setActivePage] = useState(1)
 
 	// Reset page when switching sections
@@ -37,8 +39,6 @@ const Portfolio = ({ activeTab, setActiveTab }) => {
 	return (
 		<section className="min-h-[100vh] h-screen m-auto flex flex-col">
 			<PortfolioLayout
-				activeSection={activeTab}
-				setActiveSection={setActiveTab}
 				activePage={activePage}
 				onPageChange={setActivePage}
 				totalPages={totalPages}

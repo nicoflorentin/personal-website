@@ -11,7 +11,10 @@ import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_
 import { useMedia } from "use-media";
 import NavItem from "../ui/NavItem";
 
-const Main = ({ onNavigate }) => {
+import { useView } from "../../context/ViewContext"
+
+const Main = () => {
+	const { navigateToPortfolio } = useView()
 	const [hoveredItem, setHoveredItem] = useState(null)
 	const [clickedItem, setClickedItem] = useState(null)
 	const isDesktop = useMedia({ minWidth: "1024px" })
@@ -21,14 +24,14 @@ const Main = ({ onNavigate }) => {
 			name: MAIN_ICONS_PROJECTS,
 			icon: <BsBriefcaseFill color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
 			bigIcon: <BsBriefcaseFill color="#93C572" size={LIST_ITEM_BIG_ICON_SIZE} />,
-			onClick: () => onNavigate(MAIN_ICONS_PROJECTS),
+			onClick: () => navigateToPortfolio(MAIN_ICONS_PROJECTS),
 			content: "WORK",
 		},
 		{
 			name: MAIN_ICONS_ABOUT,
 			icon: <BsFillPersonLinesFill color="#93C572" size={LIST_ITEM_ICON_SIZE} />,
 			bigIcon: <BsFillPersonLinesFill color="#93C572" size={LIST_ITEM_BIG_ICON_SIZE} />,
-			onClick: () => onNavigate(MAIN_ICONS_ABOUT),
+			onClick: () => navigateToPortfolio(MAIN_ICONS_ABOUT),
 			content: "ABOUT",
 		},
 		{
@@ -80,7 +83,10 @@ const Main = ({ onNavigate }) => {
 				>
 					<div className="overflow-hidden¿">
 						<motion.div
-							exit={{ x: -1000, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
+							initial={{ x: -500, opacity: 0 }}
+							animate={{ x: 0, opacity: 1 }}
+							exit={{ x: -500, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
+							transition={{ duration: 0.8, ease: "easeInOut" }}
 						>
 							<NameLabel />
 						</motion.div>
@@ -89,7 +95,10 @@ const Main = ({ onNavigate }) => {
 					<div className="overflow-hidden¿">
 						<motion.nav
 							className="navbar"
-							exit={{ x: 1000, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
+							initial={{ x: 500, opacity: 0 }}
+							animate={{ x: 0, opacity: 1 }}
+							exit={{ x: 500, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
+							transition={{ duration: 0.8, ease: "easeInOut" }}
 						>
 							<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden¿ lg:text-end lg:items-end">
 								{navConfig.map((itemConfig, index) => (

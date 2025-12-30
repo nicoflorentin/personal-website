@@ -1,16 +1,10 @@
 import style from "./App.module.css"
 import { Main, Portfolio } from "./components/index.js"
 import { AnimatePresence } from "framer-motion"
-import { useState } from "react"
+import { ViewProvider, useView } from "./context/ViewContext"
 
-function App() {
-	const [view, setView] = useState("main")
-	const [activeTab, setActiveTab] = useState("about")
-
-	const handleNavigate = (section) => {
-		setActiveTab(section)
-		setView("portfolio")
-	}
+const Content = () => {
+	const { view, activeTab, setActiveTab, navigateToPortfolio } = useView()
 
 	return (
 		<div className={style.paperOverlay}>
@@ -18,14 +12,22 @@ function App() {
 				<div className="m-auto sm:max-w-7xl h-full">
 					<AnimatePresence mode="wait">
 						{view === "main" ? (
-							<Main key="main" onNavigate={handleNavigate} />
+							<Main key="main" />
 						) : (
-							<Portfolio key="portfolio" activeTab={activeTab} setActiveTab={setActiveTab} />
+							<Portfolio key="portfolio" />
 						)}
 					</AnimatePresence>
 				</div>
 			</div>
 		</div>
+	)
+}
+
+function App() {
+	return (
+		<ViewProvider>
+			<Content />
+		</ViewProvider>
 	)
 }
 
