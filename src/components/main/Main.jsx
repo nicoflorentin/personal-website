@@ -14,7 +14,7 @@ import NavItem from "../ui/NavItem";
 import { useView } from "../../context/ViewContext"
 
 const Main = () => {
-	const { navigateToPortfolio } = useView()
+	const { navigateToPortfolio, firstPageLoad } = useView()
 	const [hoveredItem, setHoveredItem] = useState(null)
 	const [clickedItem, setClickedItem] = useState(null)
 	const isDesktop = useMedia({ minWidth: "1024px" })
@@ -81,26 +81,26 @@ const Main = () => {
 					id="nav"
 					className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px] "
 				>
-					<div className="overflow-hidden¿">
+					<div className="">
 						<motion.div
-							initial={{ x: -500, opacity: 0 }}
+							initial={!firstPageLoad ? { x: -200, opacity: 0 } : false}
 							animate={{ x: 0, opacity: 1 }}
-							exit={{ x: -500, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
+							exit={{ x: -500, opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
 							transition={{ duration: 0.8, ease: "easeInOut" }}
 						>
 							<NameLabel />
 						</motion.div>
 					</div>
 
-					<div className="overflow-hidden¿">
+					<div className="">
 						<motion.nav
 							className="navbar"
-							initial={{ x: 500, opacity: 0 }}
+							initial={!firstPageLoad ? { x: 200, opacity: 0 } : false}
 							animate={{ x: 0, opacity: 1 }}
-							exit={{ x: 500, opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
+							exit={{ x: 500, opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
 							transition={{ duration: 0.8, ease: "easeInOut" }}
 						>
-							<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] overflow-hidden¿ lg:text-end lg:items-end">
+							<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] lg:text-end lg:items-end">
 								{navConfig.map((itemConfig, index) => (
 									<NavItem
 										key={index}
@@ -118,7 +118,7 @@ const Main = () => {
 														? { x: 100, opacity: 0 }
 														: { x: 30, opacity: 1 }
 												}
-												transition={{ duration: 0.3, ease: "easeOut" }}
+												transition={{ duration: 0.5, ease: "easeOut" }}
 											>
 												{itemConfig.icon}
 											</motion.span>

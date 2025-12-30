@@ -5,10 +5,12 @@ const ViewContext = createContext()
 export const ViewProvider = ({ children }) => {
 	const [view, setView] = useState("main")
 	const [activeTab, setActiveTab] = useState("about")
+	const [firstPageLoad, setFirstPageLoad] = useState(true)
 
 	const navigateToPortfolio = (section) => {
 		setActiveTab(section)
 		setView("portfolio")
+		setFirstPageLoad(false)
 	}
 
 	const goBack = () => {
@@ -16,7 +18,7 @@ export const ViewProvider = ({ children }) => {
 	}
 
 	return (
-		<ViewContext.Provider value={{ view, activeTab, setActiveTab, navigateToPortfolio, goBack }}>
+		<ViewContext.Provider value={{ view, activeTab, firstPageLoad, setActiveTab, navigateToPortfolio, goBack }}>
 			{children}
 		</ViewContext.Provider>
 	)
