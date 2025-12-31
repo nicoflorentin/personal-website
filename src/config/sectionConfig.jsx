@@ -1,5 +1,6 @@
 import Projects from "../components/projects/Projects";
 import About from "../components/about/About";
+import Experience from "../components/experience/Experience";
 
 export const SECTIONS_CONFIG = [
 	{
@@ -13,7 +14,7 @@ export const SECTIONS_CONFIG = [
 				title: "Proyectos"
 			},
 			{
-				component: () => <div>Experiencia profesional</div>,
+				component: Experience,
 				props: {},
 				title: "Experiencia profesional"
 			},

@@ -15,6 +15,16 @@ export const projects = [
 		tags: ["Freelance", "Web design", "Figma", "Astro"],
 	},
 	{
+		id: "gps-tracker",
+		title: "GPS Tracker",
+		description:
+			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
+		image: gpsApp,
+		githubURL: "",
+		deployURL: "",
+		tags: ["React Native", "Figma", "MongoDB", "Map box API"],
+	},
+	{
 		id: "no-country-project",
 		title: "TeleMedicine Scheduler",
 		description:
@@ -33,16 +43,6 @@ export const projects = [
 		githubURL: "https://github.com/nicoflorentin/auto-menu",
 		deployURL: "https://auto-menu-app.vercel.app/",
 		tags: ["Web design", "Figma", "React", "MongoDB", "NodeJS"],
-	},
-	{
-		id: "gps-tracker",
-		title: "GPS Tracker",
-		description:
-			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
-		image: gpsApp,
-		githubURL: "",
-		deployURL: "",
-		tags: ["React Native", "Figma", "MongoDB", "Map box API"],
 	},
 	{
 		id: "rn-pomodoro-day-planner",

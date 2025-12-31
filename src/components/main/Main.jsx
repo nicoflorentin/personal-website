@@ -7,7 +7,7 @@ import NameLabel from "./NameLabel";
 import Header from "./Header";
 import { BsBriefcaseFill, BsFillPersonLinesFill } from "react-icons/bs";
 import { ImFolderDownload } from "react-icons/im";
-import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE, TRANSITION_DURATION_LAYOUT, TRANSITION_DURATION_FAST, MOBILE_SCROLL_ADDITIONAL_DELAY } from "../../constants/constants";
+import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE, TRANSITION_DURATION_LAYOUT, TRANSITION_DURATION_FAST, MOBILE_SCROLL_ADDITIONAL_DELAY, TRANSITION_DURATION_BIG_ICON } from "../../constants/constants";
 import { useMedia } from "use-media";
 import NavItem from "../ui/NavItem";
 
@@ -150,8 +150,8 @@ const Main = () => {
 						<motion.div
 							className="absolute w-full bottom-[10%] flex justify-center"
 							initial={{ y: 0, opacity: 0 }}
-							animate={clickedItem && { y: -30, opacity: [0, 1, 1, 0] }}
-							transition={{ duration: TRANSITION_DURATION_LAYOUT, ease: "easeOut" }}
+							animate={clickedItem && { y: [-0, -30, -30], opacity: [0, 1, 1, 0] }}
+							transition={{ duration: TRANSITION_DURATION_BIG_ICON, ease: "easeOut" }}
 						>
 							{navConfig.find(item => item.name === clickedItem)?.bigIcon}
 						</motion.div>
