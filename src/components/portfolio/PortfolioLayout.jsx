@@ -3,6 +3,7 @@ import AsideBar from "../asideBar/AsideBar"
 import ScrollPressureGauge from "../ui/ScrollPressureGauge"
 import { motion } from "framer-motion"
 import { useView } from "../../context/ViewContext"
+import { TRANSITION_DURATION_LAYOUT } from "../../constants/constants"
 
 const PortfolioLayout = ({
 	children,
@@ -35,7 +36,7 @@ const PortfolioLayout = ({
 					initial={{ x: -100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: -100, opacity: 0 }}
-					transition={{ duration: 0.5, delay: 0 }}
+					transition={{ duration: TRANSITION_DURATION_LAYOUT }}
 				>
 					<AsideBar activeSection={activeTab} setActiveSection={setActiveTab} />
 				</motion.div>
@@ -46,7 +47,7 @@ const PortfolioLayout = ({
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: 100, opacity: 0 }}
-					transition={{ duration: 0.5, delay: 0 }}
+					transition={{ duration: TRANSITION_DURATION_LAYOUT }}
 				>
 
 					{/* Top Bar */}

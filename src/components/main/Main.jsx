@@ -7,7 +7,7 @@ import NameLabel from "./NameLabel";
 import Header from "./Header";
 import { BsBriefcaseFill, BsFillPersonLinesFill } from "react-icons/bs";
 import { ImFolderDownload } from "react-icons/im";
-import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE } from "../../constants/constants";
+import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE, TRANSITION_DURATION_LAYOUT, TRANSITION_DURATION_FAST, MOBILE_SCROLL_ADDITIONAL_DELAY } from "../../constants/constants";
 import { useMedia } from "use-media";
 import NavItem from "../ui/NavItem";
 
@@ -58,13 +58,14 @@ const Main = () => {
 				() => {
 					item.onClick()
 				},
-				SCROLL_DELAY_TIME + (!isDesktop && 500)
+				SCROLL_DELAY_TIME + (!isDesktop && MOBILE_SCROLL_ADDITIONAL_DELAY)
 			)
 			setTimeout(() => {
 				setClickedItem(null)
 			}, RESET_SCROLL_DELAY_TIME)
 		}
 	}
+
 
 	const handleHover = itemName => {
 		setHoveredItem(itemName)
@@ -73,7 +74,7 @@ const Main = () => {
 	return (
 		<motion.section
 			className="relative h-[100vh] m-auto flex flex-col justify-between max-w-2xl sm:max-w-full"
-			exit={{ opacity: 0, transition: { duration: 1 } }}
+			exit={{ opacity: 0, transition: { duration: TRANSITION_DURATION_LAYOUT } }}
 		>
 			<Header />
 			<div className="h-full flex flex-col justify-center ">
@@ -83,10 +84,10 @@ const Main = () => {
 				>
 					<div className="">
 						<motion.div
-							initial={!firstPageLoad ? { x: -200, opacity: 0 } : false}
+							initial={!firstPageLoad ? { x: -100, opacity: 0 } : false}
 							animate={{ x: 0, opacity: 1 }}
-							exit={{ x: -500, opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
-							transition={{ duration: 0.8, ease: "easeInOut" }}
+							exit={{ x: -100, opacity: 0, transition: { duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" } }}
+							transition={{ duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" }}
 						>
 							<NameLabel />
 						</motion.div>
@@ -95,10 +96,10 @@ const Main = () => {
 					<div className="">
 						<motion.nav
 							className="navbar"
-							initial={!firstPageLoad ? { x: 200, opacity: 0 } : false}
+							initial={!firstPageLoad ? { x: 100, opacity: 0 } : false}
 							animate={{ x: 0, opacity: 1 }}
-							exit={{ x: 500, opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
-							transition={{ duration: 0.8, ease: "easeInOut" }}
+							exit={{ x: 100, opacity: 0, transition: { duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" } }}
+							transition={{ duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" }}
 						>
 							<ul className="flex flex-col gap-2 w-52 font-inter text-bone text-sm tracking-[2px] font-[700] lg:text-end lg:items-end">
 								{navConfig.map((itemConfig, index) => (
@@ -118,7 +119,7 @@ const Main = () => {
 														? { x: 100, opacity: 0 }
 														: { x: 30, opacity: 1 }
 												}
-												transition={{ duration: 0.5, ease: "easeOut" }}
+												transition={{ duration: TRANSITION_DURATION_LAYOUT, ease: "easeOut" }}
 											>
 												{itemConfig.icon}
 											</motion.span>
@@ -133,7 +134,7 @@ const Main = () => {
 														? { x: 100, opacity: 1 }
 														: { x: 30, opacity: 0 }
 												}
-												transition={{ duration: 0.5, ease: "easeOut" }}
+												transition={{ duration: TRANSITION_DURATION_FAST, ease: "easeOut" }}
 											>
 												{itemConfig.icon}
 											</motion.span>
@@ -150,7 +151,7 @@ const Main = () => {
 							className="absolute w-full bottom-[10%] flex justify-center"
 							initial={{ y: 0, opacity: 0 }}
 							animate={clickedItem && { y: -30, opacity: [0, 1, 1, 0] }}
-							transition={{ duration: 1, ease: "easeOut" }}
+							transition={{ duration: TRANSITION_DURATION_LAYOUT, ease: "easeOut" }}
 						>
 							{navConfig.find(item => item.name === clickedItem)?.bigIcon}
 						</motion.div>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import PortfolioLayout from "./PortfolioLayout"
 import { SECTIONS_CONFIG } from "../../config/sectionConfig"
 import { useView } from "../../context/ViewContext"
+import { TRANSITION_DURATION_CONTENT } from "../../constants/constants"
 
 const Portfolio = () => {
 	const { activeTab, setActiveTab } = useView()
@@ -26,7 +27,7 @@ const Portfolio = () => {
 				initial={{ opacity: 0, y: 10 }}
 				animate={{ opacity: 1, y: 0 }}
 				exit={{ opacity: 0, y: -10 }}
-				transition={{ duration: 0.3 }}
+				transition={{ duration: TRANSITION_DURATION_CONTENT }}
 				className="w-full h-full"
 			>
 				<ActiveComponent {...currentPageConfig.props} />
