@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useTransform, useMotionValue, useSpring, animate } from 'framer-motion';
 
-const ScrollPressureGauge = ({ action, label = "Almost there ..." }) => {
+const ScrollPressureGauge = ({ action, label = "Back" }) => {
 	const [isCompleted, setIsCompleted] = useState(false);
 	const pressure = useMotionValue(0);
 
@@ -10,6 +10,8 @@ const ScrollPressureGauge = ({ action, label = "Almost there ..." }) => {
 	const DECAY_RATE = 0.98;    // How fast pressure drops (0-1)
 	const THRESHOLD = 1;     // Completion threshold
 
+	const TOTAL_ROWS = 25
+
 	// Smooth partial display for the rows
 	const smoothPressure = useSpring(pressure, {
 		stiffness: 200,
@@ -17,7 +19,7 @@ const ScrollPressureGauge = ({ action, label = "Almost there ..." }) => {
 	});
 
 	// Map pressure (0-1) to rows (0-40) and text opacity
-	const rowsActive = useTransform(smoothPressure, [0, 1], [0, 40]);
+	const rowsActive = useTransform(smoothPressure, [0, 1], [0, TOTAL_ROWS]);
 	const textOpacity = useTransform(smoothPressure, [0.1, 0.8], [0, 1]);
 
 	// Decay loop
@@ -33,14 +35,16 @@ const ScrollPressureGauge = ({ action, label = "Almost there ..." }) => {
 		return () => clearInterval(timer);
 	}, []);
 
-	// Wheel event listener
+	// Wheel event listener for Wheel Up only
 	useEffect(() => {
-		const handleWheel = () => {
+		const handleWheel = (event) => {
 			if (isCompleted) return;
 
-			// Add pressure, capped at 1
-			const newPressure = Math.min(pressure.get() + PRESSURE_GAIN, 1);
-			pressure.set(newPressure);
+			// Solo sumar presión si el movimiento es hacia arriba (deltaY negativo)
+			if (event.deltaY < 0) {
+				const newPressure = Math.min(pressure.get() + PRESSURE_GAIN, 1);
+				pressure.set(newPressure);
+			}
 		};
 
 		window.addEventListener('wheel', handleWheel);
@@ -65,16 +69,16 @@ const ScrollPressureGauge = ({ action, label = "Almost there ..." }) => {
 			{/* Text Overlay */}
 			<motion.div
 				style={{ opacity: textOpacity }}
-				className="text-white font-consolas text-sm tracking-widest whitespace-nowrap bg-black/50 px-3 py-1 rounded backdrop-blur-sm"
+				className="text-white font-consolas text-sm whitespace-nowrap px-3 py-1 rounded"
 			>
 				{label}
 			</motion.div>
 
 			{/* Matrix */}
-			<div className="flex gap-1 p-4 rounded-xl backdrop-blur-sm relative">
-				{Array.from({ length: 10 }).map((_, colIndex) => (
+			<div className="flex gap-1 p-4 rounded-xl backdrop-blur-sm¿ relative">
+				{Array.from({ length: 5 }).map((_, colIndex) => (
 					<div key={colIndex} className="flex flex-col-reverse gap-1">
-						{Array.from({ length: 40 }).map((_, rowIndex) => (
+						{Array.from({ length: TOTAL_ROWS }).map((_, rowIndex) => (
 							<Cell key={rowIndex} index={rowIndex} rowsActive={rowsActive} />
 						))}
 					</div>
@@ -94,13 +98,13 @@ const Cell = ({ index, rowsActive }) => {
 
 	const backgroundColor = useTransform(rowsActive,
 		[index, index + 1],
-		["#27272a", "#a1a1aa"] // De zinc-800 a zinc-400
+		["", "rgba(41, 41, 41, 1)"]
 	);
 
 	return (
 		<motion.div
 			style={{ opacity, backgroundColor }}
-			className="w-2 h-1 rounded-[1px]"
+			className="w-2 h-2 rounded-[2px]"
 		/>
 	);
 };

@@ -29,7 +29,7 @@ const PortfolioLayout = ({
 
 	return (
 		<section className="w-full h-full">
-			<div className="flex relative h-full w-full max-w-[1200px] mx-auto text-bone font-consolas">
+			<div className="flex relative h-full w-full max-w-[1200px]¿ mx-auto text-bone font-consolas">
 				{/* Sidebar - Entry Animation Left */}
 				<motion.div
 					className="flex-shrink-0 h-full"

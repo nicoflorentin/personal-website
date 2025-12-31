@@ -9,7 +9,7 @@ const Content = () => {
 	return (
 		<div className={style.paperOverlay}>
 			<div className="font-consolas z-10 opacity-[0.80] select-none bg-[#000000] h-screen overflow-hidden">
-				<div className="m-auto sm:max-w-7xl h-full">
+				<div className="m-auto sm:max-w-[1700px] h-full">
 					<AnimatePresence mode="wait">
 						{view === "main" ? (
 							<Main key="main" />
