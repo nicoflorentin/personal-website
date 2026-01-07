@@ -8,13 +8,13 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 
 			{/* Title */}
 			<div className="mb-12">
-				<h1 className="text-3xl md:text-5xl font-bold tracking-wide text-primary hidden md:block">
+				<h1 className="text-3xl md:text-5xl text-right font-extrabold tracking-wide  text-primary hidden md:block">
 					ABOUT ME
 				</h1>
 			</div>
 
 			{/* Navigation */}
-			<nav className="flex flex-col items-end gap-2 font-inter text-sm tracking-[2px] font-[700] mb-12">
+			<nav className="flex flex-col items-end gap-2  font-inter text-sm tracking-[2px] font-[700] mb-12">
 				{SECTIONS_CONFIG.map((section) => (
 					<NavItem
 						key={section.id}
