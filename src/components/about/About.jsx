@@ -1,28 +1,12 @@
-const About = ({ scroller, scrollToSection }) => {
+const About = ({ page = 1 }) => {
 	return (
-		<section
-			className="flex flex-col justify-around items-center
+		<div
+			className="flex flex-col justify-center items-center
 						font-consolas
-						h-[100vh] max-w-2xl m-auto
+						h-full max-w-2xl m-auto
 						py-10
 						"
 		>
-			<h2
-				className="text-primary text-3xl font-bold 
-							text-center
-							tracking-wide
-							"
-			>
-				ABOUT ME
-			</h2>
-
-			{/* <img
-				className="w-40
-							rounded-3xl
-							"
-				src={profileImage}
-				alt="profile"
-			/> */}
 			<div>
 				<p
 					className="text-bone text-[16px]
@@ -36,22 +20,9 @@ const About = ({ scroller, scrollToSection }) => {
 					I'm also passionate about design. I use tools like <span className="text-lg font-medium">Photoshop, Figma,</span> and <span className="text-lg font-medium">GIMP</span> to transform user-centric concepts into seamless, intuitive digital experiences.
 
 					<br /><br />Whether developing responsive user interfaces, optimizing server-side functionality, or working within a Linux environment, I'm dedicated to crafting high-quality solutions that not only meet business needs but also engage and delight users.
-				</p><span></span>
+				</p>
 			</div>
-			<button
-				onClick={() => { scrollToSection('projects') }}
-				className="text-secondary font-inter text-sm font-bold
-							text-left
-							leading-5 tracking-widest
-							w-44 px-5
-							border-l-2 border-secondary
-							hover:text-primary hover:border-primary
-							transition-all duration-fast
-							"
-			>
-				CHECK OUT MY EXPERIENCE
-			</button>
-		</section>
+		</div>
 	)
 }
 

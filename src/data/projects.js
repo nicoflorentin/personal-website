@@ -1,25 +1,18 @@
 import gpsApp from "../assets/images/gps.webp"
 import auadImage from "../assets/images/auad.png"
+import noCountryImage from "../assets/images/telemed.jpeg"
 
 export const projects = [
 	{
 		id: "astro-landing",
 		title: "Astro Landing",
 		description:
-			"Modern and professional landing page for a law firm built with Astro. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
+			"Modern and professional landing page for a law firm built with Astro. The project includes production hosting and a custom domain, plus an integrated email service for client contact. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
 
 		image: auadImage,
 		githubURL: "",
 		deployURL: "https://auad-landing-page.vercel.app/",
-	},
-	{
-		id: "automenu",
-		title: "AutoMenu",
-		description:
-			"Instantly generate modern design menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level.",
-		image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
-		githubURL: "https://github.com/nicoflorentin/auto-menu",
-		deployURL: "https://auto-menu-app.vercel.app/",
+		tags: ["Freelance", "Web design", "Figma", "Astro"],
 	},
 	{
 		id: "gps-tracker",
@@ -29,6 +22,27 @@ export const projects = [
 		image: gpsApp,
 		githubURL: "",
 		deployURL: "",
+		tags: ["React Native", "Figma", "MongoDB", "Map box API"],
+	},
+	{
+		id: "no-country-project",
+		title: "TeleMedicine Scheduler",
+		description:
+			"TeleMedicine Scheduler is a web application that enables patients to book, manage, and attend virtual medical appointments. It features secure video consultations, real-time scheduling, and automated reminders, making healthcare more accessible and efficient for both patients and providers.",
+		image: noCountryImage,
+		githubURL: "https://github.com/nicoflorentin/api-nocountry",
+		deployURL: "",
+		tags: ["Backend", "API", "Database", "SQL"],
+	},
+	{
+		id: "automenu",
+		title: "AutoMenu",
+		description:
+			"Instantly generate modern design menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level.",
+		image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
+		githubURL: "https://github.com/nicoflorentin/auto-menu",
+		deployURL: "https://auto-menu-app.vercel.app/",
+		tags: ["Web design", "Figma", "React", "MongoDB", "NodeJS"],
 	},
 	{
 		id: "rn-pomodoro-day-planner",
@@ -48,15 +62,15 @@ export const projects = [
 	// 	githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
 	// 	deployURL: "https://naturaleza-xtreme.vercel.app/",
 	// },
-	{
-		id: "tokio",
-		title: "Tokio Blues Dialog Simulator",
-		description:
-			"Interactive dialogues app that allow you to choose different responses and see how they influence the narrative. A hobby project I thoroughly enjoyed creating, based on the novel 'Norwegian Wood' (Tokyo Blues) by Haruki Murakami",
-		image: "https://github.com/nicoflorentin/dialog-simulator/raw/master/dialog-simulator-gif-demo.gif",
-		githubURL: "https://github.com/nicoflorentin/dialog-simulator",
-		deployURL: "https://tokiobluesdialogs.netlify.app/",
-	},
+	// {
+	// 	id: "tokio",
+	// 	title: "Tokio Blues Dialog Simulator",
+	// 	description:
+	// 		"A hobby project I enjoyed creating, based on the novel 'Norwegian Wood' (Tokyo Blues) by Haruki Murakami. Interactive dialogues app that allow you to choose different responses and see how they influence the narrative.",
+	// 	image: "https://github.com/nicoflorentin/dialog-simulator/raw/master/dialog-simulator-gif-demo.gif",
+	// 	githubURL: "https://github.com/nicoflorentin/dialog-simulator",
+	// 	deployURL: "https://tokiobluesdialogs.netlify.app/",
+	// },
 	// {
 	//   id: "rickandmorty",
 	//   title: "RyM Viewer",
