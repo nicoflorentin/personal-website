@@ -18,11 +18,11 @@ export const SECTIONS_CONFIG = [
 				props: {},
 				title: "Experiencia profesional"
 			},
-			{
-				component: () => <div>Otros</div>,
-				props: {},
-				title: "Otros"
-			}
+			// {
+			// 	component: () => <div>Otros</div>,
+			// 	props: {},
+			// 	title: "Otros"
+			// }
 		]
 	},
 	{
@@ -35,16 +35,16 @@ export const SECTIONS_CONFIG = [
 				props: { page: 1 },
 				title: "Resumen"
 			},
-			{
-				component: () => <div>Tecnologias</div>,
-				props: { page: 2 },
-				title: "Tecnologias"
-			},
-			{
-				component: () => <div>Más sobre mí ...</div>,
-				props: { page: 3 },
-				title: "Mas sobre mi ..."
-			}
+			// {
+			// 	component: () => <div>Tecnologias</div>,
+			// 	props: { page: 2 },
+			// 	title: "Tecnologias"
+			// },
+			// {
+			// 	component: () => <div>Más sobre mí ...</div>,
+			// 	props: { page: 3 },
+			// 	title: "Mas sobre mi ..."
+			// }
 		]
 	}
 ];

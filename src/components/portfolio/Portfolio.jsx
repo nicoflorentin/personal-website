@@ -42,9 +42,8 @@ const Portfolio = () => {
 			<PortfolioLayout
 				activePage={activePage}
 				onPageChange={setActivePage}
-				totalPages={totalPages}
+				pages={currentSection.pages}
 				sectionTitle={currentSection.title}
-				pageTitle={currentPageConfig?.title}
 			>
 				<AnimatePresence mode="wait">
 					{renderContent()}
