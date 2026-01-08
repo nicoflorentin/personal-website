@@ -7,6 +7,7 @@ export const ViewProvider = ({ children }) => {
 	const [activeTab, setActiveTab] = useState("about")
 	const [firstPageLoad, setFirstPageLoad] = useState(true)
 	const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+	console.log("ViewProvider mounting")
 
 	const navigateToPortfolio = (section) => {
 		setActiveTab(section)

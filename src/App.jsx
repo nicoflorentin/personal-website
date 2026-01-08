@@ -28,6 +28,7 @@ const Content = () => {
 }
 
 function App() {
+	console.log("App rendering, rendering ViewProvider")
 	return (
 		<ViewProvider>
 			<Content />

@@ -2,6 +2,7 @@ import { useView } from '../../context/ViewContext';
 // import resume from '../../assets/documents/Nicolas-Florentin-CV.pdf';
 
 const CvDownloadItem = ({ resetTime }) => {
+	console.log("CvDownloadItem rendering")
 	const { openContactModal } = useView()
 
 	const toggleDownloadVisibility = () => {
