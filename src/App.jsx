@@ -2,9 +2,10 @@ import style from "./App.module.css"
 import { Main, Portfolio } from "./components/index.js"
 import { AnimatePresence } from "framer-motion"
 import { ViewProvider, useView } from "./context/ViewContext"
+import ContactModal from "./components/modal/ContactModal"
 
 const Content = () => {
-	const { view, activeTab, setActiveTab, navigateToPortfolio } = useView()
+	const { view, activeTab, setActiveTab, navigateToPortfolio, isContactModalOpen } = useView()
 
 	return (
 		<div className={style.paperOverlay}>
@@ -19,6 +20,9 @@ const Content = () => {
 					</AnimatePresence>
 				</div>
 			</div>
+			<AnimatePresence>
+				{isContactModalOpen && <ContactModal />}
+			</AnimatePresence>
 		</div>
 	)
 }

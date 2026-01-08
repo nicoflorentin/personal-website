@@ -11,12 +11,12 @@ export const SECTIONS_CONFIG = [
 			{
 				component: Projects,
 				props: {},
-				title: "Proyectos"
+				title: "Developed projects"
 			},
 			{
 				component: Experience,
 				props: {},
-				title: "Experiencia profesional"
+				title: "Professional experience"
 			},
 			// {
 			// 	component: () => <div>Otros</div>,
@@ -33,7 +33,7 @@ export const SECTIONS_CONFIG = [
 			{
 				component: About,
 				props: { page: 1 },
-				title: "Resumen"
+				title: "Something about me"
 			},
 			// {
 			// 	component: () => <div>Tecnologias</div>,

@@ -39,7 +39,7 @@ const PortfolioLayout = ({
 				>
 
 					{/* Top Bar */}
-					<header className="h-28 flex flex-col items-start justify-center w-full gap-2 pl-8">
+					<header className="flex flex-col items-start justify-center w-full gap-2 pt-10 pl-8">
 						{/* Navigation Menu */}
 						<nav className="flex items-center gap-8">
 							{pages?.map((page, index) => (

@@ -1,28 +1,19 @@
-import { useRef, useState } from 'react'
-import resume from '../../assets/documents/Nicolas-Florentin-CV.pdf';
+import { useView } from '../../context/ViewContext';
+// import resume from '../../assets/documents/Nicolas-Florentin-CV.pdf';
 
 const CvDownloadItem = ({ resetTime }) => {
-	const [showConfirm, setShowConfirm] = useState(false)
-
-	const timeOutRef = useRef(null)
+	const { openContactModal } = useView()
 
 	const toggleDownloadVisibility = () => {
-		setShowConfirm(true)
-		timeOutRef.current = setTimeout(() => {
-			setShowConfirm(false)
-		}, resetTime);
+		// Wait for the hover/click transition to complete (200ms)
+		setTimeout(() => {
+			openContactModal()
+		}, 200)
 	}
-
-	// const closeDownloadConfirmHandler = () => {
-	// 	setShowConfirm(false)
-	// 	timeOutRef.current && clearTimeout(timeOutRef.current)
-	// }
 
 	return (
 		<div className='text-secondary transition-all duration-fast'>
-			{!showConfirm ? <li className='hover:text-primary cursor-pointer' onClick={toggleDownloadVisibility}>RESUME</li> : <li>
-				<span className='hover:text-primary'><a href={resume} download={'NicolasFlorentin.pdf'}>DOWNLOAD RESUME</a><span className='absolute ml-1'>?</span></span>
-			</li>}
+			<li className='hover:text-primary cursor-pointer' onClick={toggleDownloadVisibility}>CONTACT</li>
 		</div>
 	)
 }

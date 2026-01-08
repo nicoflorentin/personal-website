@@ -6,6 +6,7 @@ export const ViewProvider = ({ children }) => {
 	const [view, setView] = useState("main")
 	const [activeTab, setActiveTab] = useState("about")
 	const [firstPageLoad, setFirstPageLoad] = useState(true)
+	const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 
 	const navigateToPortfolio = (section) => {
 		setActiveTab(section)
@@ -17,8 +18,21 @@ export const ViewProvider = ({ children }) => {
 		setView("main")
 	}
 
+	const openContactModal = () => setIsContactModalOpen(true)
+	const closeContactModal = () => setIsContactModalOpen(false)
+
 	return (
-		<ViewContext.Provider value={{ view, activeTab, firstPageLoad, setActiveTab, navigateToPortfolio, goBack }}>
+		<ViewContext.Provider value={{
+			view,
+			activeTab,
+			firstPageLoad,
+			isContactModalOpen,
+			setActiveTab,
+			navigateToPortfolio,
+			goBack,
+			openContactModal,
+			closeContactModal
+		}}>
 			{children}
 		</ViewContext.Provider>
 	)
