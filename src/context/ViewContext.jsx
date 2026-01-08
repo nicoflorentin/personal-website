@@ -5,14 +5,14 @@ const ViewContext = createContext()
 export const ViewProvider = ({ children }) => {
 	const [view, setView] = useState("main")
 	const [activeTab, setActiveTab] = useState("about")
-	const [firstPageLoad, setFirstPageLoad] = useState(true)
+	const [isFirstPageLoad, setIsFirstPageLoad] = useState(true)
 	const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 	console.log("ViewProvider mounting")
 
 	const navigateToPortfolio = (section) => {
 		setActiveTab(section)
 		setView("portfolio")
-		setFirstPageLoad(false)
+		setIsFirstPageLoad(false)
 	}
 
 	const goBack = () => {
@@ -26,7 +26,7 @@ export const ViewProvider = ({ children }) => {
 		<ViewContext.Provider value={{
 			view,
 			activeTab,
-			firstPageLoad,
+			isFirstPageLoad,
 			isContactModalOpen,
 			setActiveTab,
 			navigateToPortfolio,

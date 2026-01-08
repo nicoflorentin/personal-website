@@ -14,7 +14,7 @@ import NavItem from "../ui/NavItem";
 import { useView } from "../../context/ViewContext"
 
 const Main = () => {
-	const { navigateToPortfolio, firstPageLoad } = useView()
+	const { navigateToPortfolio, isFirstPageLoad } = useView()
 	const [hoveredItem, setHoveredItem] = useState(null)
 	const [clickedItem, setClickedItem] = useState(null)
 	const isDesktop = useMedia({ minWidth: "1024px" })
@@ -84,7 +84,7 @@ const Main = () => {
 				>
 					<div className="">
 						<motion.div
-							initial={!firstPageLoad ? { x: -100, opacity: 0 } : false}
+							initial={!isFirstPageLoad ? { x: -100, opacity: 0 } : false}
 							animate={{ x: 0, opacity: 1 }}
 							exit={{ x: -100, opacity: 0, transition: { duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" } }}
 							transition={{ duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" }}
@@ -96,7 +96,7 @@ const Main = () => {
 					<div className="">
 						<motion.nav
 							className="navbar"
-							initial={!firstPageLoad ? { x: 100, opacity: 0 } : false}
+							initial={!isFirstPageLoad ? { x: 100, opacity: 0 } : false}
 							animate={{ x: 0, opacity: 1 }}
 							exit={{ x: 100, opacity: 0, transition: { duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" } }}
 							transition={{ duration: TRANSITION_DURATION_LAYOUT, ease: "easeInOut" }}
