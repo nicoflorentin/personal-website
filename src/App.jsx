@@ -17,7 +17,7 @@ const Content = () => {
 			{/* 2. CAPA ANIMACIÓN: Los gradientes */}
 			<div className="absolute inset-0 z-0">
 				<BackgroundGradientAnimation
-					// containerClassName forza a que ocupe el espacio padre absoluto
+					// containerClassName forza a que ocupe el espacio padre absolutoo
 					containerClassName="absolute inset-0 h-full w-full opacity-60"
 
 					// Opcional: Colores más oscuros para que no sea tan brillante
