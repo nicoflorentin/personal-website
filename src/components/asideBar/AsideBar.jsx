@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { SiLinktree } from "react-icons/si"
 import NavItem from "../ui/NavItem"
 import { SECTIONS_CONFIG } from "../../config/sectionConfig"
 import { useView } from "../../context/ViewContext"
@@ -43,8 +44,11 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 				<a href="https://linkedin.com/in/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
 					<FaLinkedin />
 				</a>
-				<a href="#" className="hover:text-white transition-colors">
+				<a href="https://twitter.com/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
 					<FaTwitter />
+				</a>
+				<a href="https://linktr.ee/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+					<SiLinktree />
 				</a>
 			</div>
 
