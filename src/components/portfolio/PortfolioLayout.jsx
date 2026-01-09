@@ -49,8 +49,8 @@ const PortfolioLayout = ({
 									className={`
 										text-lg md:text-sm font-bold tracking-widest uppercase transition-colors duration-300 font-inter
 										${activePage === index + 1
-											? "text-zinc-200"
-											: "text-zinc-600 hover:text-zinc-400"
+											? "text-zinc-200 hover:text-primary"
+											: "text-zinc-600 hover:text-primary"
 										}
 									`}
 								>
