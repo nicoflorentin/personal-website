@@ -18,14 +18,14 @@ const Content = () => {
 			<div className="absolute inset-0 z-0">
 				<BackgroundGradientAnimation
 					// containerClassName forza a que ocupe el espacio padre absolutoo
-					containerClassName="absolute inset-0 h-full w-full opacity-60"
+					containerClassName="absolute inset-0 h-full w-full opacity-[0.05]"
 
 					// Opcional: Colores más oscuros para que no sea tan brillante
 					firstColor="18, 113, 255"
 					secondColor="100, 0, 200"
 					pointerColor="140, 100, 255"
-					size="80%"
-					blendingValue="overlay" // 'overlay' o 'hard-light' funcionan bien con negro
+					size="90%"
+					blendingValue="hard-light" // 'overlay' o 'hard-light' funcionan bien con negro
 				/>
 			</div>
 

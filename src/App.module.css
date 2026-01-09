@@ -1,24 +1,21 @@
-/* App.module.css */
 .paperOverlay {
-  position: absolute;
+  position: fixed;
+  /* Fixed para que cubra toda la pantalla siempre */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
-  /* Textura */
+  /* Imagen de textura */
   background-image: url("/src/assets/images/bg-texture.webp");
   background-repeat: repeat;
 
-  /* Mezcla */
-  opacity: 0.15;
-  /* Ajusta la intensidad de la textura aquí */
-  mix-blend-mode: overlay;
-  /* Esto hará que la textura reaccione a los colores de la animación */
-
-  /* Lógica */
+  /* Control de visibilidad */
+  opacity: 0.2;
+  /* Valor bajo para que sea sutil sobre el negro */
   pointer-events: none;
-  /* CRUCIAL: Permite clickear los botones debajo */
-  z-index: 10;
-  /* Encima de la animación (z-0), debajo del contenido (z-20) */
+  /* Importante: para que no bloquee los clicks en botones */
+
+  z-index: 1;
+  /* Un z-index bajo para que esté justo detrás del contenido pero sobre el fondo */
 }
