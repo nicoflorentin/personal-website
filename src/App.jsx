@@ -5,21 +5,26 @@ import { ViewProvider, useView } from "./context/ViewContext"
 import ContactModal from "./components/modal/ContactModal"
 
 const Content = () => {
-	const { view, activeTab, setActiveTab, navigateToPortfolio, isContactModalOpen } = useView()
+	const { view, isContactModalOpen } = useView()
 
 	return (
-		<div className={style.paperOverlay}>
-			<div className="font-consolas z-10 opacity-[0.80] select-none bg-[#000000] h-screen overflow-hidden">
-				<div className="m-auto sm:max-w-[1700px] h-full">
-					<AnimatePresence mode="wait">
-						{view === "main" ? (
-							<Main key="main" />
-						) : (
-							<Portfolio key="portfolio" />
-						)}
-					</AnimatePresence>
-				</div>
+		/* Contenedor principal con el fondo negro */
+		<div className="bg-[#0a0a0a] min-h-screen w-full relative">
+
+			{/* Capa de textura (Overlay)  */}
+			<div className={style.paperOverlay} />
+
+			{/* Contenido real  */}
+			<div className="relative z-10 font-consolas sm:max-w-[1700px] m-auto h-screen overflow-hidden">
+				<AnimatePresence mode="wait">
+					{view === "main" ? (
+						<Main key="main" />
+					) : (
+						<Portfolio key="portfolio" />
+					)}
+				</AnimatePresence>
 			</div>
+
 			<AnimatePresence>
 				{isContactModalOpen && <ContactModal />}
 			</AnimatePresence>
