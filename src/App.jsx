@@ -4,18 +4,36 @@ import { AnimatePresence } from "framer-motion"
 import { ViewProvider, useView } from "./context/ViewContext"
 import ContactModal from "./components/modal/ContactModal"
 
+// Importa tu nuevo componente (ajusta la ruta según donde lo guardaste)
+import { BackgroundGradientAnimation } from "./components/ui/BackgroundGradientAnimation"
+
 const Content = () => {
 	const { view, isContactModalOpen } = useView()
 
 	return (
-		/* Contenedor principal con el fondo negro */
-		<div className="bg-[#0a0a0a] min-h-screen w-full relative">
+		// 1. CAPA BASE: Color negro sólido
+		<div className="relative min-h-screen w-full bg-black overflow-hidden">
 
-			{/* Capa de textura (Overlay)  */}
+			{/* 2. CAPA ANIMACIÓN: Los gradientes */}
+			<div className="absolute inset-0 z-0">
+				<BackgroundGradientAnimation
+					// containerClassName forza a que ocupe el espacio padre absoluto
+					containerClassName="absolute inset-0 h-full w-full opacity-60"
+
+					// Opcional: Colores más oscuros para que no sea tan brillante
+					firstColor="18, 113, 255"
+					secondColor="100, 0, 200"
+					pointerColor="140, 100, 255"
+					size="80%"
+					blendingValue="overlay" // 'overlay' o 'hard-light' funcionan bien con negro
+				/>
+			</div>
+
+			{/* 3. CAPA TEXTURA: El ruido/papel (z-index intermedio) */}
 			<div className={style.paperOverlay} />
 
-			{/* Contenido real  */}
-			<div className="relative z-10 font-consolas sm:max-w-[1700px] m-auto h-screen overflow-hidden">
+			{/* 4. CAPA CONTENIDO: Tu app real (z-index superior) */}
+			<div className="relative z-20 font-consolas sm:max-w-[1700px] m-auto h-screen overflow-hidden">
 				<AnimatePresence mode="wait">
 					{view === "main" ? (
 						<Main key="main" />
@@ -33,7 +51,7 @@ const Content = () => {
 }
 
 function App() {
-	console.log("App rendering, rendering ViewProvider")
+	console.log("App rendering...")
 	return (
 		<ViewProvider>
 			<Content />
