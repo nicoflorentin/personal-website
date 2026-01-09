@@ -10,7 +10,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 	const { openContactModal } = useView()
 
 	return (
-		<aside className="w-16 md:w-64 flex-shrink-0 flex flex-col pt-10 pl-6 h-full overflow-hidden relative">
+		<aside className="flex flex-col pt-10 pl-6 h-full overflow-hidden relative">
 			{/* Navigation */}
 			<nav className="flex flex-col items-end gap-2  font-inter text-sm tracking-[2px] font-[700] mb-12">
 				{SECTIONS_CONFIG.map((section) => (
