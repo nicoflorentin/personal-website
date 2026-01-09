@@ -7,12 +7,10 @@ const Projects = () => {
 	}
 
 	return (
-		<div className="h-full w-full max-w-[1200px] m-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
+		<div className="h-full w-full m-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
 			<div
-				className="flex flex-col gap-10
-                   font-inter
-									 px-3 m-auto
-									 h-full overflow-y-auto pr-2 pb-20 scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent"
+				className="flex flex-col gap-10 font-inter h-full overflow-y-auto 
+             [&-::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
 			>
 				<ProjectsMap />
 			</div>

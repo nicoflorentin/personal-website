@@ -31,7 +31,7 @@ const PortfolioLayout = ({
 
 				{/* Main Content Area - Entry Animation Right */}
 				<motion.div
-					className="flex-1 flex flex-col h-full pl-16 opacity-0"
+					className="flex-1 flex flex-col h-full opacity-0 pl-20"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: 100, opacity: 0 }}
@@ -39,7 +39,7 @@ const PortfolioLayout = ({
 				>
 
 					{/* Top Bar */}
-					<header className="flex flex-col items-start justify-center w-full gap-2 pt-10 pl-8">
+					<header className="flex flex-col items-start justify-center w-full gap-2 pt-10">
 						{/* Navigation Menu */}
 						<nav className="flex items-center gap-8">
 							{pages?.map((page, index) => (
@@ -62,7 +62,7 @@ const PortfolioLayout = ({
 					</header>
 
 					{/* Content */}
-					<main className="flex-1 p-8 overflow-hidden relative">
+					<main className="flex-1 overflow-hidden relative pt-10">
 						{children}
 					</main>
 				</motion.div>

@@ -2,7 +2,7 @@ import ProjectTag from "./ProjectTag";
 
 const Project = ({ title, description, image, githubURL, deployURL, tags = [] }) => {
 	return (
-		<div className="flex flex-col gap-3 text-center px-5 my-3 m-auto max-w-xs md:gap-10 md:max-w-full md:flex-row items-center relative pb-12">
+		<div className="flex flex-col gap-3 text-center my-3 m-auto max-w-xs md:gap-10 md:max-w-full md:flex-row items-center relative pb-12">
 			<div className="md:order-2">
 				<h3 className="text-bone font-medium text-lg uppercase tracking-widest mb-5 md:mb-2 md:order-2">
 					{title}
