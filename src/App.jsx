@@ -18,7 +18,7 @@ const Content = () => {
 			<div className="absolute inset-0 z-0">
 				<BackgroundGradientAnimation
 					// containerClassName forza a que ocupe el espacio padre absolutoo
-					containerClassName="absolute inset-0 h-full w-full opacity-[0.1]"
+					containerClassName="absolute inset-0 h-full w-full opacity-[0.2]"
 
 					// Opcional: Colores más oscuros para que no sea tan brillante
 					firstColor="18, 113, 255"
