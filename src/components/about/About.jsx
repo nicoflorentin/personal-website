@@ -33,7 +33,7 @@ const About = ({ page = 1 }) => {
 		>
 			<motion.div className="border-l-[1px] border-zinc-800 pl-10" variants={itemVariants}>
 				<p className="text-zinc-400 text-lg md:text-2xl font-light leading-relaxed tracking-wide">
-					I'm a <span className={techHighlight}>full-stack developer</span> with a strong focus on JavaScript,
+					My name is <span className="text-white font-semibold">Nicolás Florentin</span>, I'm a <span className={techHighlight}>full-stack developer</span> with a strong focus on JavaScript,
 					specializing in building dynamic mobile and web applications. <br /><br />
 					Expertise in {" "}
 					<span className={techHighlight}>React</span>,{" "}

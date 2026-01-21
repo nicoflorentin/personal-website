@@ -13,6 +13,11 @@ const Content = () => {
 	return (
 		// 1. CAPA BASE: Color negro sólido
 		<div className="relative min-h-screen w-full bg-black overflow-hidden">
+			<title>Nicolás Florentin | Portfolio</title>
+			<meta
+				name="description"
+				content="Portfolio de Nicolás Florentin, desarrollador full stack en React, Node.js y Linux."
+			/>
 
 			{/* 2. CAPA ANIMACIÓN: Los gradientes */}
 			<div className="absolute inset-0 z-0">

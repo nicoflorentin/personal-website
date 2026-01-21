@@ -20,6 +20,9 @@ const NameLabel = () => {
 			<h2 className="font-rubik text-[53px] leading-[0.95em] tracking-[10px] mb-20 min-[320px]:text-[60px] lg:text-[80px]">
 				FULL <br /> STACK <br /> DEV{barIsVisible ? '' : '/'}
 			</h2>
+			<p className="max-w-xs text-[10px] tracking-[2px] opacity-30 font-inter uppercase mt-[-70px] mb-20">
+				Full stack developer specializing in React, Node.js and Linux.
+			</p>
 		</div>
 	)
 }
