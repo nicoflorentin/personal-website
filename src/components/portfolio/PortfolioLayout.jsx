@@ -17,7 +17,7 @@ const PortfolioLayout = ({
 
 	return (
 		<section className="w-full h-full">
-			<div className="flex relative h-full w-full mx-auto text-bone font-consolas">
+			<div className="flex relative h-full max-w-[1200px] mx-auto text-bone font-consolas">
 				{/* Sidebar - Entry Animation Left */}
 				<motion.div
 					className="flex-shrink-0 h-full"
@@ -67,7 +67,7 @@ const PortfolioLayout = ({
 					</main>
 				</motion.div>
 			</div>
-			<div className="absolute bottom-10 right-10">
+			<div className="absolute bottom-10 right-0">
 				<ScrollPressureGauge action={goBack} />
 			</div>
 		</section>
