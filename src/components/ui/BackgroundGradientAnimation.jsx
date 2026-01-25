@@ -24,6 +24,21 @@ export const BackgroundGradientAnimation = ({
 	const [curY, setCurY] = useState(0);
 	const [tgX, setTgX] = useState(0);
 	const [tgY, setTgY] = useState(0);
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		// Detectar si es mobile
+		const checkMobile = () => {
+			const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+			setIsMobile(mobile);
+		};
+
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+
+		return () => window.removeEventListener('resize', checkMobile);
+	}, []);
+
 	useEffect(() => {
 		document.body.style.setProperty("--gradient-background-start", gradientBackgroundStart);
 		document.body.style.setProperty("--gradient-background-end", gradientBackgroundEnd);
@@ -93,7 +108,7 @@ export const BackgroundGradientAnimation = ({
 						`absolute [background:radial-gradient(circle_at_center,_var(--first-color)_0,_var(--first-color)_50%)_no-repeat]`,
 						`[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
 						`[transform-origin:center_center]`,
-						`animate-first`,
+						!isMobile && `animate-first`,
 						`opacity-100`
 					)}></div>
 				<div
@@ -101,7 +116,7 @@ export const BackgroundGradientAnimation = ({
 						`absolute [background:radial-gradient(circle_at_center,_rgba(var(--second-color),_0.8)_0,_rgba(var(--second-color),_0)_50%)_no-repeat]`,
 						`[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
 						`[transform-origin:calc(50%-400px)]`,
-						`animate-second`,
+						!isMobile && `animate-second`,
 						`opacity-100`
 					)}></div>
 				<div
@@ -109,7 +124,7 @@ export const BackgroundGradientAnimation = ({
 						`absolute [background:radial-gradient(circle_at_center,_rgba(var(--third-color),_0.8)_0,_rgba(var(--third-color),_0)_50%)_no-repeat]`,
 						`[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
 						`[transform-origin:calc(50%+400px)]`,
-						`animate-third`,
+						!isMobile && `animate-third`,
 						`opacity-100`
 					)}></div>
 				<div
@@ -117,7 +132,7 @@ export const BackgroundGradientAnimation = ({
 						`absolute [background:radial-gradient(circle_at_center,_rgba(var(--fourth-color),_0.8)_0,_rgba(var(--fourth-color),_0)_50%)_no-repeat]`,
 						`[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
 						`[transform-origin:calc(50%-200px)]`,
-						`animate-fourth`,
+						!isMobile && `animate-fourth`,
 						`opacity-70`
 					)}></div>
 				<div
@@ -125,11 +140,11 @@ export const BackgroundGradientAnimation = ({
 						`absolute [background:radial-gradient(circle_at_center,_rgba(var(--fifth-color),_0.8)_0,_rgba(var(--fifth-color),_0)_50%)_no-repeat]`,
 						`[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
 						`[transform-origin:calc(50%-800px)_calc(50%+800px)]`,
-						`animate-fifth`,
+						!isMobile && `animate-fifth`,
 						`opacity-100`
 					)}></div>
 
-				{interactive && (
+				{interactive && !isMobile && (
 					<div
 						ref={interactiveRef}
 						onMouseMove={handleMouseMove}

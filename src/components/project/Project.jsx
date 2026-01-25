@@ -55,7 +55,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 				<CardCurtain />
 			</CardCurtainRevealBody>
 
-			<CardCurtainRevealFooter className="mt-auto max-h-[600px] overflow-hidden">
+			<CardCurtainRevealFooter className="mt-auto max-h-[600px]">
 				<img
 					src={image}
 					alt={title}
