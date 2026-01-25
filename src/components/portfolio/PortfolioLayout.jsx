@@ -49,7 +49,7 @@ const PortfolioLayout = ({
 									className={`
 										text-lg md:text-sm font-bold tracking-widest uppercase transition-colors duration-300 font-inter
 										${activePage === index + 1
-											? "text-zinc-200 hover:text-primary"
+											? "text-bone hover:text-primary"
 											: "text-zinc-600 hover:text-primary"
 										}
 									`}
@@ -62,14 +62,14 @@ const PortfolioLayout = ({
 					</header>
 
 					{/* Content */}
-					<main className="flex-1 overflow-hidden relative py-10">
+					<main className="h-full py-10 relative">
 						{children}
 					</main>
 				</motion.div>
 			</div>
-			<div className="absolute bottom-10 right-0">
+			{/* <div className="absolute bottom-10 right-0">
 				<ScrollPressureGauge action={goBack} />
-			</div>
+			</div> */}
 		</section>
 	)
 }

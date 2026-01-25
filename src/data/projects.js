@@ -46,7 +46,7 @@ export const projects = [
 	},
 	{
 		id: "rn-pomodoro-day-planner",
-		title: "Android/IOS Pomodoro App",
+		title: "Pomodoro Mobile App",
 		description:
 			"Organize your day with a focus on productivity using the Pomodoro technique. Plan tasks, track progress, and boost your efficiency with this intuitive mobile app.",
 		image: "https://github.com/user-attachments/assets/c1611870-7fe7-4996-9bd3-20d090751c43",
