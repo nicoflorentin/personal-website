@@ -13,7 +13,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 
 		<CardCurtainReveal className="h-full w-full text-bone ">
 			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full">
-				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[2px] text-bone">
+				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[3px] text-bone">
 					{title}
 				</CardCurtainRevealTitle>
 				<CardCurtainRevealDescription className="my-4 flex-1">
