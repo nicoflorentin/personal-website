@@ -78,7 +78,7 @@ const CardCurtainRevealTitle = React.forwardRef(({ className, ...props }, ref) =
     <motion.h2
       ref={ref}
       className={className}
-      animate={isMouseIn ? { y: 0 } : { y: 200 }}
+      animate={isMouseIn ? { y: 0 } : { y: 260 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       {...props} />
   );

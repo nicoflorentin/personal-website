@@ -11,13 +11,13 @@ import {
 const Project = ({ title, description, image, githubURL, deployURL, tags = [] }) => {
 	return (
 
-		<CardCurtainReveal className="h-full w-full text-bone ">
+		<CardCurtainReveal className="h-full w-full text-bone">
 			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full">
 				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[3px] text-bone">
 					{title}
 				</CardCurtainRevealTitle>
 				<CardCurtainRevealDescription className="my-4 flex-1">
-					<p className="text-bone/80 font-light leading-5 text-sm tracking-wide">
+					<p className="text-bone/80 font-light leading-5 text-sm tracking-[1px]">
 						{description}
 					</p>
 					{tags.length > 0 && (
@@ -52,7 +52,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 					)}
 				</div>
 
-				<CardCurtain className="" />
+				<CardCurtain />
 			</CardCurtainRevealBody>
 
 			<CardCurtainRevealFooter className="mt-auto max-h-[600px] overflow-hidden">
