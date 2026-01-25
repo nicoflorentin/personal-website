@@ -11,7 +11,7 @@ import {
 const Project = ({ title, description, image, githubURL, deployURL, tags = [] }) => {
 	return (
 		<div className="flex">
-			<CardCurtainReveal className="h-[560px]¿ w-96 text-zinc-50 border border-zinc-800 rounded-xl¿">
+			<CardCurtainReveal className="h-full w-96 text-zinc-50 border border-zinc-800">
 				<CardCurtainRevealBody className="relative z-10 flex flex-col h-full">
 					<CardCurtainRevealTitle className="text-3xl font-medium tracking-tight text-bone">
 						{title}
@@ -29,7 +29,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 						)}
 					</CardCurtainRevealDescription>
 
-					<div className="flex gap-4 mt-auto">
+					<div className="flex gap-4">
 						{githubURL && (
 							<a
 								href={githubURL}
@@ -55,7 +55,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 					<CardCurtain className="" />
 				</CardCurtainRevealBody>
 
-				<CardCurtainRevealFooter className="mt-auto h-64 overflow-hidden">
+				<CardCurtainRevealFooter className="mt-auto h-[500px] overflow-hidden">
 					<img
 						src={image}
 						alt={title}

@@ -62,7 +62,7 @@ const PortfolioLayout = ({
 					</header>
 
 					{/* Content */}
-					<main className="flex-1 overflow-hidden relative pt-10">
+					<main className="flex-1 overflow-hidden relative py-10">
 						{children}
 					</main>
 				</motion.div>
