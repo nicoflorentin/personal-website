@@ -67,7 +67,7 @@ const CardCurtainRevealFooter = React.forwardRef(({ className, ...props }, ref) 
 CardCurtainRevealFooter.displayName = "CardCurtainReveal"
 
 const CardCurtainRevealBody = React.forwardRef(({ className, ...props }, ref) => {
-  return <div ref={ref} className={cn("flex-1 p-6", className)} {...props} />;
+  return <div ref={ref} className={cn("flex-1 py-0 px-2", className)} {...props} />;
 })
 CardCurtainRevealBody.displayName = "CardCurtainRevealBody"
 
@@ -78,7 +78,7 @@ const CardCurtainRevealTitle = React.forwardRef(({ className, ...props }, ref) =
     <motion.h2
       ref={ref}
       className={className}
-      animate={isMouseIn ? { y: 0 } : { y: 260 }}
+      animate={isMouseIn ? { y: 0 } : { y: 150 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       {...props} />
   );

@@ -25,16 +25,16 @@ const About = ({ page = 1 }) => {
 			className="flex flex-col justify-start items-start
 						font-inter
 						h-full max-w-4xl
-						py-10 pr-10
+						pr-10
 						"
 			variants={containerVariants}
 			initial="hidden"
 			animate="visible"
 		>
-			<motion.div className="border-l-[1px] border-zinc-800 pl-10" variants={itemVariants}>
-				<p className="text-zinc-400 text-lg md:text-2xl font-light leading-relaxed tracking-wide">
+			<motion.div className="" variants={itemVariants}>
+				<p className="text-zinc-400 text-md md:text-lg font-light leading-relaxed tracking-wide">
 					My name is <span className="text-white font-semibold">Nicolás Florentin</span>, I'm a <span className={techHighlight}>full-stack developer</span> with a strong focus on JavaScript,
-					specializing in building dynamic mobile and web applications. <br /><br />
+					specializing in building dynamic mobile and web applications.
 					Expertise in {" "}
 					<span className={techHighlight}>React</span>,{" "}
 					<span className={techHighlight}>React Native</span>,{" "}
@@ -44,18 +44,18 @@ const About = ({ page = 1 }) => {
 				</p>
 			</motion.div>
 
-			<motion.div className="border-l-[1px] border-zinc-800 pl-10 mt-12" variants={itemVariants}>
-				<p className="text-zinc-400 text-lg md:text-2xl font-light leading-relaxed tracking-wide">
+			<motion.div className="mt-10" variants={itemVariants}>
+				<p className="text-zinc-400 text-md md:text-lg font-light leading-relaxed tracking-wide">
 					I'm also passionate about <span className={techHighlight}>design</span>. <br />
 					I use tools like <span className={techHighlight}>Photoshop</span>,
 					<span className={techHighlight}>Figma</span>, and
-					<span className={techHighlight}>GIMP</span> to transform user-centric concepts
+					<span className={techHighlight}> GIMP</span> to transform user-centric concepts
 					into seamless, intuitive digital experiences.
 				</p>
 			</motion.div>
 
-			<motion.div className="border-l-[1px] border-zinc-800 pl-10 mt-12" variants={itemVariants}>
-				<p className="text-zinc-400 text-lg md:text-xl font-light leading-relaxed tracking-wide opacity-80">
+			<motion.div className="mt-10" variants={itemVariants}>
+				<p className="text-zinc-400 text-md md:text-lg font-light leading-relaxed tracking-wide">
 					Whether developing responsive user interfaces, optimizing server-side functionality,
 					or working within a Linux environment, I'm dedicated to crafting high-quality solutions
 					that not only meet business needs but also engage and delight users.

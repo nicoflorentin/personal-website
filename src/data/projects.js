@@ -6,9 +6,7 @@ export const projects = [
 	{
 		id: "astro-landing",
 		title: "Astro Landing",
-		description:
-			"Modern and professional landing page for a law firm built with Astro. The project includes production hosting and a custom domain, plus an integrated email service for client contact. Features a sleek design, fast loading times, and optimized SEO to help potential clients find and connect with legal services.",
-
+		description: "Modern landing page for a law firm with integrated email service and SEO optimization.",
 		image: auadImage,
 		githubURL: "",
 		deployURL: "https://auad-landing-page.vercel.app/",
@@ -17,8 +15,7 @@ export const projects = [
 	{
 		id: "gps-tracker",
 		title: "GPS Tracker",
-		description:
-			"I worked on this project in a professional setting for a company specializing in the distribution of GPS devices and offering a GPS tracking mobile application service.",
+		description: "Professional mobile application for real-time tracking and GPS device distribution management.",
 		image: gpsApp,
 		githubURL: "",
 		deployURL: "",
@@ -27,8 +24,7 @@ export const projects = [
 	{
 		id: "no-country-project",
 		title: "TeleMedicine Scheduler",
-		description:
-			"TeleMedicine Scheduler is a web application that enables patients to book, manage, and attend virtual medical appointments. It features secure video consultations, real-time scheduling, and automated reminders, making healthcare more accessible and efficient for both patients and providers.",
+		description: "Web platform for patients to book and attend virtual medical appointments securely.",
 		image: noCountryImage,
 		githubURL: "https://github.com/nicoflorentin/api-nocountry",
 		deployURL: "",
@@ -37,8 +33,7 @@ export const projects = [
 	{
 		id: "automenu",
 		title: "AutoMenu",
-		description:
-			"Instantly generate modern design menus and manage every detail from a feature-rich dashboard. Discover an efficient and powerful way to take your restaurant to the next level.",
+		description: "Digital menu generator with a feature-rich dashboard for efficient restaurant management.",
 		image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
 		githubURL: "https://github.com/nicoflorentin/auto-menu",
 		deployURL: "https://auto-menu-app.vercel.app/",
@@ -47,52 +42,10 @@ export const projects = [
 	{
 		id: "rn-pomodoro-day-planner",
 		title: "Pomodoro Mobile App",
-		description:
-			"Organize your day with a focus on productivity using the Pomodoro technique. Plan tasks, track progress, and boost your efficiency with this intuitive mobile app.",
+		description: "Intuitive productivity app to plan tasks and track progress using the Pomodoro technique.",
 		image: "https://github.com/user-attachments/assets/c1611870-7fe7-4996-9bd3-20d090751c43",
 		githubURL: "https://github.com/nicoflorentin/RN-pomodoro-day-planner",
 		deployURL: "",
+		tags: ["React Native", "Productivity"],
 	},
-
-	// {
-	// 	id: "nature",
-	// 	title: "NatureXtreme",
-	// 	description: "Ecommerce with full CRUD functionality, login and a complete dashboard view",
-	// 	image: "https://github.com/nicoflorentin/portfolio/assets/81888574/eb497ade-2788-4c2a-b738-1f26ae5d16fc",
-	// 	githubURL: "https://github.com/nicoflorentin/NaturalezaXtreme",
-	// 	deployURL: "https://naturaleza-xtreme.vercel.app/",
-	// },
-	// {
-	// 	id: "tokio",
-	// 	title: "Tokio Blues Dialog Simulator",
-	// 	description:
-	// 		"A hobby project I enjoyed creating, based on the novel 'Norwegian Wood' (Tokyo Blues) by Haruki Murakami. Interactive dialogues app that allow you to choose different responses and see how they influence the narrative.",
-	// 	image: "https://github.com/nicoflorentin/dialog-simulator/raw/master/dialog-simulator-gif-demo.gif",
-	// 	githubURL: "https://github.com/nicoflorentin/dialog-simulator",
-	// 	deployURL: "https://tokiobluesdialogs.netlify.app/",
-	// },
-	// {
-	//   id: "rickandmorty",
-	//   title: "RyM Viewer",
-	//   description: "This project queries the Rick and Morty API to display the characters information. It allows users to implement filters and search by text with an unique and charming design",
-	//   image: "https://github.com/nicoflorentin/rick_and_morty/assets/81888574/507eedd3-e0dc-46c8-9329-7b4dcc0465c8",
-	//   githubURL: "https://github.com/nicoflorentin/rick_and_morty",
-	//   deployURL: "https://rymviewer.netlify.app"
-	// },
-	// {
-	//   id: "matrix",
-	//   title: "Matrix Navigator",
-	//   description: "From a list of information without coordinates, this application assigns a location to each element and allows coherent navigation to the chosen direction.",
-	//   image: "https://github.com/nicoflorentin/matrix-navigator/assets/81888574/4d34d1be-d91b-4ca7-93f7-f92410c23cb1",
-	//   githubURL: "https://github.com/nicoflorentin/matrix-navigator",
-	//   deployURL: "https://matrix-navigator.vercel.app/"
-	// },
-	// {
-	//   id: "pokemon",
-	//   title: "Pokémon Viewer",
-	//   description: "This project queries the Pokémon API to display the creatures information. It allows users to implement filters and search by text. The cherry on top is the posibility to create your own Pokémon.",
-	//   image: "https://github.com/nicoflorentin/pokemon-viewer/assets/81888574/4f50c15b-fe39-4dd4-add9-cb3663d368f4",
-	//   githubURL: "https://github.com/nicoflorentin/pokemon-viewer",
-	//   deployURL: "https://pokemon-viewer-pi.vercel.app/"
-	// }
 ]
