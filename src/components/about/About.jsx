@@ -48,7 +48,7 @@ const About = ({ page = 1 }) => {
 				<p className="text-zinc-400 text-md md:text-lg font-light leading-relaxed tracking-wide">
 					I'm also passionate about <span className={techHighlight}>design</span>. <br />
 					I use tools like <span className={techHighlight}>Photoshop</span>,
-					<span className={techHighlight}>Figma</span>, and
+					<span className={techHighlight}> Figma</span>, and
 					<span className={techHighlight}> GIMP</span> to transform user-centric concepts
 					into seamless, intuitive digital experiences.
 				</p>

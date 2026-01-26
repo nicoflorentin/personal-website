@@ -3,6 +3,7 @@ import { SiLinktree } from "react-icons/si"
 import NavItem from "../ui/NavItem"
 import { SECTIONS_CONFIG } from "../../config/sectionConfig"
 import { useView } from "../../context/ViewContext"
+import SocialIcon from "../ui/SocialIcon"
 
 const AsideBar = ({ activeSection, setActiveSection }) => {
 
@@ -29,20 +30,21 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 
 
 			{/* Socials */}
-			<div className="flex flex-col gap-4 text-xl md:text-2xl items-end mb-12 mt-auto">
-				<a href="https://github.com/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+			<div className="flex flex-col gap-4 text-xl md:text-2xl items-end mb-12 mt-auto m-5">
+				<SocialIcon href="https://github.com/nicoflorentin">
 					<FaGithub />
-				</a>
-				<a href="https://linkedin.com/in/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+				</SocialIcon>
+				<SocialIcon href="https://www.linkedin.com/in/nflorentin">
 					<FaLinkedin />
-				</a>
-				<a href="https://twitter.com/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+				</SocialIcon>
+				<SocialIcon href="https://twitter.com/qflorentt">
 					<FaTwitter />
-				</a>
-				<a href="https://linktr.ee/nicoflorentin" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+				</SocialIcon>
+				<SocialIcon href="https://linktr.ee/qflorent">
 					<SiLinktree />
-				</a>
+				</SocialIcon>
 			</div>
+
 
 			{/* Footer Text moved to Sidebar */}
 			{/* <div className="pr-8 text-[11px] text-zinc-600 font-inter text-right">
