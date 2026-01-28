@@ -29,13 +29,13 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 					)}
 				</CardCurtainRevealDescription>
 
-				<div className="flex gap-4 mb-2">
+				<CardCurtainRevealDescription className="flex gap-4 mb-2">
 					{githubURL && (
 						<a
 							href={githubURL}
 							target="_blank"
 							rel="noreferrer"
-							className="text-secondary text-sm px-3 py-1 border border-secondary rounded-full hover:bg-secondary hover:text-zinc-950 transition-all duration-fast"
+							className="text-secondary text-sm px-3 py-1 border border-secondary hover:border-primary rounded-full hover:bg-primary hover:font-bold hover:text-zinc-950 transition-all duration-fast"
 						>
 							REPO
 						</a>
@@ -45,12 +45,12 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 							href={deployURL}
 							target="_blank"
 							rel="noreferrer"
-							className="text-secondary text-sm px-3 py-1 border border-secondary rounded-full hover:bg-secondary hover:text-zinc-950 transition-all duration-fast"
+							className="text-secondary text-sm px-3 py-1 border border-secondary hover:border-primary rounded-full hover:bg-primary hover:font-bold hover:text-zinc-950 transition-all duration-fast"
 						>
 							VISIT
 						</a>
 					)}
-				</div>
+				</CardCurtainRevealDescription>
 
 				<CardCurtain />
 			</CardCurtainRevealBody>

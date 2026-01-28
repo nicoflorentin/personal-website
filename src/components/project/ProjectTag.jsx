@@ -1,6 +1,6 @@
-const ProjectTag = ({label}) => {
+const ProjectTag = ({ label }) => {
 	return (
-		<div className="text-secondary">ꞏ {label}</div>
+		<div className="text-secondary bg-secondary/20 px-5 py-1 rounded-full">{label}</div>
 	)
 }
 
