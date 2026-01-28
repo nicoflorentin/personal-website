@@ -11,7 +11,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 	const { openContactModal } = useView()
 
 	return (
-		<aside className="flex flex-col pt-10 pl-6 h-full overflow-hidden relative">
+		<aside className="flex flex-col pt-10 px-6 h-full overflow-hidden relative bg-transparent">
 			{/* Navigation */}
 			<nav className="flex flex-col items-end gap-2  font-inter text-sm tracking-[2px] font-[700] mb-12">
 				{SECTIONS_CONFIG.map((section) => (
@@ -30,7 +30,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 
 
 			{/* Socials */}
-			<div className="flex flex-col gap-4 text-xl md:text-2xl items-end mb-12 mt-auto m-5">
+			<div className="flex flex-col gap-4 text-xl md:text-2xl items-end mb-12 mt-auto text-zinc-400">
 				<SocialIcon href="https://github.com/nicoflorentin">
 					<FaGithub />
 				</SocialIcon>

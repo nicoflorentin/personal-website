@@ -1,7 +1,8 @@
-
+import { useState } from "react"
 import AsideBar from "../asideBar/AsideBar"
 import ScrollPressureGauge from "../ui/ScrollPressureGauge"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { FiMenu, FiX } from "react-icons/fi"
 import { useView } from "../../context/ViewContext"
 import { TRANSITION_DURATION_LAYOUT } from "../../constants/constants"
 
@@ -11,16 +12,70 @@ const PortfolioLayout = ({
 	onPageChange,
 	pages
 }) => {
-	const { activeTab, setActiveTab, goBack } = useView()
+	const { activeTab, setActiveTab } = useView()
+	const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
 
+	const handleSidebarClose = () => {
+		setIsMobileSidebarOpen(false)
+	}
 
+	// Update active tab wrapper to also close sidebar on mobile
+	const handleSetActiveTab = (tab) => {
+		setActiveTab(tab)
+		setIsMobileSidebarOpen(false)
+	}
 
 	return (
-		<section className="w-full h-full">
+		<section className="w-full h-full relative">
+			{/* Mobile Toggle Button Container */}
+			<div className="md:hidden fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-40 flex items-end p-6">
+				<button
+					onClick={() => setIsMobileSidebarOpen(true)}
+					className="pointer-events-auto p-3 text-bone hover:text-white transition-colors duration-300"
+				>
+					<FiMenu size={28} />
+				</button>
+			</div>
+
+			{/* Mobile Sidebar Drawer */}
+			<AnimatePresence>
+				{isMobileSidebarOpen && (
+					<>
+						{/* Backdrop */}
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							onClick={handleSidebarClose}
+							className="md:hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"
+						/>
+
+						{/* Drawer */}
+						<motion.div
+							initial={{ x: "-100%" }}
+							animate={{ x: 0 }}
+							exit={{ x: "-100%" }}
+							transition={{ type: "spring", damping: 25, stiffness: 200 }}
+							className="md:hidden fixed top-0 left-0 h-full w-[280px] z-50 bg-[#121212] border-r border-zinc-800 shadow-2xl"
+						>
+							<div className="flex h-full flex-col relative">
+								<button
+									onClick={handleSidebarClose}
+									className="absolute top-4 right-4 text-zinc-400 hover:text-white"
+								>
+									<FiX size={24} />
+								</button>
+								<AsideBar activeSection={activeTab} setActiveSection={handleSetActiveTab} />
+							</div>
+						</motion.div>
+					</>
+				)}
+			</AnimatePresence>
+
 			<div className="flex relative h-full max-w-[1200px] mx-auto text-bone font-consolas">
-				{/* Sidebar - Entry Animation Left */}
+				{/* Sidebar - Desktop (Hidden on Mobile) */}
 				<motion.div
-					className="flex-shrink-0 h-full"
+					className="hidden md:block flex-shrink-0 h-full"
 					initial={{ x: -100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: -100, opacity: 0 }}
@@ -31,7 +86,7 @@ const PortfolioLayout = ({
 
 				{/* Main Content Area - Entry Animation Right */}
 				<motion.div
-					className="flex-1 flex flex-col h-full opacity-0 pl-20"
+					className="flex-1 flex flex-col h-full opacity-0 pl-4 md:pl-20"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: 100, opacity: 0 }}
