@@ -17,7 +17,7 @@ const Projects = () => {
 		>
 			<CarouselContent className={`ml-1 px-1 ${isMobile ? "h-full" : ""}`}>
 				{projects.map((project) => (
-					<CarouselItem className={isMobile ? "basis-full" : "basis-1/3"} key={project.id}>
+					<CarouselItem className="basis-full md:basis-1/2 lg:basis-1/3" key={project.id}>
 						<Project {...project} />
 					</CarouselItem>
 				))}
