@@ -30,7 +30,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 
 
 			{/* Socials */}
-			<div className="flex flex-col gap-4 text-xl md:text-2xl items-end mb-12 mt-auto text-zinc-400">
+			<div className="flex flex-col gap-4 text-3xl md:text-2xl items-end mb-12 mt-auto text-zinc-400">
 				<SocialIcon href="https://github.com/nicoflorentin">
 					<FaGithub />
 				</SocialIcon>

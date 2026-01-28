@@ -59,12 +59,6 @@ const PortfolioLayout = ({
 							className="md:hidden fixed top-0 left-0 h-full w-[280px] z-50 bg-[#121212] border-r border-zinc-800 shadow-2xl"
 						>
 							<div className="flex h-full flex-col relative">
-								<button
-									onClick={handleSidebarClose}
-									className="absolute top-4 right-4 text-zinc-400 hover:text-white"
-								>
-									<FiX size={24} />
-								</button>
 								<AsideBar activeSection={activeTab} setActiveSection={handleSetActiveTab} />
 							</div>
 						</motion.div>
