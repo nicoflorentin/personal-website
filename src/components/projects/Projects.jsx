@@ -1,16 +1,23 @@
 import Project from "../project/Project"
 import { projects } from "../../data/projects"
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel"
+import { useWindowWidth } from "../../hooks/useWindowWidth"
 
 const Projects = () => {
+	const windowWidth = useWindowWidth()
+	const isMobile = windowWidth < 768
+	const orientation = isMobile ? "vertical" : "horizontal"
+
 	return (
 		<Carousel
+			key={orientation}
 			opts={{ align: "start" }}
-			className="w-full m-auto animate-in fade-in slide-in-from-bottom-4 duration-500 font-inter"
+			className={`w-full ${isMobile ? "h-[600px]" : "h-[690px]"} m-auto animate-in fade-in slide-in-from-bottom-4 duration-500 font-inter`}
+			orientation={orientation}
 		>
-			<CarouselContent className="h-[690px]">
+			<CarouselContent className={`ml-1 px-1 ${isMobile ? "h-full" : ""}`}>
 				{projects.map((project) => (
-					<CarouselItem className="basis-1/3 ml-4" key={project.id}>
+					<CarouselItem className={isMobile ? "basis-full" : "basis-1/3"} key={project.id}>
 						<Project {...project} />
 					</CarouselItem>
 				))}

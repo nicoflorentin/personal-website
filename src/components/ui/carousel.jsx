@@ -1,3 +1,5 @@
+// https://ui.shadcn.com/docs/components/radix/carousel
+
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react"
@@ -116,12 +118,12 @@ const CarouselContent = React.forwardRef(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
 
   return (
-    <div ref={carouselRef} className="overflow-hidden">
+    <div ref={carouselRef} className={cn("overflow-hidden", orientation === "vertical" && "h-full")}>
       <div
         ref={ref}
         className={cn(
           "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col h-full",
           className
         )}
         {...props} />
@@ -140,7 +142,7 @@ const CarouselItem = React.forwardRef(({ className, ...props }, ref) => {
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        orientation === "horizontal" ? "pl-4" : "pt-4 h-full",
         className
       )}
       {...props} />
