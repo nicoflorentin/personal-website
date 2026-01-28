@@ -22,15 +22,6 @@ export const projects = [
 		tags: ["React Native", "Figma", "MongoDB", "Map box API"],
 	},
 	{
-		id: "no-country-project",
-		title: "TeleMedicine Scheduler",
-		description: "Web platform for patients to book and attend virtual medical appointments securely.",
-		image: noCountryImage,
-		githubURL: "https://github.com/nicoflorentin/api-nocountry",
-		deployURL: "",
-		tags: ["Backend", "API", "Database", "SQL"],
-	},
-	{
 		id: "automenu",
 		title: "AutoMenu",
 		description: "Digital menu generator with a feature-rich dashboard for efficient restaurant management.",
@@ -38,6 +29,15 @@ export const projects = [
 		githubURL: "https://github.com/nicoflorentin/auto-menu",
 		deployURL: "https://auto-menu-app.vercel.app/",
 		tags: ["Web design", "Figma", "React", "MongoDB", "NodeJS"],
+	},
+	{
+		id: "no-country-project",
+		title: "TeleMedicine Scheduler",
+		description: "Web platform for patients to book and attend virtual medical appointments securely.",
+		image: noCountryImage,
+		githubURL: "https://github.com/nicoflorentin/api-nocountry",
+		deployURL: "",
+		tags: ["Backend", "API", "Database", "SQL"],
 	},
 	{
 		id: "rn-pomodoro-day-planner",
