@@ -28,7 +28,7 @@ const PortfolioLayout = ({
 	return (
 		<section className="w-full h-full relative">
 			{/* Mobile Toggle Button Container */}
-			<div className="md:hidden fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-40 flex items-end p-6">
+			<div className="md:hidden fixed bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none z-40 flex items-end p-6">
 				<button
 					onClick={() => setIsMobileSidebarOpen(true)}
 					className="pointer-events-auto p-3 text-bone hover:text-white transition-colors duration-300"
@@ -90,13 +90,13 @@ const PortfolioLayout = ({
 					{/* Top Bar */}
 					<header className="flex flex-col items-start justify-center w-full gap-2 pt-10">
 						{/* Navigation Menu */}
-						<nav className="flex items-center gap-8">
+						<nav className="flex items-center sm:gap-8 mx-5 sm:mx-0">
 							{pages?.map((page, index) => (
 								<button
 									key={page.title}
 									onClick={() => onPageChange(index + 1)}
 									className={`
-										text-lg md:text-sm font-bold tracking-widest uppercase transition-colors duration-300 font-inter
+										text-sm md:text-md font-bold tracking-widest uppercase transition-colors duration-300 font-inter
 										${activePage === index + 1
 											? "text-bone hover:text-primary"
 											: "text-zinc-600 hover:text-primary"

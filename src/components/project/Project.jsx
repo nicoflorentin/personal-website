@@ -10,9 +10,8 @@ import {
 
 const Project = ({ title, description, image, githubURL, deployURL, tags = [] }) => {
 	return (
-
-		<CardCurtainReveal className="2xl:h-full h-[550px] w-full text-bone" >
-			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full">
+		<CardCurtainReveal className="h-full max-h-[1000px] w-full text-bone" >
+			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full px-10 md:px-0">
 				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[3px] text-bone">
 					{title}
 				</CardCurtainRevealTitle>
@@ -55,7 +54,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 				<CardCurtain />
 			</CardCurtainRevealBody>
 
-			<CardCurtainRevealFooter className="mt-auto max-h-[600px]">
+			<CardCurtainRevealFooter className="mt-auto max-h-[600px] w-full">
 				<img
 					src={image}
 					alt={title}
