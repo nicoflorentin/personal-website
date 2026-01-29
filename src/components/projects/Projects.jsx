@@ -12,17 +12,17 @@ const Projects = () => {
 		<Carousel
 			key={orientation}
 			opts={{ align: "start" }}
-			className={`w-full ${isMobile ? "h-[600px]" : "h-[690px]"} m-auto animate-in fade-in slide-in-from-bottom-4 duration-500 font-inter`}
+			className={`w-full h-[600px] sm:h-full border m-auto animate-in fade-in slide-in-from-bottom-4 duration-500 font-inter`}
 			orientation={orientation}
 		>
-			<CarouselContent className={`ml-1 px-1 ${isMobile ? "h-full" : ""}`}>
+			<CarouselContent className="ml-1 px-1 h-[1000px] max-h-[800px] debug">
 				{projects.map((project) => (
 					<CarouselItem className="basis-full md:basis-1/2 lg:basis-1/3" key={project.id}>
 						<Project {...project} />
 					</CarouselItem>
 				))}
 			</CarouselContent>
-		</Carousel>
+		</Carousel >
 	)
 }
 
