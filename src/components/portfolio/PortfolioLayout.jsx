@@ -28,7 +28,7 @@ const PortfolioLayout = ({
 	return (
 		<section className="w-full h-full relative">
 			{/* Mobile Toggle Button Container */}
-			<div className="md:hidden fixed bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none z-40 flex items-end p-6">
+			<div className="md:hidden fixed bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0E0D0D] to-transparent pointer-events-none z-40 flex items-end p-6">
 				<button
 					onClick={() => setIsMobileSidebarOpen(true)}
 					className="pointer-events-auto p-3 text-bone hover:text-white transition-colors duration-300"

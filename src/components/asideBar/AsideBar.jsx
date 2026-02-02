@@ -13,7 +13,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 	return (
 		<aside className="flex flex-col pt-10 px-6 h-full overflow-hidden relative bg-transparent">
 			{/* Navigation */}
-			<nav className="flex flex-col items-end gap-2  font-inter text-sm tracking-[2px] font-[700] mb-12">
+			<nav className="flex flex-col items-end gap-2 font-inter tracking-[2px] font-[700] mb-12">
 				{SECTIONS_CONFIG.map((section) => (
 					<NavItem
 						key={section.id}
