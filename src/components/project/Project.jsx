@@ -1,3 +1,4 @@
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 import ProjectTag from "./ProjectTag";
 import {
 	CardCurtainReveal,
@@ -9,8 +10,11 @@ import {
 } from "@/components/ui/card-curtain-reveal"
 
 const Project = ({ title, description, image, githubURL, deployURL, tags = [] }) => {
+	const windowWidth = useWindowWidth();
+	const isMobile = windowWidth < 768;
+
 	return (
-		<CardCurtainReveal className="h-full max-h-[1000px] w-full text-bone" >
+		<CardCurtainReveal className="h-full max-h-[1000px] w-full text-bone" isMobile={isMobile}>
 			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full px-10 md:px-0">
 				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[3px] text-bone">
 					{title}
