@@ -3,10 +3,10 @@ import { experiences } from "../../data/experience"
 const ExperienceItem = ({ company, role, date, description, technologies }) => {
 	return (
 		<div className="flex flex-col gap-0 mb-10 font-inter">
-			<div className="flex items-center justify-between gap-4">
-				<h3 className="text-secondary font-bold text-2xl tracking-wider">{company}</h3>
+			<div className="flex items-start debug sm:items-center justify-between gap-4">
+				<h3 className="text-secondary font-bold text-xl tracking-tight sm:text-2xl sm:tracking-wider">{company}</h3>
 				<div className="flex-1 h-[1px] bg-zinc-800/50"></div>
-				<span className="text-zinc-500 text-xs tracking-widest uppercase">{date}</span>
+				<span className="text-zinc-500 text-xs sm:mt-0 mt-2 tracking-tighter sm:text-xs sm:tracking-widest uppercase whitespace-nowrap">{date}</span>
 			</div>
 			<div className="flex flex-col gap-3">
 				<h4 className="text-bone font-medium text-md opacity-90">{role}</h4>
