@@ -62,7 +62,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 				<img
 					src={image}
 					alt={title}
-					className="h-64 w-full object-cover grayscale rounded-3xl hover:grayscale-0 transition-all duration-500"
+					className="h-64 w-full object-cover grayscale rounded-b-xl hover:grayscale-0 transition-all duration-500"
 				/>
 			</CardCurtainRevealFooter>
 		</CardCurtainReveal>
