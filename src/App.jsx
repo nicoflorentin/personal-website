@@ -3,6 +3,7 @@ import { Main, Portfolio } from "./components/index.js"
 import { AnimatePresence } from "framer-motion"
 import { ViewProvider, useView } from "./context/ViewContext"
 import ContactModal from "./components/modal/ContactModal"
+import LanguageSelector from "./components/LanguageSelector"
 
 // Importa tu nuevo componente (ajusta la ruta según donde lo guardaste)
 import { BackgroundGradientAnimation } from "./components/ui/BackgroundGradientAnimation"
@@ -39,6 +40,10 @@ const Content = () => {
 
 			{/* 4. CAPA CONTENIDO: Tu app real (z-index superior) */}
 			<div className="relative z-20 font-consolas sm:max-w-[1700px] m-auto h-screen overflow-hidden">
+				<div className="absolute top-4 right-4 z-50">
+					<LanguageSelector />
+				</div>
+
 				<AnimatePresence mode="wait">
 					{view === "main" ? (
 						<Main key="main" />

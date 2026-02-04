@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 
 
 
-const NameLabel = () => {
+import { useTranslation, Trans } from 'react-i18next'; // Add Trans to import
 
+const NameLabel = () => {
+	const { t } = useTranslation();
 	const [barIsVisible, setBarIsVisible] = useState(false);
 	const intervalRef = useRef(null);
 
@@ -21,7 +23,7 @@ const NameLabel = () => {
 				FULL <br /> STACK <br /> DEV{barIsVisible ? '' : '/'}
 			</h2>
 			<p className="max-w-xs text-[10px] tracking-[2px] opacity-30 font-inter uppercase mt-[-70px] mb-20">
-				Full stack developer specializing in React, Node.js and Linux.
+				{t('dev_description')}
 			</p>
 		</div>
 	)
