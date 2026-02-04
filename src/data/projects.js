@@ -32,7 +32,7 @@ export const projects = [
 	},
 	{
 		id: "no-country-project",
-		title: "TeleMedicine Scheduling Infrastructure",
+		title: "TeleMedicine Scheduling App",
 		description: "Engineered the backend for a secure telemedicine platform. I designed the SQL database and RESTful API to handle complex appointment logic and ensure seamless virtual consultations.",
 		image: noCountryImage,
 		githubURL: "https://github.com/nicoflorentin/api-nocountry",
