@@ -40,9 +40,9 @@ const Content = () => {
 
 			{/* 4. CAPA CONTENIDO: Tu app real (z-index superior) */}
 			<div className="relative z-20 font-consolas sm:max-w-[1700px] m-auto h-screen overflow-hidden">
-				<div className="absolute top-4 right-4 z-50">
+				{/* <div className="absolute top-4 right-4 z-50">
 					<LanguageSelector />
-				</div>
+				</div> */}
 
 				<AnimatePresence mode="wait">
 					{view === "main" ? (
