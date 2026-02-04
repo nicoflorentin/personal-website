@@ -32,7 +32,7 @@ export const projects = [
 	},
 	{
 		id: "no-country-project",
-		title: "TeleMedicine Scheduling App",
+		title: "TeleMedicine Scheduling",
 		description: "Engineered the backend for a secure telemedicine platform. I designed the SQL database and RESTful API to handle complex appointment logic and ensure seamless virtual consultations.",
 		image: noCountryImage,
 		githubURL: "https://github.com/nicoflorentin/api-nocountry",
@@ -41,7 +41,7 @@ export const projects = [
 	},
 	{
 		id: "rn-pomodoro-day-planner",
-		title: "Focus-Driven Productivity App",
+		title: "Productivity Mobile App",
 		description: "Developed a mobile task manager focused on deep work. I implemented the Pomodoro technique with a clean UX to help users track progress and improve their daily productivity.",
 		image: "https://github.com/user-attachments/assets/c1611870-7fe7-4996-9bd3-20d090751c43",
 		githubURL: "https://github.com/nicoflorentin/RN-pomodoro-day-planner",
