@@ -19,12 +19,12 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[3px] text-bone">
 					{title}
 				</CardCurtainRevealTitle>
-				<CardCurtainRevealDescription className="my-4 flex-1">
+				<CardCurtainRevealDescription className="my-2 flex-1">
 					<p className="text-bone/80 font-light leading-5 text-sm tracking-[1px]">
 						{description}
 					</p>
 					{tags.length > 0 && (
-						<div className="flex flex-wrap gap-2 mt-6">
+						<div className="flex flex-wrap gap-2 mt-2">
 							{tags.map((tag, index) => (
 								<ProjectTag key={index} label={tag} />
 							))}

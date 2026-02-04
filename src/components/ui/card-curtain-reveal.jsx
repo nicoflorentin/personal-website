@@ -34,11 +34,11 @@ function useCardCurtainRevealContext() {
 
 const CardCurtainReveal = React.forwardRef(({ children, className, isMobile = false, ...props }, ref) => {
   const [internalMouseIn, setInternalMouseIn] = React.useState(false)
-  
+
   // En mobile, siempre mostrar el efecto abierto (isMouseIn = true)
   // En desktop, usar el estado interno del hover
   const isMouseIn = isMobile ? true : internalMouseIn
-  
+
   const handleMouseEnter = React.useCallback(() => setInternalMouseIn(true), [])
   const handleMouseLeave = React.useCallback(() => setInternalMouseIn(false), [])
 
@@ -46,7 +46,7 @@ const CardCurtainReveal = React.forwardRef(({ children, className, isMobile = fa
     <CardCurtainRevealContext.Provider value={{ isMouseIn }}>
       <div
         ref={ref}
-        className={cn("relative flex flex-col gap-2 overflow-hidden", className)}
+        className={cn("relative flex flex-col overflow-hidden", className)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         {...props}>
