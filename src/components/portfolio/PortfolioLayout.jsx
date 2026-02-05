@@ -111,7 +111,7 @@ const PortfolioLayout = ({
 					</header>
 
 					{/* Content */}
-					<main className="h-full py-5 md:py-10 relative debug">
+					<main className="h-full py-5 md:py-10 relative">
 						{children}
 					</main>
 				</motion.div>
