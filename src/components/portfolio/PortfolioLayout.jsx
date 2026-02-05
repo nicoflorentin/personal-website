@@ -99,7 +99,7 @@ const PortfolioLayout = ({
 										text-sm md:text-md font-bold tracking-widest uppercase transition-colors duration-300 font-inter
 										${activePage === index + 1
 											? "text-bone hover:text-primary"
-											: "text-zinc-600 hover:text-primary"
+											: "text-bone/30 hover:text-primary"
 										}
 									`}
 								>
@@ -107,7 +107,7 @@ const PortfolioLayout = ({
 								</button>
 							))}
 						</nav>
-						<div className="w-full h-[1px] bg-zinc-700"></div>
+						<div className="w-full h-[2px] bg-bone/30"></div>
 					</header>
 
 					{/* Content */}

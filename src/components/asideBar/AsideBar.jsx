@@ -18,7 +18,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 					<NavItem
 						key={section.id}
 						onClick={() => setActiveSection(section.id)}
-						className={`${activeSection === section.id ? 'text-white' : 'text-gray-500'}`}
+						className={`${activeSection === section.id ? 'text-bone' : 'text-bone/30'}`}
 					>
 						{section.label}
 					</NavItem>

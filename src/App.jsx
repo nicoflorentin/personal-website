@@ -13,7 +13,7 @@ const Content = () => {
 
 	return (
 		// 1. CAPA BASE: Color negro sólido
-		<div className="relative min-h-screen w-full bg-blue-800/30 overflow-hidden select-none">
+		<div className="relative min-h-screen w-full bg-blue-800/10 overflow-hidden select-none">
 			<title>Nicolás Florentin | Portfolio</title>
 			<meta
 				name="description"
