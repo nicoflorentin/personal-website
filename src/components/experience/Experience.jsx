@@ -8,7 +8,7 @@ const ExperienceItem = ({ company, role, date, description, technologies }) => {
 				<div className="flex-1 h-[1px] bg-zinc-800/50"></div>
 				<span className="text-zinc-500 text-xs sm:mt-0 mt-2 tracking-tighter sm:text-xs sm:tracking-widest uppercase whitespace-nowrap">{date}</span>
 			</div>
-			<div className="flex flex-col gap-3">
+			<div className="flex flex-col gap-1">
 				<h4 className="text-bone font-medium text-md opacity-90">{role}</h4>
 				<p className="text-zinc-400 leading-relaxed text-sm¿ max-w-3xl">
 					{description}
