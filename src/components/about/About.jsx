@@ -32,7 +32,7 @@ const About = ({ page = 1 }) => {
 			animate="visible"
 		>
 			<motion.div className="" variants={itemVariants}>
-				<p className="text-zinc-400 text-md md:text-lg font-light leading-relaxed tracking-wide">
+				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
 					My name is <span className="text-white font-semibold">Nicolás Florentin</span>, I'm a <span className={techHighlight}>full-stack developer</span> with a strong focus on JavaScript,
 					specializing in building dynamic mobile and web applications.
 					Expertise in {" "}
@@ -45,7 +45,7 @@ const About = ({ page = 1 }) => {
 			</motion.div>
 
 			<motion.div className="mt-10" variants={itemVariants}>
-				<p className="text-zinc-400 text-md md:text-lg font-light leading-relaxed tracking-wide">
+				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
 					I'm also passionate about <span className={techHighlight}>design</span>. <br />
 					I use tools like <span className={techHighlight}>Photoshop</span>,
 					<span className={techHighlight}> Figma</span>, and
@@ -55,7 +55,7 @@ const About = ({ page = 1 }) => {
 			</motion.div>
 
 			<motion.div className="mt-10" variants={itemVariants}>
-				<p className="text-zinc-400 text-md md:text-lg font-light leading-relaxed tracking-wide">
+				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
 					Whether developing responsive user interfaces, optimizing server-side functionality,
 					or working within a Linux environment, I'm dedicated to crafting high-quality solutions
 					that not only meet business needs but also engage and delight users.

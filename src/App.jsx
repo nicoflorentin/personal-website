@@ -3,7 +3,7 @@ import { Main, Portfolio } from "./components/index.js"
 import { AnimatePresence } from "framer-motion"
 import { ViewProvider, useView } from "./context/ViewContext"
 import ContactModal from "./components/modal/ContactModal"
-import LanguageSelector from "./components/LanguageSelector"
+import LanguageSelector from "./components/ui/LanguageSelector"
 
 // Importa tu nuevo componente (ajusta la ruta según donde lo guardaste)
 import { BackgroundGradientAnimation } from "./components/ui/BackgroundGradientAnimation"
@@ -13,7 +13,7 @@ const Content = () => {
 
 	return (
 		// 1. CAPA BASE: Color negro sólido
-		<div className="relative min-h-screen w-full bg-black overflow-hidden select-none">
+		<div className="relative min-h-screen w-full bg-blue-800/30 overflow-hidden select-none">
 			<title>Nicolás Florentin | Portfolio</title>
 			<meta
 				name="description"

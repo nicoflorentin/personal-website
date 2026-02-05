@@ -11,7 +11,7 @@
   background-repeat: repeat;
 
   /* Control de visibilidad */
-  opacity: 0.2;
+  opacity: 0.1;
   /* Valor bajo para que sea sutil sobre el negro */
   pointer-events: none;
   /* Importante: para que no bloquee los clicks en botones */

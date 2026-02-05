@@ -20,7 +20,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 					{title}
 				</CardCurtainRevealTitle>
 				<CardCurtainRevealDescription className="my-2 flex-1">
-					<p className="text-bone/80 font-light leading-5 text-sm tracking-[1px]">
+					<p className="text-bone/80 leading-5 text-sm tracking-[1px]">
 						{description}
 					</p>
 					{tags.length > 0 && (

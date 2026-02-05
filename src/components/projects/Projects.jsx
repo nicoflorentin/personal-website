@@ -1,6 +1,6 @@
 import Project from "../project/Project"
 import { projects } from "../../data/projects"
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../ui/carousel"
 import { useWindowWidth } from "../../hooks/useWindowWidth"
 
 const Projects = () => {
@@ -22,6 +22,8 @@ const Projects = () => {
 					</CarouselItem>
 				))}
 			</CarouselContent>
+			<CarouselPrevious className="hidden md:flex" />
+			<CarouselNext className="hidden md:flex" />
 		</Carousel >
 	)
 }

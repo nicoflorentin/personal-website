@@ -10,7 +10,7 @@ const ExperienceItem = ({ company, role, date, description, technologies }) => {
 			</div>
 			<div className="flex flex-col gap-3">
 				<h4 className="text-bone font-medium text-md opacity-90">{role}</h4>
-				<p className="text-zinc-400 font-light leading-relaxed text-sm¿ max-w-3xl">
+				<p className="text-zinc-400 leading-relaxed text-sm¿ max-w-3xl">
 					{description}
 				</p>
 			</div>
