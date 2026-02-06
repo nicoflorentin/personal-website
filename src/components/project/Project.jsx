@@ -15,7 +15,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 
 	return (
 		<CardCurtainReveal className="h-full max-h-[1000px] w-full text-bone" isMobile={isMobile}>
-			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full lg:px-10 md:px-0">
+			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full md:px-0">
 				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[3px] text-bone">
 					{title}
 				</CardCurtainRevealTitle>
