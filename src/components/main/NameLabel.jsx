@@ -20,7 +20,7 @@ const NameLabel = () => {
 		<div className="text-primary">
 			<h1 className="text-[16px] tracking-wide pl-2 font-inter">NICOLÁS FLORENTÍN</h1>
 			<h2 className="font-rubik text-[53px] leading-[0.95em] tracking-[10px] mb-20 min-[320px]:text-[60px] lg:text-[80px]">
-				FULL <br /> STACK <br /> DEV{barIsVisible ? '' : '/'}
+				FRONTEND <br /> DEV{barIsVisible ? '' : '/'}
 			</h2>
 			<p className="max-w-xs text-[12px] font-medium tracking-[2px] opacity-70 font-inter uppercase mt-[-70px] mb-20">
 				{t('dev_description')}

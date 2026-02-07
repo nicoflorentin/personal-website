@@ -8,9 +8,12 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 	const imageSrc = image;
 
 	return (
-		<div className="group flex flex-col md:flex-row gap-6 md:gap-8 items-start rounded-lg p-6 transition-all duration-300 hover:bg-gray-600/10 border-t border-transparent hover:border-white/20">
+		<a
+			href={deployURL || githubURL || "#"}
+			target="_blank"
+			className="group flex flex-col md:flex-row gap-6 md:gap-8 items-start rounded-lg p-6 transition-all duration-300 hover:bg-gray-600/10 border-t border-transparent hover:border-white/20">
 			{/* Image Section */}
-			<div className="w-full md:w-1/3 flex-shrink-0 overflow-hidden rounded-md border border-white/10 group-hover:border-white/20 transition-colors">
+			<div className="w-full md:w-1/3 text-bone flex-shrink-0 overflow-hidden rounded-md border border-white/10 group-hover:border-white/20 transition-colors">
 				<img
 					src={imageSrc}
 					alt={title}
@@ -64,7 +67,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 					)}
 				</div>
 			</div>
-		</div>
+		</a>
 	);
 };
 

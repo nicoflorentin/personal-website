@@ -9,7 +9,7 @@ export default {
 			colors: {
 				primary: "#93C572",
 				secondary: '#AE8FDB',
-				bone: '#ffffff',
+				bone: '#eeeeee',
 				text: '1C1C1C',
 				// background: 'hsl(var(--background))',
 				// foreground: 'hsl(var(--foreground))',

@@ -18,8 +18,6 @@ const About = () => {
 		visible: { opacity: 1, y: 0 }
 	}
 
-	const techHighlight = "text-white font-medium hover:text-primary transition-colors duration-300 cursor-default relative group"
-
 	return (
 		<motion.div
 			className="flex flex-col justify-start items-start font-inter h-full max-w-4xl pr-10"
@@ -27,34 +25,38 @@ const About = () => {
 			initial="hidden"
 			animate="visible"
 		>
-			{/* Introducción y Ubicación */}
+			{/* Introduction */}
 			<motion.div variants={itemVariants}>
 				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
-					My name is <span className="text-white font-semibold">Nicolás Florentin</span>, a <span className={techHighlight}>Full-stack Developer</span> based in <span className="text-white">Argentina</span>.
-					I specialize in building high-performance digital products, bridging the gap between robust <span className={techHighlight}>Node.js</span> architectures and polished interfaces.
+					I am <span className="text-white font-semibold">Nicolás Florentin</span>, a freelance developer dedicated to providing high-impact <span className="text-white">web solutions and mobile applications</span>. I specialize in turning complex ideas into digital products that are simple, modern, and built for growth.
 				</p>
 			</motion.div>
 
-			{/* Experiencia Web & Mobile */}
+			{/* Experience & Results */}
 			<motion.div className="mt-8" variants={itemVariants}>
 				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
-					Currently, as a <span className="text-white">Freelancer</span>, I focus on <span className={techHighlight}>Astro</span> and <span className={techHighlight}>React</span> to deliver boutique e-commerce solutions integrated with <span className={techHighlight}>Stripe</span>.
-					My background includes developing complex MVPs with <span className={techHighlight}>React Native</span>, implementing real-time tracking via <span className={techHighlight}>WebSockets</span> and <span className={techHighlight}>MQTT</span>, and crafting intricate animations with <span className={techHighlight}>Framer Motion</span>.
+					My experience as a freelancer includes developing online stores designed to maximize sales and mobile apps that integrate <span className="text-white">real-time GPS and device tracking</span>. I have also had the privilege of working with a <span className="text-white">prominent law firm</span>, helping them streamline their digital presence and operations.
 				</p>
 			</motion.div>
 
-			{/* Diseño y Herramientas */}
+			{/* Infrastructure & Stability */}
 			<motion.div className="mt-8" variants={itemVariants}>
 				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
-					Beyond the code, I bring a designer's eye to every project. Using <span className={techHighlight}>Figma</span> and <span className={techHighlight}>Photoshop</span>, I transform concepts into intuitive user experiences.
-					I'm comfortable working in <span className={techHighlight}>Linux</span> environments and have a proven ability to handle high-pressure situations and customer-facing communication, ensuring that business goals align with user delight.
+					To ensure stability, I build on the most reliable foundations. I am proficient in <span className="text-white font-medium">Linux</span> because it is the <span className="text-white">backbone of the entire global infrastructure</span>. Mastering this environment allows me to deliver projects that are fast, scalable, and highly secure from the very first line of code.
 				</p>
 			</motion.div>
 
-			{/* Cierre */}
+			{/* Philosophy & Design */}
 			<motion.div className="mt-8" variants={itemVariants}>
-				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide italic">
-					Dedicated to crafting high-quality, scalable solutions that don't just work—they engage.
+				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
+					As a flexible professional and a lifelong learner, I combine technical depth with a focus on <span className="text-white font-medium">reducing friction</span>. My goal is to make technology effortless for the user, ensuring that every digital experience feels natural and every business goal is met.
+				</p>
+			</motion.div>
+
+			{/* Closing / Status */}
+			<motion.div className="mt-8" variants={itemVariants}>
+				<p className="text-white text-md md:text-lg font-medium italic border-l-2 border-white/20 pl-4">
+					I am currently open to new opportunities and collaborations—let's build something meaningful together.
 				</p>
 			</motion.div>
 		</motion.div>
