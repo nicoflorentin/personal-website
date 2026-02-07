@@ -26,7 +26,7 @@ const PortfolioLayout = ({
 	}
 
 	return (
-		<section className="w-full h-full relative">
+		<section className="w-full relative min-h-screen">
 			{/* Mobile Toggle Button Container */}
 			<div className="md:hidden fixed bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0E0D0D] to-transparent pointer-events-none z-40 flex items-end p-6">
 				<button
@@ -66,10 +66,11 @@ const PortfolioLayout = ({
 				)}
 			</AnimatePresence>
 
-			<div className="flex relative h-full max-w-[1200px] mx-auto text-bone font-consolas">
+			<div className="flex relative max-w-[1200px] mx-auto text-bone font-consolas">
+
 				{/* Sidebar - Desktop (Hidden on Mobile) */}
 				<motion.div
-					className="hidden md:block flex-shrink-0 h-full"
+					className="hidden md:block flex-shrink-0 h-screen sticky top-0"
 					initial={{ x: -100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: -100, opacity: 0 }}
@@ -80,7 +81,7 @@ const PortfolioLayout = ({
 
 				{/* Main Content Area - Entry Animation Right */}
 				<motion.div
-					className="flex-1 flex flex-col h-full opacity-0 pl-4 md:pl-20"
+					className="flex-1 flex flex-col min-h-screen opacity-0 pl-4 md:pl-20"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: 100, opacity: 0 }}

@@ -13,7 +13,7 @@ const Content = () => {
 
 	return (
 		// 1. CAPA BASE: Color negro sólido
-		<div className="relative min-h-screen w-full bg-blue-800/10 overflow-hidden select-none">
+		<div className="relative min-h-screen w-full bg-blue-800/10 select-none">
 			<title>Nicolás Florentin | Portfolio</title>
 			<meta
 				name="description"
@@ -39,7 +39,7 @@ const Content = () => {
 			<div className={style.paperOverlay} />
 
 			{/* 4. CAPA CONTENIDO: Tu app real (z-index superior) */}
-			<div className="relative z-20 font-consolas sm:max-w-[1700px] m-auto h-screen overflow-hidden">
+			<div className="relative z-20 font-consolas sm:max-w-[1700px] m-auto min-h-screen">
 				{/* <div className="absolute top-4 right-4 z-50">
 					<LanguageSelector />
 				</div> */}

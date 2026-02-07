@@ -38,7 +38,7 @@ const Portfolio = () => {
 	const totalPages = currentSection.pages.length
 
 	return (
-		<section className="min-h-[100vh] h-screen m-auto flex flex-col">
+		<section className="min-h-screen m-auto flex flex-col">
 			<PortfolioLayout
 				activePage={activePage}
 				onPageChange={setActivePage}
