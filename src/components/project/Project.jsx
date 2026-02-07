@@ -1,72 +1,71 @@
-import { useWindowWidth } from "@/hooks/useWindowWidth";
-import ProjectTag from "./ProjectTag";
-import {
-	CardCurtainReveal,
-	CardCurtainRevealBody,
-	CardCurtainRevealDescription,
-	CardCurtainRevealFooter,
-	CardCurtainRevealTitle,
-	CardCurtain
-} from "@/components/ui/card-curtain-reveal"
+
 
 const Project = ({ title, description, image, githubURL, deployURL, tags = [] }) => {
-	const windowWidth = useWindowWidth();
-	const isMobile = windowWidth < 768;
+
+	// Determine if the URL is an external link or a local asset
+	const isExternalImage = image?.startsWith('http');
+	const imageSrc = image;
 
 	return (
-		<CardCurtainReveal className="h-full max-h-[1000px] w-full text-bone" isMobile={isMobile}>
-			<CardCurtainRevealBody className="relative z-10 flex flex-col h-full md:px-0">
-				<CardCurtainRevealTitle className="uppercase text-3xl font-bold -tracking-[3px] text-bone">
-					{title}
-				</CardCurtainRevealTitle>
-				<CardCurtainRevealDescription className="my-2 flex-1">
-					<p className="text-bone/80 leading-5 text-sm tracking-[1px]">
+		<div className="group flex flex-col md:flex-row gap-6 md:gap-8 items-start p-6 rounded-lg transition-all duration-300 hover:bg-stone-900/50 border border-transparent hover:border-white/10">
+			{/* Image Section */}
+			<div className="w-full md:w-1/3 flex-shrink-0 overflow-hidden rounded-md border border-white/10 group-hover:border-white/20 transition-colors">
+				<img
+					src={imageSrc}
+					alt={title}
+					className="w-full h-48 md:h-36 object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+				/>
+			</div>
+
+			{/* Content Section */}
+			<div className="flex-1 flex flex-col gap-3">
+				<div className="flex flex-col gap-1">
+					<div className="flex items-center justify-between">
+						<h3 className="text-xl font-bold text-bone group-hover:text-secondary transition-colors font-inter">
+							{title}
+							<span className="inline-block ml-2 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-1 transition-all duration-300 mb-[4px]">
+								↗
+							</span>
+						</h3>
+					</div>
+
+					<p className="text-bone/70 text-sm leading-relaxed font-sans">
 						{description}
 					</p>
-					{tags.length > 0 && (
-						<div className="flex flex-wrap gap-2 mt-2">
-							{tags.map((tag, index) => (
-								<ProjectTag key={index} label={tag} />
-							))}
-						</div>
-					)}
-				</CardCurtainRevealDescription>
+				</div>
 
-				<CardCurtainRevealDescription className="flex gap-4 mb-2">
-					{githubURL && (
-						<a
-							href={githubURL}
-							target="_blank"
-							rel="noreferrer"
-							className="text-secondary text-sm px-3 py-1 border border-secondary hover:border-primary rounded-full hover:bg-primary hover:font-bold hover:text-zinc-950 transition-all duration-fast"
-						>
-							REPO
-						</a>
-					)}
+				{/* Tech Stack */}
+				{tags.length > 0 && (
+					<div className="flex flex-wrap gap-2 pt-1">
+						{tags.map((tag, index) => (
+							<span
+								key={index}
+								className="text-xs px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-medium border border-secondary/20"
+							>
+								{tag}
+							</span>
+						))}
+					</div>
+				)}
+
+				{/* Links (Optional - if we want buttons below) */}
+				<div className="flex gap-4 mt-2">
 					{deployURL && (
 						<a
 							href={deployURL}
 							target="_blank"
 							rel="noreferrer"
-							className="text-secondary text-sm px-3 py-1 border border-secondary hover:border-primary rounded-full hover:bg-primary hover:font-bold hover:text-zinc-950 transition-all duration-fast"
+							className="hidden" // Hiding for now to match the "clean" reference look where the whole card might be clickable or title has the link. 
+						// Only adding if user specifically requests buttons or if we decide to make the title the main link.
+						// For now, let's keep the buttons visible but subtle if needed, or stick to the reference which implies the title is the link.
+						// The reference has an arrow icon next to the title.
 						>
-							VISIT
+							Visit
 						</a>
 					)}
-				</CardCurtainRevealDescription>
-
-				<CardCurtain />
-			</CardCurtainRevealBody>
-
-			<CardCurtainRevealFooter className="mt-auto max-h-[600px] w-full">
-				<img
-					src={image}
-					alt={title}
-					className="h-64 w-full object-cover grayscale rounded-b-xl hover:grayscale-0 transition-all duration-500"
-				/>
-			</CardCurtainRevealFooter>
-		</CardCurtainReveal>
-
+				</div>
+			</div>
+		</div>
 	);
 };
 
