@@ -1,3 +1,4 @@
+import ProjectTag from "./ProjectTag";
 
 
 const Project = ({ title, description, image, githubURL, deployURL, tags = [] }) => {
@@ -7,21 +8,21 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 	const imageSrc = image;
 
 	return (
-		<div className="group flex flex-col md:flex-row gap-6 md:gap-8 items-start p-6 rounded-lg transition-all duration-300 hover:bg-stone-900/50 border border-transparent hover:border-white/10">
+		<div className="group flex flex-col md:flex-row gap-6 md:gap-8 items-start rounded-lg p-6 transition-all duration-300 hover:bg-gray-600/10 border-t border-transparent hover:border-white/20">
 			{/* Image Section */}
 			<div className="w-full md:w-1/3 flex-shrink-0 overflow-hidden rounded-md border border-white/10 group-hover:border-white/20 transition-colors">
 				<img
 					src={imageSrc}
 					alt={title}
-					className="w-full h-48 md:h-36 object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+					className="w-full h-48 md:h-36 object-cover object- transform group-hover:scale-105 transition-transform duration-500"
 				/>
 			</div>
 
 			{/* Content Section */}
 			<div className="flex-1 flex flex-col gap-3">
 				<div className="flex flex-col gap-1">
-					<div className="flex items-center justify-between">
-						<h3 className="text-xl font-bold text-bone group-hover:text-secondary transition-colors font-inter">
+					<div className="flex items-center">
+						<h3 className="text-xl font-bold text-bone group-hover:text-secondary transition-colors font-inter -my-1">
 							{title}
 							<span className="inline-block ml-2 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-1 transition-all duration-300 mb-[4px]">
 								↗
@@ -29,7 +30,7 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 						</h3>
 					</div>
 
-					<p className="text-bone/70 text-sm leading-relaxed font-sans">
+					<p className="text-bone/70 text-sm leading-relaxed font-inter">
 						{description}
 					</p>
 				</div>
@@ -38,18 +39,16 @@ const Project = ({ title, description, image, githubURL, deployURL, tags = [] })
 				{tags.length > 0 && (
 					<div className="flex flex-wrap gap-2 pt-1">
 						{tags.map((tag, index) => (
-							<span
+							<ProjectTag
 								key={index}
-								className="text-xs px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-medium border border-secondary/20"
-							>
-								{tag}
-							</span>
+								label={tag}
+							/>
 						))}
 					</div>
 				)}
 
 				{/* Links (Optional - if we want buttons below) */}
-				<div className="flex gap-4 mt-2">
+				<div className="">
 					{deployURL && (
 						<a
 							href={deployURL}

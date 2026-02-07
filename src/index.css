@@ -30,6 +30,10 @@ body {
 	/* Clave para navegadores modernos */
 }
 
+:root {
+	--radius: 0.5rem;
+}
+
 /* width */
 ::-webkit-scrollbar {
 	width: 3px;

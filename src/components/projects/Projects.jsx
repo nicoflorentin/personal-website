@@ -8,7 +8,7 @@ const Projects = () => {
 
 
 	return (
-		<div className="w-full h-full flex flex-col gap-12 max-w-5xl mx-auto px-4 py-8">
+		<div className="w-full h-full flex flex-col gap-12 max-w-5xl ">
 			{projects.map((project) => (
 				<Project key={project.id} {...project} />
 			))}
