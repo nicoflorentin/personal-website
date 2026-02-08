@@ -18,11 +18,11 @@ const NameLabel = () => {
 	}, [])
 	return (
 		<div className="text-primary">
-			<h1 className="text-[16px] tracking-wide pl-2 font-inter">NICOLÁS FLORENTÍN</h1>
-			<h2 className="font-rubik text-[53px] leading-[0.95em] tracking-[10px] mb-20 min-[320px]:text-[60px] lg:text-[80px]">
+			<h1 className="text-[16px] tracking-wide pl-1 sm:pl-2 font-inter">NICOLÁS FLORENTÍN</h1>
+			<h2 className="font-rubik leading-[0.95em] md:tracking-[5px] mb-20 text-[40px] lg:text-[80px] sm:text-[53px]">
 				FRONTEND <br /> DEV{barIsVisible ? '' : '/'}
 			</h2>
-			<p className="max-w-xs text-[12px] font-medium tracking-[2px] opacity-70 font-inter uppercase mt-[-70px] mb-20">
+			<p className="max-w-xs text-[10px] sm:text-[12px] font-medium tracking-[2px] opacity-70 font-inter uppercase sm:mt-[-70px] mt-[-80px] mb-20">
 				{t('dev_description')}
 			</p>
 		</div>

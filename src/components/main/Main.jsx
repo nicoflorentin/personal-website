@@ -80,7 +80,7 @@ const Main = () => {
 			<div className="h-full flex flex-col justify-center ">
 				<div
 					id="nav"
-					className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[500px] "
+					className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-52 xl:gap-[400px] min-[1370px]:gap-[500px] "
 				>
 					<div className="">
 						<motion.div
