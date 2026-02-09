@@ -23,7 +23,7 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 						{section.label}
 					</NavItem>
 				))}
-				<NavItem onClick={openContactModal} className="text-purple-400 cursor-pointer">
+				<NavItem onClick={openContactModal} className="text-purple-400/80 cursor-pointer">
 					Contact
 				</NavItem>
 			</nav>

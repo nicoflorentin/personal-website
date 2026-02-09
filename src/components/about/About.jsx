@@ -28,14 +28,14 @@ const About = () => {
 			{/* Introduction */}
 			<motion.div variants={itemVariants}>
 				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
-					I am <span className="text-white font-semibold">Nicolás Florentin</span>, a freelance developer dedicated to providing high-impact <span className="text-white">web solutions and mobile applications</span>. I specialize in turning complex ideas into digital products that are simple, modern, and built for growth.
+					I am <span className="text-white font-semibold">Nicolás Florentin</span>, a front end developer dedicated to providing high-impact <span className="text-white">web solutions and mobile applications</span>. I specialize in turning complex ideas into digital products that are simple, modern, and built for growth.
 				</p>
 			</motion.div>
 
 			{/* Experience & Results */}
 			<motion.div className="mt-8" variants={itemVariants}>
 				<p className="text-zinc-400 text-md md:text-lg leading-relaxed tracking-wide">
-					My experience as a freelancer includes developing online stores designed to maximize sales and mobile apps that integrate <span className="text-white">real-time GPS and device tracking</span>. I have also had the privilege of working with a <span className="text-white">prominent law firm</span>, helping them streamline their digital presence and operations.
+					My experience as a freelancer includes <span className="text-white font-medium">developing online stores</span> designed to maximize sales and mobile apps that integrate <span className="text-white">real-time GPS and device tracking</span>. I have also had the privilege of working with a <span className="text-white">prominent law firm</span>, helping them streamline their digital presence and operations.
 				</p>
 			</motion.div>
 
@@ -55,8 +55,8 @@ const About = () => {
 
 			{/* Closing / Status */}
 			<motion.div className="mt-8" variants={itemVariants}>
-				<p className="text-white text-md md:text-lg font-medium italic border-l-2 border-white/20 pl-4">
-					I am currently open to new opportunities and collaborations—let's build something meaningful together.
+				<p className="text-white text-md md:text-xl font-medium border-l-2 border-white/20 pl-4">
+					I am currently open to new opportunities where I can contribute to building software that solves real-world problems at scale
 				</p>
 			</motion.div>
 		</motion.div>
