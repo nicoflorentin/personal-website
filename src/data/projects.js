@@ -1,6 +1,8 @@
 import gpsApp from "../assets/images/gps.webp"
 import auadImage from "../assets/images/auad.png"
 import noCountryImage from "../assets/images/telemed.jpeg"
+import automenuImage from "../assets/images/automenu.png"
+import pomodoroImage from "../assets/images/pomodoro.png"
 
 export const projects = [
 	{
@@ -25,7 +27,7 @@ export const projects = [
 		id: "automenu",
 		title: "Restaurant Menu Solution",
 		description: "Created a digital menu system to streamline restaurant operations. I developed both the customer interface and a robust admin dashboard for real-time inventory and price management.",
-		image: "https://github.com/nicoflorentin/auto-menu/assets/81888574/56c68267-7bad-4d86-b98e-cacf9bd3a7cb",
+		image: automenuImage,
 		githubURL: "https://github.com/nicoflorentin/auto-menu",
 		deployURL: "https://auto-menu-app.vercel.app/",
 		tags: ["Web design", "Figma", "React", "MongoDB", "NodeJS"],
@@ -43,7 +45,7 @@ export const projects = [
 		id: "rn-pomodoro-day-planner",
 		title: "Productivity Mobile App",
 		description: "Developed a mobile task manager focused on deep work. I implemented the Pomodoro technique with a clean UX to help users track progress and improve their daily productivity.",
-		image: "https://github.com/user-attachments/assets/c1611870-7fe7-4996-9bd3-20d090751c43",
+		image: pomodoroImage,
 		githubURL: "https://github.com/nicoflorentin/RN-pomodoro-day-planner",
 		deployURL: "",
 		tags: ["React Native", "Productivity", "Design"],
