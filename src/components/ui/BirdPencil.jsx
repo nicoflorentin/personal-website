@@ -12,8 +12,8 @@ const BirdPencil = ({ className = "" }) => {
 			<motion.div
 				className="absolute inset-0 bg-bone/20"
 				animate={{
-					backgroundColor: ["rgba(238, 238, 238, 0.2)", "#93C572"],
-					scale: [1, 1.2],
+					backgroundColor: ["rgba(238, 238, 238, 0.2)", "#AE8FDB"],
+					scale: [1, 1.1],
 					filter: [
 						"drop-shadow(0 0 0px rgba(147,197,114,0))",
 						"drop-shadow(0 0 15px rgba(147,197,114,0.6))",
