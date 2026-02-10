@@ -4,7 +4,7 @@ import birdPencilUrl from "../../assets/images/bird-pencil.svg"
 const BirdPencil = ({ className = "" }) => {
 	return (
 		<motion.div
-			className={`relative cursor-pointer w-32 h-32 ${className}`}
+			className={`relative w-32 h-32 ${className}`}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 20, delay: 0.5 }}
