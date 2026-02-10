@@ -28,7 +28,7 @@ const ExperienceItem = ({ company, role, date, description, technologies }) => {
 const Experience = () => {
 	return (
 		<div className="h-full w-full animate-in fade-in slide-in-from-bottom-4 duration-500">
-			<div className="flex flex-col h-full pr-4 pb-20">
+			<div className="flex flex-col h-full px-2 pb-20">
 				{experiences.map(experience => (
 					<ExperienceItem key={experience.id} {...experience} />
 				))}

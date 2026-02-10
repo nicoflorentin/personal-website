@@ -20,7 +20,7 @@ const About = () => {
 
 	return (
 		<motion.div
-			className="flex flex-col justify-start items-start font-inter h-full max-w-4xl pr-10"
+			className="flex flex-col justify-start items-start font-inter h-full max-w-4xl px-5 mb-20 md:px-0 md:pr-10 md:mb-0"
 			variants={containerVariants}
 			initial="hidden"
 			animate="visible"

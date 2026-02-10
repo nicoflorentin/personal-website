@@ -12,9 +12,9 @@ const CvDownloadItem = ({ resetTime }) => {
 	}
 
 	return (
-		<div className='text-secondary transition-all duration-fast'>
+		<ul className='text-secondary transition-all duration-fast'>
 			<li className='hover:text-primary cursor-pointer' onClick={toggleDownloadVisibility}>CONTACT</li>
-		</div>
+		</ul>
 	)
 }
 

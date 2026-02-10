@@ -11,21 +11,25 @@ const AsideBar = ({ activeSection, setActiveSection }) => {
 	const { openContactModal } = useView()
 
 	return (
-		<aside className="flex flex-col pt-10 px-6 h-full overflow-hidden relative bg-transparent">
+		<aside className="flex flex-col pt-10 px-6 lg:pl-10 h-full overflow-hidden relative bg-transparent">
 			{/* Navigation */}
-			<nav className="flex flex-col items-end gap-2 font-inter tracking-[2px] font-[700] mb-12">
-				{SECTIONS_CONFIG.map((section) => (
-					<NavItem
-						key={section.id}
-						onClick={() => setActiveSection(section.id)}
-						className={`${activeSection === section.id ? 'text-bone' : 'text-bone/30'}`}
-					>
-						{section.label}
+			<nav>
+
+				<ul className="flex flex-col items-end gap-2 font-inter tracking-[2px] font-[700] mb-12">
+
+					{SECTIONS_CONFIG.map((section) => (
+						<NavItem
+							key={section.id}
+							onClick={() => setActiveSection(section.id)}
+							className={`${activeSection === section.id ? 'text-bone' : 'text-bone/30'}`}
+						>
+							{section.label}
+						</NavItem>
+					))}
+					<NavItem onClick={openContactModal} className="text-purple-400/80 cursor-pointer">
+						Contact
 					</NavItem>
-				))}
-				<NavItem onClick={openContactModal} className="text-purple-400/80 cursor-pointer">
-					Contact
-				</NavItem>
+				</ul>
 			</nav>
 
 
