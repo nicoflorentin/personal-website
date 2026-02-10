@@ -40,7 +40,7 @@ const Content = () => {
 			<div className={style.paperOverlay} />
 
 			{/* Bird Pencil SVG */}
-			<div className="absolute -right-[40%] blur-[1px] -bottom-[900px] z-50 hidden lg:block opacity-10">
+			<div className="absolute left-1/2 -translate-x-[20%] blur-[1px] -bottom-[900px] z-50 hidden lg:block opacity-10">
 				<BirdPencil className="w-[1500px] h-[1500px] opacity-10" />
 			</div>
 
