@@ -16,7 +16,7 @@ export const projects = [
 	},
 	{
 		id: "gps-tracker",
-		title: "Real-Time GPS Tracking Mobile App",
+		title: "GPS Tracking Mobile App",
 		description: "Developed an MVP for the startup BlipConnection, focusing on UI design, user security and real-time tracking. I integrated Mapbox SDK to provide live location updates and efficient device management.",
 		image: gpsApp,
 		githubURL: "",
