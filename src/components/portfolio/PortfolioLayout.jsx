@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { FiMenu, FiX } from "react-icons/fi"
 import { useView } from "../../context/ViewContext"
 import { TRANSITION_DURATION_LAYOUT } from "../../constants/constants"
+import BirdPencil from "../ui/BirdPencil"
 
 const PortfolioLayout = ({
 	children,
@@ -116,6 +117,11 @@ const PortfolioLayout = ({
 						{children}
 					</main>
 				</motion.div>
+			</div>
+
+			{/* Bird Pencil SVG */}
+			<div className="absolute right-5 bottom-5 z-20 hidden lg:block">
+				<BirdPencil className="w-[400px] h-[400px] opacity-10" />
 			</div>
 			{/* <div className="absolute bottom-10 right-0">
 				<ScrollPressureGauge action={goBack} />

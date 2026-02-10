@@ -10,6 +10,7 @@ import { ImFolderDownload } from "react-icons/im";
 import { LIST_ITEM_ICON_SIZE, SCROLL_DELAY_TIME, RESET_SCROLL_DELAY_TIME, RESET_RESUME_LINK_STATE, LIST_ITEM_BIG_ICON_SIZE, TRANSITION_DURATION_LAYOUT, TRANSITION_DURATION_FAST, MOBILE_SCROLL_ADDITIONAL_DELAY, TRANSITION_DURATION_BIG_ICON } from "../../constants/constants";
 import { useMedia } from "use-media";
 import NavItem from "../ui/NavItem";
+import BirdPencil from "../ui/BirdPencil";
 
 import { useView } from "../../context/ViewContext"
 
@@ -160,6 +161,11 @@ const Main = () => {
 			</div>
 			<div className="text-primary text-center font-inter tracking-[0.9em] font-light ">
 				<Slider />
+			</div>
+
+			{/* Bird Pencil SVG */}
+			<div className="absolute right-5 bottom-5 z-20 hidden lg:block">
+				<BirdPencil className="w-[400px] h-[400px] opacity-10" />
 			</div>
 		</motion.section>
 	)
