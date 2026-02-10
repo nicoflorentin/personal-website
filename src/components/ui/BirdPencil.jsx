@@ -4,13 +4,27 @@ import birdPencilUrl from "../../assets/images/bird-pencil.svg"
 const BirdPencil = ({ className = "" }) => {
 	return (
 		<motion.div
-			className={`relative group cursor-pointer w-32 h-32 ${className}`}
+			className={`relative cursor-pointer w-32 h-32 ${className}`}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			transition={{ duration: 1, delay: 0.5 }}
+			transition={{ duration: 20, delay: 0.5 }}
 		>
-			<div
-				className="absolute inset-0 bg-bone/20 transition-all duration-700 ease-in-out group-hover:bg-primary group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(147,197,114,0.6)]"
+			<motion.div
+				className="absolute inset-0 bg-bone/20"
+				animate={{
+					backgroundColor: ["rgba(238, 238, 238, 0.2)", "#93C572"],
+					scale: [1, 1.2],
+					filter: [
+						"drop-shadow(0 0 0px rgba(147,197,114,0))",
+						"drop-shadow(0 0 15px rgba(147,197,114,0.6))",
+					],
+				}}
+				transition={{
+					duration: 40,
+					// repeat: Infinity,
+					repeatType: "reverse",
+					ease: "easeInOut",
+				}}
 				style={{
 					maskImage: `url('${birdPencilUrl}')`,
 					WebkitMaskImage: `url('${birdPencilUrl}')`,
