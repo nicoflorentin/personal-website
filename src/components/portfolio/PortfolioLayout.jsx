@@ -81,7 +81,7 @@ const PortfolioLayout = ({
 
 				{/* Main Content Area - Entry Animation Right */}
 				<motion.div
-					className="flex-1 flex flex-col min-h-screen opacity-0 pl-4 md:pl-20"
+					className="flex-1 flex flex-col min-h-screen opacity-0 md:pl-20"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					exit={{ x: 100, opacity: 0 }}
@@ -91,7 +91,7 @@ const PortfolioLayout = ({
 					{/* Top Bar */}
 					<header className="flex flex-col items-start justify-center w-full gap-2 pt-10">
 						{/* Navigation Menu */}
-						<nav className="flex items-center sm:gap-8 mx-5 sm:mx-0">
+						<nav className="flex items-center gap-8 mx-5 md:mx-0">
 							{pages?.map((page, index) => (
 								<button
 									key={page.title}

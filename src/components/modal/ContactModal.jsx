@@ -8,10 +8,30 @@ const ContactModal = () => {
 	const { closeContactModal } = useView()
 	const [emailCopied, setEmailCopied] = useState(false)
 
-	const handleCopyEmail = () => {
-		navigator.clipboard.writeText("nicoflorentn@gmail.com")
-		setEmailCopied(true)
-		setTimeout(() => setEmailCopied(false), 2000)
+	const handleCopyEmail = async () => {
+		const email = "nicoflorentin@gmail.com"
+		try {
+			if (navigator.clipboard && window.isSecureContext) {
+				await navigator.clipboard.writeText(email)
+			} else {
+				// Fallback for non-secure contexts or older browsers
+				const textArea = document.createElement("textarea")
+				textArea.value = email
+				textArea.style.position = "fixed"
+				textArea.style.left = "-999999px"
+				textArea.style.top = "-999999px"
+				document.body.appendChild(textArea)
+				textArea.focus()
+				textArea.select()
+				const successful = document.execCommand('copy')
+				document.body.removeChild(textArea)
+				if (!successful) throw new Error('execCommand failed')
+			}
+			setEmailCopied(true)
+			setTimeout(() => setEmailCopied(false), 2000)
+		} catch (err) {
+			console.error('Failed to copy email: ', err)
+		}
 	}
 
 	return (
@@ -26,7 +46,7 @@ const ContactModal = () => {
 				initial={{ scale: 0.9, opacity: 0, y: 20 }}
 				animate={{ scale: 1, opacity: 1, y: 0 }}
 				exit={{ scale: 0.9, opacity: 0, y: 20 }}
-				className="bg-[#1C1C1C] border border-zinc-800 w-full max-w-2xl shadow-2xl overflow-hidden font-consolas relative"
+				className="bg-zinc-900 rounded-lg w-full max-w-2xl shadow-2xl overflow-hidden font-consolas relative"
 				onClick={(e) => e.stopPropagation()}
 			>
 				{/* Header */}
@@ -34,7 +54,7 @@ const ContactModal = () => {
 					<h2 className="text-3xl md:text-4xl text-primary font-rubik tracking-wider">CONTACT ME</h2>
 					<button
 						onClick={closeContactModal}
-						className="text-secondary hover:text-white transition-colors text-2xl"
+						className="text-secondary hover:text-primary transition-colors text-2xl"
 					>
 						<FaTimes />
 					</button>
