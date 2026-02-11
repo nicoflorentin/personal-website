@@ -41,7 +41,7 @@ const Content = () => {
 
 			{/* Bird Pencil SVG */}
 			<div className="fixed left-1/2 -translate-x-[20%] blur-[1px] -bottom-[900px] hidden lg:block opacity-10">
-				<BirdPencil className="w-[1700px] h-[1700px] opacity-5" />
+				<BirdPencil className="2xl:w-[1700px] 2xl:h-[1700px] w-[1550px] h-[1550px] opacity-5" />
 			</div>
 
 			{/* 4. CAPA CONTENIDO: Tu app real (z-index superior) */}
