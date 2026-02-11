@@ -3,6 +3,7 @@ import auadImage from "../assets/images/auad.png"
 import noCountryImage from "../assets/images/telemed.jpeg"
 import automenuImage from "../assets/images/automenu.png"
 import pomodoroImage from "../assets/images/pomodoro.png"
+import threeHundredImage from "../assets/images/3hundred.png"
 
 export const projects = [
 	{
@@ -13,6 +14,15 @@ export const projects = [
 		githubURL: "",
 		deployURL: "https://auad-landing-page.vercel.app/",
 		tags: ["Freelance", "Web design", "Figma", "Astro"],
+	},
+	{
+		id: "3hundred-landing",
+		title: "Marketing Agency Landing Page",
+		description: "Developed high-performance components for a leading marketing agency landing page and maintained Node.js and library versions",
+		image: threeHundredImage,
+		githubURL: "",
+		deployURL: "https://www.the3hundred.com/",
+		tags: ["Freelance", "Web design", "Keen-slider", "Figma", "NextJS", "TailwindCSS"],
 	},
 	{
 		id: "gps-tracker",
