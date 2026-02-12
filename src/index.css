@@ -31,6 +31,10 @@ body {
 	/* Clave para navegadores modernos */
 }
 
+html {
+	scrollbar-gutter: stable;
+}
+
 :root {
 	--radius: 0.5rem;
 }
