@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 const About = () => {
 	const containerVariants = {
-		hidden: { opacity: 0, x: -20 },
+		hidden: { opacity: 0, y: -5 },
 		visible: {
 			opacity: 1,
 			x: 0,

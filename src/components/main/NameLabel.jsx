@@ -10,7 +10,7 @@ const NameLabel = () => {
 	const intervalRef = useRef(null);
 
 	useEffect(() => {
-		intervalRef.current = setInterval(() => setBarIsVisible(prev => !prev), 2000);
+		intervalRef.current = setInterval(() => setBarIsVisible(prev => !prev), 800);
 		return () => {
 			clearInterval(intervalRef.current)
 			intervalRef.current = null

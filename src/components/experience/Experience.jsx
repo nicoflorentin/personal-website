@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { experiences } from "../../data/experience"
 
 const ExperienceItem = ({ company, role, date, description, technologies }) => {
@@ -26,14 +27,38 @@ const ExperienceItem = ({ company, role, date, description, technologies }) => {
 }
 
 const Experience = () => {
+	const containerVariants = {
+		hidden: { opacity: 0, y: -5 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				duration: 0.8,
+				staggerChildren: 0.2
+			}
+		}
+	}
+
+	const itemVariants = {
+		hidden: { opacity: 0, y: 10 },
+		visible: { opacity: 1, y: 0 }
+	}
+
 	return (
-		<div className="h-full w-full animate-in fade-in slide-in-from-bottom-4 duration-500">
+		<motion.div
+			className="h-full w-full"
+			variants={containerVariants}
+			initial="hidden"
+			animate="visible"
+		>
 			<div className="flex flex-col h-full px-2 pb-20">
 				{experiences.map(experience => (
-					<ExperienceItem key={experience.id} {...experience} />
+					<motion.div key={experience.id} variants={itemVariants}>
+						<ExperienceItem {...experience} />
+					</motion.div>
 				))}
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 
