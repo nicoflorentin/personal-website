@@ -7,7 +7,7 @@ const BirdPencil = ({ className = "" }) => {
 			className={`relative w-32 h-32 ${className}`}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			transition={{ duration: 20, delay: 0.5 }}
+			transition={{ duration: 10, delay: 0.5 }}
 		>
 			<motion.div
 				className="absolute inset-0 bg-bone/20"
@@ -20,7 +20,7 @@ const BirdPencil = ({ className = "" }) => {
 					],
 				}}
 				transition={{
-					duration: 40,
+					duration: 20,
 					// repeat: Infinity,
 					repeatType: "reverse",
 					ease: "easeInOut",
