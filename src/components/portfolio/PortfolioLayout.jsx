@@ -66,7 +66,7 @@ const PortfolioLayout = ({
 				)}
 			</AnimatePresence>
 
-			<div className="flex relative max-w-[1200px] mx-auto text-bone font-consolas">
+			<div className="flex items-start relative max-w-[1200px] mx-auto text-bone font-consolas">
 
 				{/* Sidebar - Desktop (Hidden on Mobile) */}
 				<motion.div

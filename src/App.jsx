@@ -14,7 +14,7 @@ const Content = () => {
 
 	return (
 		// 1. CAPA BASE: Color negro sólido
-		<div className="relative min-h-screen w-full bg-blue-800/10 select-none overflow-hidden">
+		<div className="relative min-h-screen w-full bg-blue-800/10 select-none overflow-x-hidden">
 			<title>Nicolás Florentin | Portfolio</title>
 			<meta
 				name="description"
@@ -40,8 +40,13 @@ const Content = () => {
 			<div className={style.paperOverlay} />
 
 			{/* Bird Pencil SVG */}
-			<div className="fixed left-1/2 -translate-x-[20%] blur-[1px] -bottom-[900px] hidden lg:block opacity-10">
-				<BirdPencil className="2xl:w-[1700px] 2xl:h-[1700px] w-[1550px] h-[1550px] opacity-5" />
+			<div className="fixed left-1/2 blur-[1px]
+										sm:-translate-x-[20%] sm:-bottom-[900px]
+										-bottom-[900px] -translate-x-[30%]
+										lg:block opacity-10">
+				<BirdPencil className="2xl:w-[1700px] 2xl:h-[1700px]
+															md:w-[1550px] md:h-[1550px] 
+															w-[1500px] h-[1500px] opacity-5" />
 			</div>
 
 			{/* 4. CAPA CONTENIDO: Tu app real (z-index superior) */}
