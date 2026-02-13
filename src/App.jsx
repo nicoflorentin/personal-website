@@ -42,11 +42,11 @@ const Content = () => {
 			{/* Bird Pencil SVG */}
 			<div className="fixed left-1/2 blur-[1px]
 										sm:-translate-x-[20%] sm:-bottom-[900px]
-										-bottom-[900px] -translate-x-[30%]
+										-bottom-[600px] -translate-x-[30%]
 										lg:block opacity-10">
 				<BirdPencil className="2xl:w-[1700px] 2xl:h-[1700px]
-															md:w-[1550px] md:h-[1550px] 
-															w-[1500px] h-[1500px] opacity-5" />
+															sm:w-[1550px] sm:h-[1550px] 
+															w-[1100px] h-[1100px] opacity-5" />
 			</div>
 
 			{/* 4. CAPA CONTENIDO: Tu app real (z-index superior) */}

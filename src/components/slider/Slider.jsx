@@ -21,7 +21,7 @@ export const Slider = () => {
 	}
 	return (
 		<>
-			<div className={style.slider}>
+			<div className={`${style.slider} relative -top-10 sm:top-0`}>
 				<div className={style.slideTrack}>
 					<MapWordsComponent />
 					<MapWordsComponent />
